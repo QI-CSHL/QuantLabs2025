@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Quantitative analysis labs
+  chapters:
+  - file: Lab01_Estimating_SNR_and_Resolution_and_basic_image_processing.md
+  - file: Lab02_Image_Processing_and_Basic_Detection.md
+  - file: Lab03_Image_Correction_and_Intensity_Measurements.md
+  - file: Lab04_ML-based_Segmentation_and_Classification.md
+  - file: Lab05_DL4MIA_Zero_N2V_StarDist_CellPose3.md
+  - file: Lab06_3D_Image_Analysis.md
+  - file: Lab07_Image_Time_Series_Analysis.md
+- caption:  Additional Resources
+  chapters:
+  - file: links
+  - file: glossary
+  - file: bibliography
