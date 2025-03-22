@@ -13,7 +13,7 @@
 - Image registration for 3D reconstruction
 - Some ways to segment in 3D
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ---
 

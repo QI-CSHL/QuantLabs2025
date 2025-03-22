@@ -12,7 +12,7 @@
 - Apply corrections to image data
 - Measure intensities with and without corrections
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs) 
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 
 ---
@@ -389,5 +389,5 @@ What kinds of things will this kind of background subtraction help correct for? 
 You can also assess how the correction affects smaller objects such as the mitochondria and nucleoli by changing whether corrected or uncorrected images are used on these.
 
 ```{tip}
-Want to learn more about segmenting these images? Visit tutorials.cellprofiler.org and check out the Beginner Segmentation and Advanced Segmentation modules, both of which use this image set!
+Want to learn more about segmenting these images? Visit [CellProfiler's Tutorials page](tutorials.cellprofiler.org) and check out the Beginner Segmentation and Advanced Segmentation modules, both of which use this image set!
 ```

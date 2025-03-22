@@ -15,7 +15,7 @@
 - Apply and scrutinize photobleach correction
 - Double-normalized FRAP analysis
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ---
 
@@ -157,14 +157,11 @@ features.
 Please start to download the following data (you can also find it in the
 LabData folder on our google drive):
 
-1.  Drosophila.tif -
-    [<u>http://tinyurl.com/yy5nsuce</u>](http://tinyurl.com/yy5nsuce)
+1.  [Drosophila.tif](http://tinyurl.com/yy5nsuce)
 
-2.  2D+t tracking example for ilastik:
-    [<u>http://tinyurl.com/y67af3mz</u>](http://tinyurl.com/y67af3mz)
+2.  [2D+t tracking example for ilastik](http://tinyurl.com/y67af3mz)
 
-3.  3D+t tracking example for ilastik:
-    [<u>http://tinyurl.com/y4sdzg9p</u>](http://tinyurl.com/y4sdzg9p)
+3.  [3D+t tracking example for ilastik](http://tinyurl.com/y4sdzg9p)
 
 ### (Semi-)automated Tracking in Mastodon
 
@@ -224,13 +221,11 @@ Be prepared to show the coolest thing you found out tomorrow morning
 
     - Shift + ctrl + mouse wheel (on windows) is zooming in and out.
 
-    - Spend some additional time to internalize some more shortcuts:  
-      [<u>https://imagej.net/BigDataViewer#Basic_Navigation</u>](https://imagej.net/BigDataViewer#Basic_Navigation)
+    - Spend some additional time to internalize [some more shortcuts](https://imagej.net/BigDataViewer#Basic_Navigation)
 
 #### Step 2: Manually track some cells
 
-1.  Get the Mastodon cheat sheet:
-    [<u>http://tinyurl.com/y2rxfhlv</u>](http://tinyurl.com/y2rxfhlv)
+1.  Get the [Mastodon cheat sheet](http://tinyurl.com/y2rxfhlv)
 
 2.  Figure out how to:
 
@@ -264,8 +259,7 @@ Be prepared to show the coolest thing you found out tomorrow morning
 
 #### Step 3: Semi-automatic tracking to speed things up
 
-1.  Get some instructions:
-    [<u>http://tinyurl.com/y39vgnuy</u>](http://tinyurl.com/y39vgnuy)
+1.  Get [some instructions](http://tinyurl.com/y39vgnuy)
     (warning, they are slightly outdated, screenshots will look a bit
     different than the Mastodon you are using today…)
 
@@ -288,19 +282,17 @@ Be prepared to show the coolest thing you found out tomorrow morning
 ### Tracking in ilastik
 
 Please go to
-[<u>https://ilastik.github.io/documentation/tracking/tracking</u>](https://ilastik.github.io/documentation/tracking/tracking)
-and follow the instructions on this page.
+[the tracking documentation for ilastik](https://ilastik.github.io/documentation/tracking/tracking)
+and follow the instructions.
 
-Since downloads from the ilastik website can be slow. If so, please use
+Note that downloads from the ilastik website can be slow. If so, please use
 the following links to get the sample data and projects (*likely you
 have downloaded this in Exercise 0 already, no need to download it
 again*):
 
-1.  2D+t tracking example for ilastik:
-    [<u>http://tinyurl.com/y67af3mz</u>](http://tinyurl.com/y67af3mz)
+1.  [2D+t tracking example for ilastik](http://tinyurl.com/y67af3mz)
 
-2.  3D+t tracking example for ilastik:
-    [<u>http://tinyurl.com/y4sdzg9p</u>](http://tinyurl.com/y4sdzg9p)
+2.  [3D+t tracking example for ilastik](http://tinyurl.com/y4sdzg9p)
 
 The 2D example will be way faster to work with, but please choose any of
 the two. After the download is completed, unzip the file and open
@@ -363,6 +355,5 @@ Let us install it and then use it.
 
 ```{tip}
 Tracking in napari is a thing. Kind of. 
-If you want to learn more about it, maybe this is a good place to start:
-[https://focalplane.biologists.com/2023/06/01/tracking-in-napari/](https://focalplane.biologists.com/2023/06/01/tracking-in-napari/)
+If you want to learn more about it, maybe [this](https://focalplane.biologists.com/2023/06/01/tracking-in-napari/) is a good place to start.
 ```

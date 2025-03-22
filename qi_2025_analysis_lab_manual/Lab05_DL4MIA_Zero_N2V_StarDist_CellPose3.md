@@ -16,7 +16,7 @@
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ## **Overview**
 
@@ -35,7 +35,7 @@ a browser, and buckle up.
 ## **Exercise 1: Remind yourself about what we’ve heard in the lecture**
 
 1.  Visit
-    [<u>https://playground.tensorflow.org</u>](https://playground.tensorflow.org)
+    [thi neural network playground](https://playground.tensorflow.org)
     and look around. What terms did you hear before, what is new, and
     what is confusing?
 
@@ -70,8 +70,7 @@ a browser, and buckle up.
 ## **Exercise 2: Play with CellPose** 
 
 ```{note}
-Once back home, you will need this link to get started:
-[<u>https://cellpose.readthedocs.io/en/latest/installation.html</u>](https://cellpose.readthedocs.io/en/latest/installation.html)
+Once back home, you will need [this link](https://cellpose.readthedocs.io/en/latest/installation.html) to get started.
 ```
 
 Here, at QI, we have taken this annoying step for you already. Hence,
@@ -92,9 +91,7 @@ this:<img src="images/lab05/cellpose_gui.png" style="width:6in" />
 
 Open the file `easy\001_img.tif` by dragging it onto the open window.
 You can find this file in the folder ‘DL4MIA’ in the Lab Data share, or
-download it directly via
-
-https://drive.google.com/drive/folders/1BgoUf1f-QfcFNIsppdzTCjehkCAntbyc?usp=share_link
+[download it directly](https://drive.google.com/drive/folders/1BgoUf1f-QfcFNIsppdzTCjehkCAntbyc?usp=share_link).
 
 We need to tell cellpose (roughly) how large our objects are (you can do
 so via the `cell diameter`) field. How might we estimate this? Keep in
@@ -262,15 +259,11 @@ The following steps should get you started in no time:
 Now let’s look at some existing tutorial notebook and play a bit with
 it:
 
-1.  Open
-    [<u>https://colab.research.google.com/notebooks/intro.ipynb</u>](https://colab.research.google.com/notebooks/intro.ipynb)
+1.  Open the [Intro to Google Colab notebook](https://colab.research.google.com/notebooks/intro.ipynb)
     and try to execute the few code cells you’ll find there.
 
-2.  Now open a linear regression example available online and follow it
-    until (and including) the section “Simple Linear Regression”.  
-    Don’t waste your time today to go any further… it is of course super
-    interesting, but totally out of scope… ;)  
-    [<u>https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.06-Linear-Regression.ipynb</u>](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.06-Linear-Regression.ipynb)
+2.  Now open a [linear regression example](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.06-Linear-Regression.ipynb) available online and follow it until (and including) the section “Simple Linear Regression”.  
+Don’t waste your time today to go any further… it is of course super interesting, but totally out of scope… ;)
 
 > *Credit:*<img src="images/lab05/image5.png" style="width:5.99792in;height:0.66323in" />
 
@@ -290,8 +283,7 @@ so at zero cost. ZeroCostDL4Mic is designed for researchers that have
 little or no coding expertise to quickly test, train and use popular
 neural networks approaches.
 
-1.  Go to
-    [<u>https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki</u>](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki)
+1.  Go to the [ZeroCost4DL wiki](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki)
 
 2.  Scroll down and be amazed by the amount of available methods… ;)
 
@@ -331,7 +323,7 @@ readout noise, etc.).
 If you do not have really noisy data at hand, feel free to use the
 example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
 Data link from above, or just use
-[<u>https://tinyurl.com/DLLab-droso2d</u>](https://tinyurl.com/DLLab-droso2d)).
+[this example image](https://tinyurl.com/DLLab-droso2d)).
 Ideally, as a group we use a bunch of different datasets, so we have
 more results to look at…
 
@@ -478,8 +470,8 @@ to install it first.
 3.  Restart Fiji.
 
 4.  Download
-    [<u>https://tinyurl.com/DLLab-droso2d</u>](https://tinyurl.com/DLLab-droso2d)
-    and open this 2D+t tiff in Fiji.
+    [this 2D+t tiff](https://tinyurl.com/DLLab-droso2d)
+    and open it in Fiji.
 
 5.  Start the “N2V train + predict” plugin.
 
