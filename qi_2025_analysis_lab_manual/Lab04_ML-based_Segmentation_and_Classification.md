@@ -37,14 +37,12 @@ There is a train and a test stack. Why is that?
 
 - Try to segment the images by providing training examples for four
   classes: 
-  <img src="images/lab04/image1.png" height="60px" />
 
-  - Cell bodies: 
-    <img src="images/lab04/image2.png" height="60px" />
+  - Cell bodies: <img src="images/lab04/image1.png" height="100px" />
 
-  - Synapses: <img src="images/lab04/image3.png" height="60px" />
+  - Synapses: <img src="images/lab04/image2.png" height="100px" />
 
-  - Granule cell layer
+  - Granule cell layer: <img src="images/lab04/image3.png" height="100px" />
 
   - ...and “*Other stuff*”
 
@@ -77,6 +75,11 @@ There is a train and a test stack. Why is that?
   - What happens if you only annotate the brightest cell bodies you can
     find? Why?
 
+```{admonition} **Class Challenge** (Optional)  
+:class: important
+
+Let's make this (even more) interesting! Try to come up with a 'good enough' classifier with as few total annotations as possible. What strategy/reasoning did you use to get there? Compare your results with your labmates and see who manages to win the coveted **"Least pixels for good classification" Crown** :crown: this year!
+```
 ---
 
 ## **Cell Classification** 
