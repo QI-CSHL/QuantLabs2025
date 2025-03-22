@@ -109,7 +109,7 @@ in the `Drawing` tab.
 ```
 
 How well did cellpose segment your image? Where (if anywhere) did it
-fail? Try some of different dataset-specific models from the model zoo box. Do any of these
+fail? Try some of the different dataset-specific models from the model zoo box. Do any of these
 work better? Worse? Why might that be?
 
 Let’s now try some more challenging data. From the link above, or from
