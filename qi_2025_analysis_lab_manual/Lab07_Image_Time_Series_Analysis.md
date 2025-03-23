@@ -155,13 +155,13 @@ features.
 ### Get the data we need
 
 Please start to download the following data (you can also find it in the
-LabData folder on our google drive):
+[Lab Data folder](https://tinyurl.com/qi2024labs):
 
-1.  [Drosophila.tif](http://tinyurl.com/yy5nsuce)
+1.  [Drosophila.tif](https://drive.google.com/file/d/14_8feL_3LstyBkBoefxmZMWdcQU_Q5v_/view?usp=drive_link)
 
-2.  [2D+t tracking example for ilastik](http://tinyurl.com/y67af3mz)
+2.  [2D+t tracking example for ilastik](https://drive.google.com/file/d/1y-Gijufvq40guOszqL_CGNzj32NTgEnE/view?usp=drive_link)
 
-3.  [3D+t tracking example for ilastik](http://tinyurl.com/y4sdzg9p)
+3.  [3D+t tracking example for ilastik](https://drive.google.com/file/d/14QOMHZ2z7WU47UnifXOV2LCf30jXodxe/view?usp=drive_link)
 
 ### (Semi-)automated Tracking in Mastodon
 
@@ -170,7 +170,7 @@ LabData folder on our google drive):
 ```{important}
 Collect screenshots or remember what you learned here.
 Be prepared to show the coolest thing you found out tomorrow morning
-(you absolutely will be volunteered to share your findings).
+(you absolutely will be volunteered to share your findings ;)).
 ```
 
 #### Step 1: Start a Mastodon project from a single tiff File
@@ -225,7 +225,7 @@ Be prepared to show the coolest thing you found out tomorrow morning
 
 #### Step 2: Manually track some cells
 
-1.  Get the [Mastodon cheat sheet](http://tinyurl.com/y2rxfhlv)
+1.  Get the [Mastodon cheat sheet](https://drive.google.com/file/d/1QyFG_qQceqCBg07onLXqftxyiEYFzXux/view?usp=drive_link)
 
 2.  Figure out how to:
 
@@ -259,7 +259,7 @@ Be prepared to show the coolest thing you found out tomorrow morning
 
 #### Step 3: Semi-automatic tracking to speed things up
 
-1.  Get [some instructions](http://tinyurl.com/y39vgnuy)
+1.  Get [some instructions](https://drive.google.com/file/d/1w2bm6aoKlaDIuSvZRPqTb-2q-6LcHYzV/view?usp=drive_link)
     (warning, they are slightly outdated, screenshots will look a bit
     different than the Mastodon you are using today…)
 
@@ -290,9 +290,9 @@ the following links to get the sample data and projects (*likely you
 have downloaded this in Exercise 0 already, no need to download it
 again*):
 
-1.  [2D+t tracking example for ilastik](http://tinyurl.com/y67af3mz)
+1.  [2D+t tracking example for ilastik](https://drive.google.com/file/d/1y-Gijufvq40guOszqL_CGNzj32NTgEnE/view?usp=drive_link)
 
-2.  [3D+t tracking example for ilastik](http://tinyurl.com/y4sdzg9p)
+2.  [3D+t tracking example for ilastik](https://drive.google.com/file/d/14QOMHZ2z7WU47UnifXOV2LCf30jXodxe/view?usp=drive_link)
 
 The 2D example will be way faster to work with, but please choose any of
 the two. After the download is completed, unzip the file and open
