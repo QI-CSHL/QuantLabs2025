@@ -14,7 +14,7 @@
 - Learn to use ilastik {cite}`Berg2019-no`
 - Experiment with how features and data affect performance
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ---
 
@@ -22,8 +22,7 @@ Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs
 
 - Welcome to the world of software with good documentation and
   tutorials! Take a deep breath and really soak it in, then check out
-  the ilastik pixel classifier tutorial here:
-  [<u>https://bit.ly/3x11EZf</u>](https://bit.ly/3x11EZf).  
+  the [ilastik pixel classifier tutorial](https://bit.ly/3x11EZf).  
   Let us know if you hit a snag!
 
 - You can use the data in Machine_Learning/Pixel_Classifier/ (link to
@@ -38,14 +37,12 @@ There is a train and a test stack. Why is that?
 
 - Try to segment the images by providing training examples for four
   classes: 
-  <img src="images/lab04/image1.png" height="60px" />
 
-  - Cell bodies: 
-    <img src="images/lab04/image2.png" height="60px" />
+  - Cell bodies: <img src="images/lab04/image1.png" height="100px" />
 
-  - Synapses: <img src="images/lab04/image3.png" height="60px" />
+  - Synapses: <img src="images/lab04/image2.png" height="100px" />
 
-  - Granule cell layer
+  - Granule cell layer: <img src="images/lab04/image3.png" height="100px" />
 
   - ...and “*Other stuff*”
 
@@ -78,6 +75,11 @@ There is a train and a test stack. Why is that?
   - What happens if you only annotate the brightest cell bodies you can
     find? Why?
 
+```{admonition} **Class Challenge** (Optional)  
+:class: important
+
+Let's make this (even more) interesting! Try to come up with a 'good enough' classifier with as few total annotations as possible. What strategy/reasoning did you use to get there? Compare your results with your labmates and see who manages to win the coveted **"Least pixels for good classification" Crown** :crown: this year!
+```
 ---
 
 ## **Cell Classification** 
@@ -88,7 +90,7 @@ There is a train and a test stack. Why is that?
 - Extract features from cells
 - Feature-based cell classification
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ### Segment Nuclei for Feature Extraction
 
@@ -109,8 +111,7 @@ Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs
 
 ### Classifying Mitotic and Interphase Cells
 
-- Now, you can follow this tutorial:
-  [<u>https://bit.ly/35BXgVx</u>](https://bit.ly/35BXgVx), starting at
+- Now, you can follow [this tutorial](https://bit.ly/35BXgVx), starting at
   the “From segmentation to objects” step.
 
 - Can you find a minimal set of features that will classify these cells

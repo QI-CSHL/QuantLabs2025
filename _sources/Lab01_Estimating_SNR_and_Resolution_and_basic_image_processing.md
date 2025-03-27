@@ -15,7 +15,7 @@
 - Subtract background
 - Detect point sources via LoG
 
-Lab Data: [<u>https://bit.ly/qi2023labs</u>](https://bit.ly/qi2023labs)
+**Lab Data** in [this Google Drive](https://bit.ly/qi2023labs)
 
 ---
 
@@ -24,7 +24,7 @@ Lab Data: [<u>https://bit.ly/qi2023labs</u>](https://bit.ly/qi2023labs)
 - Open Fiji
 
 ```{note}
-Fiji stands for Fiji Is Just ImageJ
+Fiji stands for **F**iji **I**s **J**ust **I**mageJ
 ```
 
 - Open the image stack “One point source 67nm pix variable SNR.ome.tif”

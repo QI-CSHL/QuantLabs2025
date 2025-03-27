@@ -423,6 +423,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
@@ -458,7 +459,7 @@ document.write(`
 <li><p>Bonus: Detecting edges and ridges</p></li>
 <li><p>Bonus: Using encapsulated <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> modules in CellProfiler</p></li>
 </ul>
-<p>Lab Data: <a class="reference external" href="https://tinyurl.com/qi2024labs"><u>https://tinyurl.com/qi2024labs</u></a></p>
+<p><strong>Lab Data</strong> in <a class="reference external" href="https://tinyurl.com/qi2024labs">this Google Drive</a></p>
 </section>
 <hr class="docutils" />
 <section id="edge-filtering-edge-detection">
@@ -658,7 +659,7 @@ your edge detector succeed? Where did it fail?</p></li>
 accentuate “ridge-like” structures in the image.</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For this exercise, you’ll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Win/ImageJ.exe</span></code> (or <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Mac/ImageJ.app</span></code> if you’re on a Mac), available with the data for this lab. Or you can follow these instructions: <a class="reference external" href="http://bigwww.epfl.ch/demo/steerable/download.html"><u>http://bigwww.epfl.ch/demo/steerable/download.html</u></a></p>
+<p>For this exercise, you’ll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Win/ImageJ.exe</span></code> (or <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Mac/ImageJ.app</span></code> if you’re on a Mac), available with the data for this lab. Or you can follow <a class="reference external" href="http://bigwww.epfl.ch/demo/steerable/download.html">these instructions</a></p>
 </div>
 <section id="basic-thresholding">
 <h4>Basic thresholding<a class="headerlink" href="#basic-thresholding" title="Link to this heading">#</a></h4>
@@ -709,9 +710,13 @@ filter. To view the raw data associated with this image, press
 particular orientation. How could you use this to filter lines of a
 given orientation?</p></li>
 </ul>
-<p><em>References:</em></p>
-<p><span id="id2">Freeman and Adelson<sup><a class="reference internal" href="bibliography.html#id3" title="W.T. Freeman and E.H. Adelson. The design and use of steerable filters. IEEE Transactions on Pattern Analysis and Machine Intelligence, 13(9):891-906, 1991. doi:10.1109/34.93808.">10</a></sup></span></p>
-<p><span id="id3">Jacob and Unser<sup><a class="reference internal" href="bibliography.html#id4" title="M. Jacob and M. Unser. Design of steerable filters for feature detection using canny-like criteria. IEEE Transactions on Pattern Analysis and Machine Intelligence, 26(8):1007-1019, 2004. doi:10.1109/TPAMI.2004.44.">11</a></sup></span></p>
+</section>
+<section id="references">
+<h4><em>References:</em><a class="headerlink" href="#references" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span id="id2">Freeman and Adelson<sup><a class="reference internal" href="bibliography.html#id3" title="W.T. Freeman and E.H. Adelson. The design and use of steerable filters. IEEE Transactions on Pattern Analysis and Machine Intelligence, 13(9):891-906, 1991. doi:10.1109/34.93808.">10</a></sup></span></p></li>
+<li><p><span id="id3">Jacob and Unser<sup><a class="reference internal" href="bibliography.html#id4" title="M. Jacob and M. Unser. Design of steerable filters for feature detection using canny-like criteria. IEEE Transactions on Pattern Analysis and Machine Intelligence, 26(8):1007-1019, 2004. doi:10.1109/TPAMI.2004.44.">11</a></sup></span></p></li>
+</ul>
 </section>
 </section>
 <section id="bonus-exercise-image-filtering-in-harder-data">
@@ -758,7 +763,7 @@ injection site, and the autofluorescence of the cell bodies in green.
 <p>Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
 How well can conventional <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> work on cells, and how easily can it be done?</p>
 <ul class="simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">DL4MIA/hard/train</span></code> <a class="reference external" href="https://tinyurl.com/qi2024labs"><u>https://tinyurl.com/qi2024labs</u></a></p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">DL4MIA/hard/train</span></code> from <a class="reference external" href="https://tinyurl.com/qi2024labs">this link</a></p></li>
 <li><p>Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel</p></li>
 <li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">advanced_untuned.cppipe</span></code> file into the CellProfiler pipeline panel. Other than the input module settings, no <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> settings have been tuned at all in this pipeline.</p></li>
 <li><p>Try to create an accurate <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?</p></li>
@@ -840,6 +845,7 @@ How well can conventional <a class="reference internal" href="glossary.html#term
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
