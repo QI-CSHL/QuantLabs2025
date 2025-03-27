@@ -13,7 +13,7 @@
 - Bonus: Detecting edges and ridges
 - Bonus: Using encapsulated {term}`segmentation` modules in CellProfiler
 
-Lab Data: [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs)
+**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
 
 ---
 
@@ -177,7 +177,7 @@ How do you know when your {term}`segmentation` is "good enough"? It's a SUPER co
 accentuate “ridge-like” structures in the image.*
 
 ```{note}
-For this exercise, you'll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch `ImageJ_SteerableJ_Win/ImageJ.exe` (or `ImageJ_SteerableJ_Mac/ImageJ.app` if you're on a Mac), available with the data for this lab. Or you can follow these instructions: [<u>http://bigwww.epfl.ch/demo/steerable/download.html</u>](http://bigwww.epfl.ch/demo/steerable/download.html) 
+For this exercise, you'll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch `ImageJ_SteerableJ_Win/ImageJ.exe` (or `ImageJ_SteerableJ_Mac/ImageJ.app` if you're on a Mac), available with the data for this lab. Or you can follow [these instructions](http://bigwww.epfl.ch/demo/steerable/download.html) 
 ```
 
 #### Basic thresholding
@@ -235,11 +235,11 @@ comparison to steerable filters)*
   particular orientation. How could you use this to filter lines of a
   given orientation?
 
-*References:*
+#### *References:*
 
-{cite:t}`93808`
+- {cite:t}`93808`
 
-{cite:t}`1307008`
+- {cite:t}`1307008`
 
 ### Bonus Exercise: Image filtering in harder data
 
@@ -277,7 +277,7 @@ Two of the steps are combined in a single setting!
 Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
 How well can conventional {term}`segmentation` work on cells, and how easily can it be done?
 
-- Download the `DL4MIA/hard/train` [<u>https://tinyurl.com/qi2024labs</u>](https://tinyurl.com/qi2024labs) 
+- Download the `DL4MIA/hard/train` from [this link](https://tinyurl.com/qi2024labs) 
 - Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel
 - Drag and drop the `advanced_untuned.cppipe` file into the CellProfiler pipeline panel. Other than the input module settings, no {term}`segmentation` settings have been tuned at all in this pipeline.
 - Try to create an accurate {term}`segmentation` of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?
