@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -64,11 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lab05_DL4MIA_Zero_N2V_StarDist_CellPose3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3D Image Analysis" href="Lab06_3D_Image_Analysis.html" />
-    <link rel="prev" title="Segmentation and Pixel Classification" href="Lab04_ML-based_Segmentation_and_Classification.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -93,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,8 +123,9 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -148,17 +155,21 @@
     
     
     <img src="_static/image001.png" class="logo__image only-light" alt="QI  Analysis Lab Manual - Home"/>
-    <img src="_static/image001.png" class="logo__image only-dark pst-js-only" alt="QI  Analysis Lab Manual - Home"/>
+    <script>document.write(`<img src="_static/image001.png" class="logo__image only-dark" alt="QI  Analysis Lab Manual - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -170,14 +181,8 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantitative analysis labs</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Lab01_Estimating_SNR_and_Resolution_and_basic_image_processing.html">Estimating SNR &amp; Resolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab02_Image_Processing_and_Basic_Detection.html">Image Processing and Basic Segmentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab03_Image_Correction_and_Intensity_Measurements.html">Image Correction and Intensity Measurements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab04_ML-based_Segmentation_and_Classification.html">Segmentation and Pixel Classification</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deep Learning for Microscopy Image Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab06_3D_Image_Analysis.html">3D Image Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab07_Image_Time_Series_Analysis.html">Image Time Series Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -192,14 +197,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -360,16 +360,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -437,9 +445,9 @@
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Appreciate how Neural Networks are trained</p></li>
-<li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25">9</a></sup></span></p></li>
+<li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25">16</a></sup></span></p></li>
 <li><p>Learn how to get to and use Google Colab</p></li>
-<li><p>Denoising with Noise2Void<span id="id2"><sup><a class="reference internal" href="bibliography.html#id9" title="Alexander Krull, Tim-Oliver Buchholz, and Florian Jug. Noise2Void - learning denoising from single noisy images. In 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2124–2132. IEEE, June 2019.">10</a></sup></span> in “Zero”</p></li>
+<li><p>Denoising with Noise2Void<span id="id2"><sup><a class="reference internal" href="bibliography.html#id9" title="Alexander Krull, Tim-Oliver Buchholz, and Florian Jug. Noise2Void - learning denoising from single noisy images. In 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2124–2132. IEEE, June 2019.">17</a></sup></span> in “Zero”</p></li>
 <li><p>Bonus: Try in-browser classification with Piximi</p></li>
 <li><p>Bonus: Use Noise2Void in Fiji</p></li>
 <li><p>Bonus: Segmentation with StarDist in “Zero”</p></li>
@@ -450,7 +458,7 @@
 <h2><strong>Overview</strong><a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>Neural networks can do useful things. Their deployment within
 user-friendly tools is, unfortunately, lagging behind. Hence, methods we
-would like to apply to our data are not always available in Fiji or ilastik<span id="id3"><sup><a class="reference internal" href="bibliography.html#id8" title="Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N Straehle, Bernhard X Kausler, Carsten Haubold, Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A Hamprecht, and Anna Kreshuk. Ilastik: interactive machine learning for (bio)image analysis. Nat. Methods, 16(12):1226–1232, December 2019.">8</a></sup></span>
+would like to apply to our data are not always available in Fiji or ilastik<span id="id3"><sup><a class="reference internal" href="bibliography.html#id8" title="Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N Straehle, Bernhard X Kausler, Carsten Haubold, Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A Hamprecht, and Anna Kreshuk. Ilastik: interactive machine learning for (bio)image analysis. Nat. Methods, 16(12):1226–1232, December 2019.">15</a></sup></span>
 quite yet (or only with a fair amount of command line work and difficulty). The latest methods can only be used by the ones “brave”
 enough to expose themselves to some amount of computer source code…</p>
 <p>Today we will all be brave! 😊</p>
@@ -625,7 +633,7 @@ segmentation. What might be useful for denoising this image?</p>
 <li><p>Downsides: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
 </ul>
 </li>
-<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">11</a></sup></span></p>
+<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">18</a></sup></span></p>
 <ul>
 <li><p>Upsides: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker <code class="docutils literal notranslate"><span class="pre">.app</span></code> or <code class="docutils literal notranslate"><span class="pre">.exe</span></code> files from their respective websites, download <a class="reference external" href="https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py">the plugin</a>, and then point CellProfiler at the location of the downloaded file.</p></li>
 <li><p>Downsides: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you’re in analysis mode and running all your images unsupervised). You’re limited to the hardware you have locally.</p></li>
@@ -682,7 +690,7 @@ Google Drive via…<br />
 </section>
 <section id="exercise-4-first-steps-with-zerocostdl4mic">
 <h2><strong>Exercise 4: First steps with ZeroCostDL4Mic</strong><a class="headerlink" href="#exercise-4-first-steps-with-zerocostdl4mic" title="Link to this heading">#</a></h2>
-<p>ZeroCostDL4Mic<span id="id5"><sup><a class="reference internal" href="bibliography.html#id10" title="Lucas von Chamier, Romain F Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-Pérez, Pieta K Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loïc A Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, and Ricardo Henriques. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat. Commun., 12(1):2276, April 2021.">12</a></sup></span> is a collection of (hopefully) self-explanatory Jupyter
+<p>ZeroCostDL4Mic<span id="id5"><sup><a class="reference internal" href="bibliography.html#id10" title="Lucas von Chamier, Romain F Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-Pérez, Pieta K Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loïc A Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, and Ricardo Henriques. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat. Commun., 12(1):2276, April 2021.">19</a></sup></span> is a collection of (hopefully) self-explanatory Jupyter
 Notebooks for Google Colab. They are meant to quickly get you started on
 learning how to use deep-learning methods specifically created for
 microscopy image analysis.</p>
@@ -750,17 +758,18 @@ evening… 🙂</p>
 </section>
 <section id="bonus-exercise-classifying-images-in-the-browser-in-piximi">
 <h2><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id27" title="Allen Goodman, Alice Lucas, Nodar Gogoberidze, Levin Moser, David Dao, Christoph Friedrich, Lassi Paavolainen, Andréa Papaleo, David Stirling, Frances Hubis, Csaba Molnar, Pearl Ryder, Rex Wang, Jane Hung, Peter Horvath, Beth Cimini, and Anne Carpenter. Piximi - an images to discovery web platform. June 2021.">13</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
+<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id27" title="Allen Goodman, Alice Lucas, Nodar Gogoberidze, Levin Moser, David Dao, Christoph Friedrich, Lassi Paavolainen, Andréa Papaleo, David Stirling, Frances Hubis, Csaba Molnar, Pearl Ryder, Rex Wang, Jane Hung, Peter Horvath, Beth Cimini, and Anne Carpenter. Piximi - an images to discovery web platform. June 2021.">20</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
 <p>Piximi will eventually include 3 major functionalities - Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes an annotation tool. As of April 2024, you can train your own classification models, annotate images, and run pre-trained object detection and/or segmentation models that we provide; we expect measurements to come out by end of Q2 2024 and hope to provide trainable segmentation by the end of 2024. You can keep visiting piximi.app to see what’s available!</p>
 <section id="train-a-10-class-classification-model-using-mnist">
 <h3>Train a 10-class classification model using MNIST<a class="headerlink" href="#train-a-10-class-classification-model-using-mnist" title="Link to this heading">#</a></h3>
-<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id7"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">14</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
+<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id7"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">21</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
 <section id="train-a-classifier">
 <h4>Train a classifier<a class="headerlink" href="#train-a-classifier" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Tell Piximi you want to open an example project</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/piximi_open.png"><img alt="_images/piximi_open.png" src="_images/piximi_open.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_open.png"><img alt="_images/piximi_open.png" src="_images/piximi_open.png" style="height: 180px;" />
+</a>
 <ul class="simple">
 <li><p>Select MNIST
 <a class="reference internal" href="_images/piximi_mnist.png"><img alt="_images/piximi_mnist.png" src="_images/piximi_mnist.png" style="height: 180px;" /></a></p></li>
@@ -771,7 +780,8 @@ evening… 🙂</p>
 </li>
 <li><p>Tell Piximi you want to fit a classifier for these images</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/piximi_fit.png"><img alt="_images/piximi_fit.png" src="_images/piximi_fit.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_fit.png"><img alt="_images/piximi_fit.png" src="_images/piximi_fit.png" style="height: 180px;" />
+</a>
 <ul class="simple">
 <li><p>You will now see Piximi’s training dialog; you can choose to tune some of the hyperparameters before training (though we’ve chosen here reasonable defaults that should work well). Otherwise, hit <a class="reference internal" href="_images/piximi_fit_classifer.png"><img alt="_images/piximi_fit_classifer.png" src="_images/piximi_fit_classifer.png" style="height: 40px;" /></a> to train.</p></li>
 <li><p>After an initialization step, you will see a performance chart that looks like the below, as well as a loss graph. You can keep hitting <code class="docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Classifier</span></code> to keep adding more epochs of training.
@@ -785,8 +795,10 @@ evening… 🙂</p>
 <section id="evaluate-your-classifier">
 <h4>Evaluate your classifier<a class="headerlink" href="#evaluate-your-classifier" title="Link to this heading">#</a></h4>
 <p>Once you’re satisfied with your training (either because it’s great or because you’re satisfied that it has plateaued), close the training dialog. Hit the <code class="docutils literal notranslate"><span class="pre">Evaluate</span> <span class="pre">Model</span></code> button to check your confusion matrix.</p>
-<a class="reference internal image-reference" href="_images/piximi_evaluate.png"><img alt="_images/piximi_evaluate.png" src="_images/piximi_evaluate.png" style="height: 90px;" /></a>
-<a class="reference internal image-reference" href="_images/piximi_confusion.png"><img alt="_images/piximi_confusion.png" src="_images/piximi_confusion.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_evaluate.png"><img alt="_images/piximi_evaluate.png" src="_images/piximi_evaluate.png" style="height: 90px;" />
+</a>
+<a class="reference internal image-reference" href="_images/piximi_confusion.png"><img alt="_images/piximi_confusion.png" src="_images/piximi_confusion.png" style="height: 180px;" />
+</a>
 <div class="admonition-questions-for-you admonition">
 <p class="admonition-title">Questions for you</p>
 <p>What patterns of mistakes do you notice? Are they the kinds of mistakes you would expect?</p>
@@ -799,17 +811,21 @@ evening… 🙂</p>
 <ul class="simple">
 <li><p>Hit the <code class="docutils literal notranslate"><span class="pre">Predict</span> <span class="pre">Model</span></code> button to apply the model to the unlabeled data</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/piximi_predict.png"><img alt="_images/piximi_predict.png" src="_images/piximi_predict.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_predict.png"><img alt="_images/piximi_predict.png" src="_images/piximi_predict.png" style="height: 180px;" />
+</a>
 <ul class="simple">
 <li><p>Evaluate the performance of the predictions - you may find that hitting one or both of these buttons helps you do that</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/piximi_hide_labeled.png"><img alt="_images/piximi_hide_labeled.png" src="_images/piximi_hide_labeled.png" style="height: 40px;" /></a>
-<a class="reference internal image-reference" href="_images/piximi_hide_other.png"><img alt="_images/piximi_hide_other.png" src="_images/piximi_hide_other.png" style="height: 90px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_hide_labeled.png"><img alt="_images/piximi_hide_labeled.png" src="_images/piximi_hide_labeled.png" style="height: 40px;" />
+</a>
+<a class="reference internal image-reference" href="_images/piximi_hide_other.png"><img alt="_images/piximi_hide_other.png" src="_images/piximi_hide_other.png" style="height: 90px;" />
+</a>
 </section>
 <section id="fix-some-mistakes">
 <h4>Fix (some?) mistakes<a class="headerlink" href="#fix-some-mistakes" title="Link to this heading">#</a></h4>
 <p>If and when (when), you find some errors in the predictions, you can fix them by assigning them a new category.</p>
-<a class="reference internal image-reference" href="_images/piximi_recategorize_errors.png"><img alt="_images/piximi_recategorize_errors.png" src="_images/piximi_recategorize_errors.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_recategorize_errors.png"><img alt="_images/piximi_recategorize_errors.png" src="_images/piximi_recategorize_errors.png" style="height: 180px;" />
+</a>
 <p>Depending on why you’re using machine learning, you might choose to fix all the wrong images at this stage, or only some</p>
 <ul>
 <li><p>Is your goal to just get the classifications right and then use them for something, and most of them are?</p>
@@ -833,8 +849,10 @@ evening… 🙂</p>
 <section id="save-things-for-later">
 <h4>Save things for later<a class="headerlink" href="#save-things-for-later" title="Link to this heading">#</a></h4>
 <p>Reproducible science matters! You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.</p>
-<a class="reference internal image-reference" href="_images/piximi_save_project.png"><img alt="_images/piximi_save_project.png" src="_images/piximi_save_project.png" style="height: 180px;" /></a>
-<a class="reference internal image-reference" href="_images/piximi_save_model.png"><img alt="_images/piximi_save_model.png" src="_images/piximi_save_model.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_save_project.png"><img alt="_images/piximi_save_project.png" src="_images/piximi_save_project.png" style="height: 180px;" />
+</a>
+<a class="reference internal image-reference" href="_images/piximi_save_model.png"><img alt="_images/piximi_save_model.png" src="_images/piximi_save_model.png" style="height: 180px;" />
+</a>
 </section>
 </section>
 <section id="train-a-3-class-classification-model-on-u2os-cells">
@@ -847,7 +865,8 @@ evening… 🙂</p>
 <ul class="simple">
 <li><p>Refresh Piximi, and then load the U2OS-cells cytoplasm crops dataset</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/piximi_bbbc013.png"><img alt="_images/piximi_bbbc013.png" src="_images/piximi_bbbc013.png" style="height: 180px;" /></a>
+<a class="reference internal image-reference" href="_images/piximi_bbbc013.png"><img alt="_images/piximi_bbbc013.png" src="_images/piximi_bbbc013.png" style="height: 180px;" />
+</a>
 <div class="admonition-optional-fix-how-the-images-look admonition">
 <p class="admonition-title">Optional: fix how the images look</p>
 <p>You need not do this, since it can be a bit slow, but it is necessary if you want to assess the performance of the no-GFP class (and will make things much easier if you are red-green colorblind).</p>
@@ -912,7 +931,7 @@ you find most interesting in the context of your own research.</p>
 Collab will work while you have fun on your free evening… 🙂</p>
 <div class="admonition-super-excited-about-deep-learning-now-and-want-to-know-where-to-find-the-latest-models admonition">
 <p class="admonition-title">Super excited about deep learning now and want to know where to find the latest models?</p>
-<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id8"><sup><a class="reference internal" href="bibliography.html#id26">15</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
+<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id8"><sup><a class="reference internal" href="bibliography.html#id26">22</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
 </div>
 </section>
 </section>
@@ -947,24 +966,6 @@ Collab will work while you have fun on your free evening… 🙂</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Lab04_ML-based_Segmentation_and_Classification.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Segmentation and Pixel Classification</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Lab06_3D_Image_Analysis.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3D Image Analysis</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -972,8 +973,7 @@ Collab will work while you have fun on your free evening… 🙂</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1047,8 +1047,8 @@ By QI
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
