@@ -16,7 +16,7 @@
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
 
-**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
+All **Analysis Lab Data** lives [HERE](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data)
 
 ## **Overview**
 
@@ -35,7 +35,7 @@ a browser, and buckle up.
 ## **Exercise 1: Remind yourself about what we’ve heard in the lecture**
 
 1.  Visit
-    [thi neural network playground](https://playground.tensorflow.org)
+    [this neural network playground](https://playground.tensorflow.org)
     and look around. What terms did you hear before, what is new, and
     what is confusing?
 
@@ -90,8 +90,8 @@ You should now see something like
 this:<img src="images/lab05/cellpose_gui.png" style="width:6in" />
 
 Open the file `easy\001_img.tif` by dragging it onto the open window.
-You can find this file in the folder ‘DL4MIA’ in the Lab Data share, or
-[download it directly](https://drive.google.com/drive/folders/1BgoUf1f-QfcFNIsppdzTCjehkCAntbyc?usp=share_link).
+You can find this file in the folder [DL4MIA](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA) in the Lab Data share, or
+[download it directly](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/easy).
 
 We need to tell cellpose (roughly) how large our objects are (you can do
 so via the `cell diameter`) field. How might we estimate this? Keep in
@@ -322,8 +322,8 @@ readout noise, etc.).
 
 If you do not have really noisy data at hand, feel free to use the
 example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
-Data link from above, or just use
-[this example image](https://tinyurl.com/DLLab-droso2d)).
+Data link from above, or just use the
+[this sample image](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif).
 Ideally, as a group we use a bunch of different datasets, so we have
 more results to look at…
 
@@ -470,7 +470,7 @@ to install it first.
 3.  Restart Fiji.
 
 4.  Download
-    [this 2D+t tiff](https://tinyurl.com/DLLab-droso2d)
+    [this 2D+t tiff](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif)
     and open it in Fiji.
 
 5.  Start the “N2V train + predict” plugin.
