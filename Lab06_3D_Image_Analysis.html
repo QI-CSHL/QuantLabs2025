@@ -532,14 +532,6 @@ an appropriate sigma, and apply the filter. Visualize the result in
 3D. Try other sigmas (appropriately scaled) if necessary. Now invert
 the image: <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">&gt;</span> <span class="pre">Invert</span></code>. This is the watershed surface. To clean up
 your workspace, save it (<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">as</span> <span class="pre">&gt;</span> <span class="pre">Tiff</span></code>) and close it.</p></li>
-<li><p><strong>Mask</strong>. This will restrict the area into which the watershed regions
-will grow. It can be obtained by thresholding a blurred version of the
-nuclei image, where the sigmas are a bit larger than the ones used
-above. Select the “mask” image. Apply a 3D gaussian filter (<code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">&gt;</span> <span class="pre">Filters</span> <span class="pre">&gt;</span> <span class="pre">Gaussian</span> <span class="pre">Blur</span> <span class="pre">3D</span></code>), with sigma a bit larger (say 50%) than
-the one used above. Threshold the result (<code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">&gt;</span> <span class="pre">Adjust</span> <span class="pre">&gt;</span> <span class="pre">Threshold</span></code>). Choose a threshold such that the resulting mask contains
-all the nuclei, then click Apply. If prompted, click Convert to Mask.
-To clean up your workspace, save the result (<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">as</span> <span class="pre">&gt;</span> <span class="pre">Tiff</span></code>)
-and close it.</p></li>
 <li><p><strong>Marker</strong>. To find markers, we will treat the nuclei as “point
 sources”, and detect them by finding local maxima in the Laplacian of
 Gaussian image. Select the “marker” image. We now compute the proper
@@ -553,7 +545,15 @@ Select Regional Minima with Connectivity 26 and click Ok. What do you
 think? Too many point sources in the background? We can filter them
 using our previously computed mask. Load “mask” by dragging it into
 Fiji. Now go to <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">&gt;</span> <span class="pre">Image</span> <span class="pre">Calculator</span></code>. And multiply the mask by
-the image with point sources. Save the result as “marker”.</p>
+the image with point sources. Save the result as “marker”.</p></li>
+<li><p><strong>Mask</strong>. This will restrict the area into which the watershed regions
+will grow. It can be obtained by thresholding a blurred version of the
+nuclei image, where the sigmas are a bit larger than the ones used
+above. Select the “mask” image. Apply a 3D gaussian filter (<code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">&gt;</span> <span class="pre">Filters</span> <span class="pre">&gt;</span> <span class="pre">Gaussian</span> <span class="pre">Blur</span> <span class="pre">3D</span></code>), with sigma a bit larger (say 50%) than
+the one used above. Threshold the result (<code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">&gt;</span> <span class="pre">Adjust</span> <span class="pre">&gt;</span> <span class="pre">Threshold</span></code>). Choose a threshold such that the resulting mask contains
+all the nuclei, then click Apply. If prompted, click Convert to Mask.
+To clean up your workspace, save the result (<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">as</span> <span class="pre">&gt;</span> <span class="pre">Tiff</span></code>)
+and close it.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p><a class="reference external" href="https://imagej.net/plugins/morpholibj">MorphoLibJ</a> might not be installed
