@@ -98,7 +98,7 @@ so via the `cell diameter`) field. How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.
 
 You can now segment this image by selecting one of the pre-trained
-models from within the `model zoo` box. Try segmenting this image using
+models from within the `dataset-specific models` box. Try segmenting this image using
 the `cyto` model. How good are the results?
 
 ```{tip}
@@ -109,7 +109,7 @@ in the `Drawing` tab.
 ```
 
 How well did cellpose segment your image? Where (if anywhere) did it
-fail? Try some of the different dataset-specific models from the model zoo box. Do any of these
+fail? Try some of the different dataset-specific models. Do any of these
 work better? Worse? Why might that be?
 
 Let’s now try some more challenging data. From the link above, or from
