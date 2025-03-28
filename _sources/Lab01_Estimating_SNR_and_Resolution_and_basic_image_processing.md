@@ -2,7 +2,7 @@
 
 *Lab authors: Hunter Elliott & Marcelo Cicconet*
 
-<small>This file last updated 2024-04-05.</small>
+<small>This file last updated 2025-03-28.</small>
 
 ---
 
@@ -15,7 +15,7 @@
 - Subtract background
 - Detect point sources via LoG
 
-**Lab Data** in [this Google Drive](https://bit.ly/qi2023labs)
+**Lab Data** in [this folder]([https://bit.ly/qi2023labs](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/Estimating_SNR_%26_Resolution))
 
 ---
 
