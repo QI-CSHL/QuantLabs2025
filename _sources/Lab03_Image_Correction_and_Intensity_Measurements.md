@@ -12,7 +12,7 @@
 - Apply corrections to image data
 - Measure intensities with and without corrections
 
-All **Analysis Lab Data** lives [HERE](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data)
+**Lab Data** in [this folder](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/Image_Corrections_%26_Intensity_Measurements)
 
 
 ---
