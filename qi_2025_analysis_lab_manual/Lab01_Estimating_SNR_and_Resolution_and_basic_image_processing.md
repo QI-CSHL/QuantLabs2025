@@ -231,7 +231,7 @@ Fiji stands for **F**iji **I**s **J**ust **I**mageJ
 This uses the FeatureJ plugin. If this plugin is not installed, go to Help \> Update \> Manage update sites, check the 'ImageScience' box, close that window, click 'Apply Changes', and restart Fiji.
 ```
 
-  - The “smoothing scale” is the sigma of the laplacian of gaussian
+  - The “smoothing scale” that you need to input in this plugin is the sigma of the laplacian of gaussian
     filter. What should this be set to? Select it and then click OK
 
   - Notice that the resulting image is 32 bit. Mouse over some of the
