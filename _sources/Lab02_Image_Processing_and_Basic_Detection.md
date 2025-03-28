@@ -13,7 +13,7 @@
 - Bonus: Detecting edges and ridges
 - Bonus: Using encapsulated {term}`segmentation` modules in CellProfiler
 
-**Lab Data** in [this folder](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/Image_Processing_%26_Basic_Segmentation)
+**Lab Data** in [this folder](hhttps://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ANYPu6vMVhfNgpStEpyt1BE/QI%202025%20Analysis%20Lab%20Data/Image_Processing_%26_Basic_Segmentation?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
 
 ---
 
@@ -277,7 +277,7 @@ Two of the steps are combined in a single setting!
 Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
 How well can conventional {term}`segmentation` work on cells, and how easily can it be done?
 
-- Download the `DL4MIA/hard/train` from [this link](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data) 
+- Download the `DL4MIA/hard/train` from [this link](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ALy6Rv2_V20eoRGljgrnhTk/QI%202025%20Analysis%20Lab%20Data/DL4MIA/hard/train?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1) 
 - Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel
 - Drag and drop the `advanced_untuned.cppipe` file into the CellProfiler pipeline panel. Other than the input module settings, no {term}`segmentation` settings have been tuned at all in this pipeline.
 - Try to create an accurate {term}`segmentation` of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?

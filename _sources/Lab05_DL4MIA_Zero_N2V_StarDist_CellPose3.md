@@ -16,7 +16,7 @@
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
 
-**Lab Data** in [this folder](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA)
+**Lab Data** in [this folder](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
 
 ## **Overview**
 
@@ -89,9 +89,8 @@ Once this is opened, type in those two comments (the stuff after
 You should now see something like
 this:<img src="images/lab05/cellpose_gui.png" style="width:6in" />
 
-Open the file `easy\001_img.tif` by dragging it onto the open window.
-You can find this file in the folder [DL4MIA](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA) in the Lab Data share, or
-[download it directly](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/easy).
+Open the file `001_img.tif` by dragging it onto the open window.
+You can find this file in the `easy` folder in the [Lab Data share](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1).
 
 We need to tell cellpose (roughly) how large our objects are (you can do
 so via the `cell diameter`) field. How might we estimate this? Keep in
@@ -225,7 +224,7 @@ Want to use Cellpose when you get home, but having trouble with the conda instal
 As of April of 2024, both of these are still using Cellpose 2, which does have human-in-the-loop retraining but not denoising or image restoration
 ```
 
-- EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with [>20 helpful image analysis tools pre-installed](https://band.embl.de/#/eosc-landingpage). 
+- EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with [>20 helpful image analysis tools pre-installed](https://bandv1.denbi.uni-tuebingen.de/#/eosc-landingpage). 
   - Upsides: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs
   - Downsides: They have limited capacity and sometimes machines aren't available due to EMBL courses. You have to upload your data to their servers, and download your results from them. 
 - Cellpose can be used with CellProfiler, both in Python if you have both programs `pip` or `conda` installed, but [CellProfiler also offers a way to use a pre-built version using Docker](https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements) {cite}`Weisbart2023-kc`
@@ -323,7 +322,7 @@ readout noise, etc.).
 If you do not have really noisy data at hand, feel free to use the
 example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
 Data link from above, or just use the
-[this sample image](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif).
+[this sample image](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&preview=drosophila_noisy_2d.tif&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1).
 Ideally, as a group we use a bunch of different datasets, so we have
 more results to look at…
 
@@ -470,7 +469,7 @@ to install it first.
 3.  Restart Fiji.
 
 4.  Download
-    [this 2D+t tiff](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif)
+    [this 2D+t tiff](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&preview=drosophila_noisy_2d.tif&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
     and open it in Fiji.
 
 5.  Start the “N2V train + predict” plugin.

@@ -452,7 +452,7 @@ document.write(`
 <li><p>Bonus: Use Noise2Void in Fiji</p></li>
 <li><p>Bonus: Segmentation with StarDist in “Zero”</p></li>
 </ul>
-<p><strong>Lab Data</strong> in <a class="reference external" href="https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA">this folder</a></p>
+<p><strong>Lab Data</strong> in <a class="reference external" href="https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&amp;amp;rlkey=s7fviytt7uv5spavsyz856gdl&amp;amp;subfolder_nav_tracking=1">this folder</a></p>
 </section>
 <section id="overview">
 <h2><strong>Overview</strong><a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
@@ -516,9 +516,8 @@ Pick and start the option “anaconda prompt”.</p>
 </div>
 <p>You should now see something like
 this:<img alt="_images/cellpose_gui.png" src="_images/cellpose_gui.png" /></p>
-<p>Open the file <code class="docutils literal notranslate"><span class="pre">easy\001_img.tif</span></code> by dragging it onto the open window.
-You can find this file in the folder <a class="reference external" href="https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA">DL4MIA</a> in the Lab Data share, or
-<a class="reference external" href="https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/easy">download it directly</a>.</p>
+<p>Open the file <code class="docutils literal notranslate"><span class="pre">001_img.tif</span></code> by dragging it onto the open window.
+You can find this file in the <code class="docutils literal notranslate"><span class="pre">easy</span></code> folder in the <a class="reference external" href="https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&amp;amp;rlkey=s7fviytt7uv5spavsyz856gdl&amp;amp;subfolder_nav_tracking=1">Lab Data share</a>.</p>
 <p>We need to tell cellpose (roughly) how large our objects are (you can do
 so via the <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">diameter</span></code>) field. How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.</p>
@@ -625,7 +624,7 @@ segmentation. What might be useful for denoising this image?</p>
 <p>As of April of 2024, both of these are still using Cellpose 2, which does have human-in-the-loop retraining but not denoising or image restoration</p>
 </div>
 <ul class="simple">
-<li><p>EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with <a class="reference external" href="https://band.embl.de/#/eosc-landingpage">&gt;20 helpful image analysis tools pre-installed</a>.</p>
+<li><p>EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with <a class="reference external" href="https://bandv1.denbi.uni-tuebingen.de/#/eosc-landingpage">&gt;20 helpful image analysis tools pre-installed</a>.</p>
 <ul>
 <li><p>Upsides: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs</p></li>
 <li><p>Downsides: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
@@ -726,7 +725,7 @@ readout noise, etc.).</p>
 <p>If you do not have really noisy data at hand, feel free to use the
 example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
 Data link from above, or just use the
-<a class="reference external" href="https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif">this sample image</a>.
+<a class="reference external" href="https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&amp;amp;preview=drosophila_noisy_2d.tif&amp;amp;rlkey=s7fviytt7uv5spavsyz856gdl&amp;amp;subfolder_nav_tracking=1">this sample image</a>.
 Ideally, as a group we use a bunch of different datasets, so we have
 more results to look at…</p>
 <img alt="_images/image16.png" src="_images/image16.png" />
@@ -887,7 +886,7 @@ to install it first.</p>
 update site and say Close - Apply changes.</p></li>
 <li><p>Restart Fiji.</p></li>
 <li><p>Download
-<a class="reference external" href="https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?preview=drosophila_noisy_2d.tif">this 2D+t tiff</a>
+<a class="reference external" href="https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&amp;amp;preview=drosophila_noisy_2d.tif&amp;amp;rlkey=s7fviytt7uv5spavsyz856gdl&amp;amp;subfolder_nav_tracking=1">this 2D+t tiff</a>
 and open it in Fiji.</p></li>
 <li><p>Start the “N2V train + predict” plugin.</p></li>
 <li><p>Figure it out… 😉</p>
