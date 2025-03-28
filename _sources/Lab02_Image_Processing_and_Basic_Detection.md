@@ -13,7 +13,7 @@
 - Bonus: Detecting edges and ridges
 - Bonus: Using encapsulated {term}`segmentation` modules in CellProfiler
 
-**Lab Data** in [this Google Drive](https://tinyurl.com/qi2024labs)
+All **Analysis Lab Data** lives [HERE](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data)
 
 ---
 
@@ -119,7 +119,7 @@ There are two main ways to move around in CellProfiler once in test mode - keep
 - Open a new CellProfiler window, or open a clean starting version by going to File -> New Project  
 - Load the `Basic_Segmentation` folder into the Images module as above
   - This will load 3 sets of images, each with a DAPI image and and actin image
-- Load the `basic_{term}`segmentation`.cppipe` folder into the pipeline panel as above
+- Load the `basic_segmentation.cppipe` pipeline file into the pipeline panel as above
 
 ```{note}
 CellProfiler `.cppipe` files are just text files. You can open them in a basic text editor such as Notepad to see what's inside. It also makes them easily shareable with your labmates or even to attach as supplemental information on a paper.
@@ -277,7 +277,7 @@ Two of the steps are combined in a single setting!
 Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
 How well can conventional {term}`segmentation` work on cells, and how easily can it be done?
 
-- Download the `DL4MIA/hard/train` from [this link](https://tinyurl.com/qi2024labs) 
+- Download the `DL4MIA/hard/train` from [this link](https://www.dropbox.com/home/QI%20Image%20Analysis/QI%202025%20Analysis%20Lab%20Data) 
 - Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel
 - Drag and drop the `advanced_untuned.cppipe` file into the CellProfiler pipeline panel. Other than the input module settings, no {term}`segmentation` settings have been tuned at all in this pipeline.
 - Try to create an accurate {term}`segmentation` of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?
