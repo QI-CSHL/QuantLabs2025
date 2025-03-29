@@ -286,3 +286,16 @@ How well can conventional {term}`segmentation` work on cells, and how easily can
 Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
 <img src="images/lab02/CellProfiler_AdvancedIDP.png"/>
 ```
+
+### Bonus: throw some measurements in the mix
+
+Now that you have segmented your cells, you can measure lots of things in each one individually!
+
+- Use the (<img src="images/lab02/AddModule.png" height="25px" />) button to open the `Add modules` window.
+- Use the search bar and look for `MeasureObjectIntensityDistribution` (or find it under the Category "Measurement" on the list on the left panel). Double click the module or press the (<img src="images/lab02/AddToPipeline.png" height="25px" />) button.
+- Select what image to measure on and what objects to measure in.
+- Press "Add another heatmap display" 
+- Execute the module by pressing <img src="images/lab02/Step.png" height="30px" />
+<img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
+- How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
+
