@@ -199,6 +199,55 @@ comparison to steerable filters)*
 
 ---
 
+## **Bonus Exercises - Segmentation**
+
+### Bonus Exercise: Encapsulating all of {term}`segmentation` into one module
+
+- At the end of your {term}`segmentation` piepeline, you'll see two modules that are there but inactive - they have an empty checkbox <img src="images/lab02/InactivatedModule.png" height="20px" /> . Click this box to enable the `IdentifyPrimaryObjects` module - it should now look like this: <img src="images/lab02/Check.png" height="20px" />
+- Run the `IdentifyPrimaryObjects` module - how does it do at identifying your nuclei directly from the DNA image?
+- Under the hood, `IdentifyPrimaryObjects` is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you `Identify` (😉) which setting corresponds to each of our previous steps?
+```{hint}
+Two of the steps are combined in a single setting!
+```
+
+### Bonus Exercise: Using seeded watershed to build Cells from Nuclei
+
+- After you've enabled `IdentifyPrimaryObjects`, you can also enable `IdentifySecondaryObjects`, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <img src="images/lab02/Check.png" height="25px" />and run this module.
+- What settings correspond to our {term}`segmentation` steps, as in IdentifyPrimary?
+- Are there any settings that are new? Click the help button (<img src="images/lab02/Info.png" height="25px" />) to learn about what these do and how they work.
+
+### Even harder {term}`segmentation`
+
+Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
+How well can conventional {term}`segmentation` work on cells, and how easily can it be done?
+
+- Download the `DL4MIA/hard/train` from [this link](https://tinyurl.com/DL4MIAhard) 
+- Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel
+- Drag and drop the `advanced_untuned.cppipe` file into the CellProfiler pipeline panel. Other than the input module settings, no {term}`segmentation` settings have been tuned at all in this pipeline.
+- Try to create an accurate {term}`segmentation` of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?
+
+```{hint}
+Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
+<img src="images/lab02/CellProfiler_AdvancedIDP.png"/>
+```
+
+### Bonus: throw some measurements in the mix
+
+Now that you have segmented your cells, you can measure lots of things in each one individually!
+
+- Use the (<img src="images/lab02/AddModule.png" height="25px" />) button to open the `Add modules` window.
+- Use the search bar and look for `MeasureObjectIntensityDistribution` (or find it under the Category "Measurement" on the list on the left panel). Double click the module or press the (<img src="images/lab02/AddToPipeline.png" height="25px" />) button.
+- Select what image to measure on and what objects to measure in.
+- Press "Add another heatmap display" 
+- Execute the module by pressing <img src="images/lab02/Step.png" height="30px" />
+```{hint}
+These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates'?
+<img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
+```
+- How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
+
+---
+
 #### Steerable Filtering
 
 - Re-load the image in ImageJ
@@ -253,52 +302,3 @@ comparison to steerable filters)*
   avoiding both the large mass of continuous red fluorescence near the
   injection site, and the autofluorescence of the cell bodies in green.
   (You will not need the blue DNA channel)
-
-
-## **Bonus Exercises - Segmentation**
-
-### Bonus Exercise: Encapsulating all of {term}`segmentation` into one module
-
-- At the end of your {term}`segmentation` piepeline, you'll see two modules that are there but inactive - they have an empty checkbox <img src="images/lab02/InactivatedModule.png" height="20px" /> . Click this box to enable the `IdentifyPrimaryObjects` module - it should now look like this: <img src="images/lab02/Check.png" height="20px" />
-- Run the `IdentifyPrimaryObjects` module - how does it do at identifying your nuclei directly from the DNA image?
-- Under the hood, `IdentifyPrimaryObjects` is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you `Identify` (😉) which setting corresponds to each of our previous steps?
-```{hint}
-Two of the steps are combined in a single setting!
-```
-
-### Bonus Exercise: Using seeded watershed to build Cells from Nuclei
-
-- After you've enabled `IdentifyPrimaryObjects`, you can also enable `IdentifySecondaryObjects`, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <img src="images/lab02/Check.png" height="25px" />and run this module.
-- What settings correspond to our {term}`segmentation` steps, as in IdentifyPrimary?
-- Are there any settings that are new? Click the help button (<img src="images/lab02/Info.png" height="25px" />) to learn about what these do and how they work.
-
-### Even harder {term}`segmentation`
-
-Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
-How well can conventional {term}`segmentation` work on cells, and how easily can it be done?
-
-- Download the `DL4MIA/hard/train` from [this link](https://tinyurl.com/DL4MIAhard) 
-- Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel
-- Drag and drop the `advanced_untuned.cppipe` file into the CellProfiler pipeline panel. Other than the input module settings, no {term}`segmentation` settings have been tuned at all in this pipeline.
-- Try to create an accurate {term}`segmentation` of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?
-
-```{hint}
-Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
-<img src="images/lab02/CellProfiler_AdvancedIDP.png"/>
-```
-
-### Bonus: throw some measurements in the mix
-
-Now that you have segmented your cells, you can measure lots of things in each one individually!
-
-- Use the (<img src="images/lab02/AddModule.png" height="25px" />) button to open the `Add modules` window.
-- Use the search bar and look for `MeasureObjectIntensityDistribution` (or find it under the Category "Measurement" on the list on the left panel). Double click the module or press the (<img src="images/lab02/AddToPipeline.png" height="25px" />) button.
-- Select what image to measure on and what objects to measure in.
-- Press "Add another heatmap display" 
-- Execute the module by pressing <img src="images/lab02/Step.png" height="30px" />
-```{hint}
-These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates'?
-<img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
-```
-- How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
-
