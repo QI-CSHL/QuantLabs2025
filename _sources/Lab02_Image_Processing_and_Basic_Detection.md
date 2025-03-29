@@ -77,7 +77,7 @@ Check out these [User Guides](https://imagej.net/learn/user-guides), or check th
     typing these thresholds into the lower and higher threshold boxes to
     perform Canny edge detection.
 
-```{margin}Having a hard time figuring out what these settings mean?
+```{margin} Having a hard time figuring out what these settings mean?
 Ask the TAs or check the [manual](https://imagescience.org/meijering/software/featurej/)!
 ```
 
