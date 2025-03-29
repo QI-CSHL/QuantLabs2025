@@ -16,7 +16,7 @@
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
 
-**Lab Data** in [this folder](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
 
 ## **Overview**
 
@@ -90,7 +90,8 @@ You should now see something like
 this:<img src="images/lab05/cellpose_gui.png" style="width:6in" />
 
 Open the file `001_img.tif` by dragging it onto the open window.
-You can find this file in the `easy` folder in the [Lab Data share](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ABWY13mHLfp6h1ZrEvPypdM/QI%202025%20Analysis%20Lab%20Data/DL4MIA?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1).
+You can find this file in the `DL4MIA/easy` folder in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData)
+).
 
 We need to tell cellpose (roughly) how large our objects are (you can do
 so via the `cell diameter`) field. How might we estimate this? Keep in
@@ -321,8 +322,8 @@ readout noise, etc.).
 
 If you do not have really noisy data at hand, feel free to use the
 example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
-Data link from above, or just use the
-[this sample image](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&preview=drosophila_noisy_2d.tif&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1).
+Data link from above, or just use the DL4MIA/noisy/drosophila_noisy_2d.tif image from the
+[Lab Data Share](https://tinyurl.com/QI2025AnalysisLabData).
 Ideally, as a group we use a bunch of different datasets, so we have
 more results to look at…
 
@@ -468,9 +469,8 @@ to install it first.
 
 3.  Restart Fiji.
 
-4.  Download
-    [this 2D+t tiff](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AKk2ByIVurlfUZCL5UoG1fI/QI%202025%20Analysis%20Lab%20Data/DL4MIA/noisy?dl=0&preview=drosophila_noisy_2d.tif&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
-    and open it in Fiji.
+4.  Download the DL4MIA/noisy/drosophila_noisy_2d.tif 2d+t image from the
+[Lab Data Share](https://tinyurl.com/QI2025AnalysisLabData) and open it in Fiji.
 
 5.  Start the “N2V train + predict” plugin.
 
