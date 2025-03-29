@@ -15,7 +15,7 @@
 - Apply and scrutinize photobleach correction
 - Double-normalized FRAP analysis
 
-**Lab Data** in [this folder](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AIuwR9cp6sCKd67mnG_1GuE/QI%202025%20Analysis%20Lab%20Data/Time_Series?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
 
 ---
 
@@ -154,14 +154,13 @@ features.
 
 ### Get the data we need
 
-Please start to download the following data (you can also find it in the
-[Lab Data folder](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/AJQeg2ySssuUcaO-JK7mdXo/QI%202025%20Analysis%20Lab%20Data/Time_Series/Tracking?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1):
+Please start to download the following data:
 
-1.  [Drosophila.tif](https://drive.google.com/file/d/14_8feL_3LstyBkBoefxmZMWdcQU_Q5v_/view?usp=drive_link)
+1.  [Drosophila example](https://tinyurl.com/trackDrosophila)
 
-2.  [2D+t tracking example for ilastik](https://drive.google.com/file/d/1y-Gijufvq40guOszqL_CGNzj32NTgEnE/view?usp=drive_link)
+2.  [2D+t tracking example for ilastik](https://tinyurl.com/tracking2dt)
 
-3.  [3D+t tracking example for ilastik](https://drive.google.com/file/d/14QOMHZ2z7WU47UnifXOV2LCf30jXodxe/view?usp=drive_link)
+3.  [3D+t tracking example for ilastik](https://tinyurl.com/tracking3dt)
 
 ### (Semi-)automated Tracking in Mastodon
 

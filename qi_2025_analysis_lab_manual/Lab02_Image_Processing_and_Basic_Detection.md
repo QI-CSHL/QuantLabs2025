@@ -13,7 +13,7 @@
 - Bonus: Detecting edges and ridges
 - Bonus: Using encapsulated {term}`segmentation` modules in CellProfiler
 
-**Lab Data** in [this folder](https://www.dropbox.com/scl/fo/w1bnjqv6w5qilrwowk9y4/ANYPu6vMVhfNgpStEpyt1BE/QI%202025%20Analysis%20Lab%20Data/Image_Processing_%26_Basic_Segmentation?dl=0&rlkey=s7fviytt7uv5spavsyz856gdl&subfolder_nav_tracking=1)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
 
 ---
 
