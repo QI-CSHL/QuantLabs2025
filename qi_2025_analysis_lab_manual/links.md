@@ -9,6 +9,7 @@
 
 ## Places to learn more (or to learn where to learn more)
 * [The BioImaging Guide](https://www.bioimagingguide.org/) {cite}`Senft2023-zy`
+* [Introduction to Bioimage Analysis (Pete Bankhead)](https://bioimagebook.github.io/index.html)
 * [HMS CITE 'favorite references'](https://nic.med.harvard.edu/fav_references/)
 * [Community-developed checklists for publishing images and image analyses](https://www.nature.com/articles/s41592-023-01987-9) {cite}`Schmied2024-tl`
 * [The Images to Knowledge conference](https://www.i2kconference.org/)
