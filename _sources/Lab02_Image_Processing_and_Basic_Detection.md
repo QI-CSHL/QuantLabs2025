@@ -182,37 +182,6 @@ To move between image sets in CellProfiler, use the `NextImageSet` button  <img 
 How do you know when your {term}`segmentation` is "good enough"? It's a SUPER common but a very complicated question! You can check out [this blog post](https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough) for one attempte at helping come up with a set of rules for making that decision.
 ```
 
----
-## **Bonus Exercises - Filtering**
-
-### Bonus Exercise: Steerable Filtering and Ridge Detection
-
-*In this section, you will segment microtubules by using filters to
-accentuate “ridge-like” structures in the image.*
-
-```{note}
-For this exercise, you'll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch `ImageJ_SteerableJ_Win/ImageJ.exe` (or `ImageJ_SteerableJ_Mac/ImageJ.app` if you're on a Mac), available with the data for this lab. Or you can follow [these instructions](http://bigwww.epfl.ch/demo/steerable/download.html) 
-```
-
-#### Basic thresholding
-
-*First, try segmenting the microtubules with simple thresholding (for
-comparison to steerable filters)*
-
-- Load one of the images from `Image_Processing/Microtubules/easy` into ImageJ
-
-- Subtract the background (Process \> Subtract Background…). To view the
-  background image, select “Create background (don’t subtract)”, and
-  “Preview”. What is a good choice for the length scale (radius)?
-  Deselect these and press OK. Why is background subtraction important
-  for basic thresholding?
-
-- Threshold the image. You can test this out manually (Image \> Adjust
-  \> Threshold…). Is there a threshold that will accurately segment the
-  microtubules?
-
----
-
 ## **Bonus Exercises - Segmentation**
 
 ### Bonus Exercise: Encapsulating all of {term}`segmentation` into one module
@@ -259,6 +228,35 @@ These are the results obtained from the example segmentation. How do your result
 <img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
 ```
 - How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
+
+---
+## **Bonus Exercises - Filtering**
+
+### Bonus Exercise: Steerable Filtering and Ridge Detection
+
+*In this section, you will segment microtubules by using filters to
+accentuate “ridge-like” structures in the image.*
+
+```{note}
+For this exercise, you'll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch `ImageJ_SteerableJ_Win/ImageJ.exe` (or `ImageJ_SteerableJ_Mac/ImageJ.app` if you're on a Mac), available with the data for this lab. Or you can follow [these instructions](http://bigwww.epfl.ch/demo/steerable/download.html) 
+```
+
+#### Basic thresholding
+
+*First, try segmenting the microtubules with simple thresholding (for
+comparison to steerable filters)*
+
+- Load one of the images from `Image_Processing/Microtubules/easy` into ImageJ
+
+- Subtract the background (Process \> Subtract Background…). To view the
+  background image, select “Create background (don’t subtract)”, and
+  “Preview”. What is a good choice for the length scale (radius)?
+  Deselect these and press OK. Why is background subtraction important
+  for basic thresholding?
+
+- Threshold the image. You can test this out manually (Image \> Adjust
+  \> Threshold…). Is there a threshold that will accurately segment the
+  microtubules?
 
 ---
 

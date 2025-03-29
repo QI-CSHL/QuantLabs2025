@@ -420,18 +420,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-your-performance-across-multiple-images">Evaluate your performance across multiple images</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-segmentation"><strong>Bonus Exercises - Segmentation</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module">Bonus Exercise: Encapsulating all of <span class="xref std std-term">segmentation</span> into one module</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">Bonus Exercise: Using seeded watershed to build Cells from Nuclei</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-harder-segmentation">Even harder <span class="xref std std-term">segmentation</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
@@ -669,36 +667,6 @@ your edge detector succeed? Where did it fail?</p></li>
 </div>
 </section>
 </section>
-<hr class="docutils" />
-<section id="bonus-exercises-filtering">
-<h2><strong>Bonus Exercises - Filtering</strong><a class="headerlink" href="#bonus-exercises-filtering" title="Link to this heading">#</a></h2>
-<section id="bonus-exercise-steerable-filtering-and-ridge-detection">
-<h3>Bonus Exercise: Steerable Filtering and Ridge Detection<a class="headerlink" href="#bonus-exercise-steerable-filtering-and-ridge-detection" title="Link to this heading">#</a></h3>
-<p><em>In this section, you will segment microtubules by using filters to
-accentuate “ridge-like” structures in the image.</em></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For this exercise, you’ll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Win/ImageJ.exe</span></code> (or <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Mac/ImageJ.app</span></code> if you’re on a Mac), available with the data for this lab. Or you can follow <a class="reference external" href="http://bigwww.epfl.ch/demo/steerable/download.html">these instructions</a></p>
-</div>
-<section id="basic-thresholding">
-<h4>Basic thresholding<a class="headerlink" href="#basic-thresholding" title="Link to this heading">#</a></h4>
-<p><em>First, try segmenting the microtubules with simple thresholding (for
-comparison to steerable filters)</em></p>
-<ul class="simple">
-<li><p>Load one of the images from <code class="docutils literal notranslate"><span class="pre">Image_Processing/Microtubules/easy</span></code> into ImageJ</p></li>
-<li><p>Subtract the background (Process &gt; Subtract Background…). To view the
-background image, select “Create background (don’t subtract)”, and
-“Preview”. What is a good choice for the length scale (radius)?
-Deselect these and press OK. Why is background subtraction important
-for basic thresholding?</p></li>
-<li><p>Threshold the image. You can test this out manually (Image &gt; Adjust
-&gt; Threshold…). Is there a threshold that will accurately segment the
-microtubules?</p></li>
-</ul>
-</section>
-</section>
-</section>
-<hr class="docutils" />
 <section id="bonus-exercises-segmentation">
 <h2><strong>Bonus Exercises - Segmentation</strong><a class="headerlink" href="#bonus-exercises-segmentation" title="Link to this heading">#</a></h2>
 <section id="bonus-exercise-encapsulating-all-of-segmentation-into-one-module">
@@ -755,6 +723,35 @@ How well can conventional <a class="reference internal" href="glossary.html#term
 <ul class="simple">
 <li><p>How can you interpret the results shown? Check the  (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) button for the module or for each parameter to understand the output better.</p></li>
 </ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bonus-exercises-filtering">
+<h2><strong>Bonus Exercises - Filtering</strong><a class="headerlink" href="#bonus-exercises-filtering" title="Link to this heading">#</a></h2>
+<section id="bonus-exercise-steerable-filtering-and-ridge-detection">
+<h3>Bonus Exercise: Steerable Filtering and Ridge Detection<a class="headerlink" href="#bonus-exercise-steerable-filtering-and-ridge-detection" title="Link to this heading">#</a></h3>
+<p><em>In this section, you will segment microtubules by using filters to
+accentuate “ridge-like” structures in the image.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For this exercise, you’ll need a plug-in (SteerableJ) that runs on an older version of ImageJ. Please launch <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Win/ImageJ.exe</span></code> (or <code class="docutils literal notranslate"><span class="pre">ImageJ_SteerableJ_Mac/ImageJ.app</span></code> if you’re on a Mac), available with the data for this lab. Or you can follow <a class="reference external" href="http://bigwww.epfl.ch/demo/steerable/download.html">these instructions</a></p>
+</div>
+<section id="basic-thresholding">
+<h4>Basic thresholding<a class="headerlink" href="#basic-thresholding" title="Link to this heading">#</a></h4>
+<p><em>First, try segmenting the microtubules with simple thresholding (for
+comparison to steerable filters)</em></p>
+<ul class="simple">
+<li><p>Load one of the images from <code class="docutils literal notranslate"><span class="pre">Image_Processing/Microtubules/easy</span></code> into ImageJ</p></li>
+<li><p>Subtract the background (Process &gt; Subtract Background…). To view the
+background image, select “Create background (don’t subtract)”, and
+“Preview”. What is a good choice for the length scale (radius)?
+Deselect these and press OK. Why is background subtraction important
+for basic thresholding?</p></li>
+<li><p>Threshold the image. You can test this out manually (Image &gt; Adjust
+&gt; Threshold…). Is there a threshold that will accurately segment the
+microtubules?</p></li>
+</ul>
+</section>
 <hr class="docutils" />
 <section id="steerable-filtering">
 <h4>Steerable Filtering<a class="headerlink" href="#steerable-filtering" title="Link to this heading">#</a></h4>
@@ -898,18 +895,16 @@ injection site, and the autofluorescence of the cell bodies in green.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-your-performance-across-multiple-images">Evaluate your performance across multiple images</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-segmentation"><strong>Bonus Exercises - Segmentation</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module">Bonus Exercise: Encapsulating all of <span class="xref std std-term">segmentation</span> into one module</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">Bonus Exercise: Using seeded watershed to build Cells from Nuclei</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-harder-segmentation">Even harder <span class="xref std std-term">segmentation</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
