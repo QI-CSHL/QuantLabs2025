@@ -165,7 +165,7 @@ To move between image sets in CellProfiler, use the `NextImageSet` button  <img 
 
 
 ```{caution}
-How do you know when your {term}`segmentation` is "good enough"? It's a SUPER common but a very complicated question! You can check out [this blog post](https://zenodo.org/doi/10.5281/zenodo.10498984) for one attempte at helping come up with a set of rules for making that decision.
+How do you know when your {term}`segmentation` is "good enough"? It's a SUPER common but a very complicated question! You can check out [this blog post](https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough) for one attempte at helping come up with a set of rules for making that decision.
 ```
 
 ---
