@@ -16,6 +16,8 @@
 
 **Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
 
+Remember to **unzip** the data folder after downloading.
+
 ---
 
 ### Training a Random Forest Pixel Classifier in ilastik
