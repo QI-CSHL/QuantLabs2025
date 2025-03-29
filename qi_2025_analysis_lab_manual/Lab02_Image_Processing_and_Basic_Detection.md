@@ -1,6 +1,6 @@
 # Image Processing and Basic Segmentation
 
-*Lab authors: Hunter Elliott, Marcelo Cicconet, & Beth Cimini* . 
+*Lab authors: Hunter Elliott, Marcelo Cicconet, Beth Cimini, & Esteban Miglietta* . 
 
 <small>This file last updated 2024-04-05.</small>
 
@@ -26,6 +26,10 @@ using what you've learned about derivative filters.*
 
 ```{note} 
 You will need to have the FeatureJ plugin installed for these exercises. If it's not, check the first analysis lab handout for instructions on how to do it. |
+```
+
+```{margin} Want to learn more about working with Fiji?
+Check out these [User Guides](https://imagej.net/learn/user-guides), or check them out on [the image.sc forum!](https://forum.image.sc/tag/fiji)
 ```
 
 - Open the `Image_Processing/Neurons/4_9_13_AVG_Aligned_Stack`.tif image
@@ -79,6 +83,10 @@ You will need to have the FeatureJ plugin installed for these exercises. If it's
 ---
 
 ### Edge detection in CellProfiler
+
+```{margin} Want to learn more about working with CellProfiler?
+Check out the [manual](https://cellprofiler.org/manuals) and the [tutorials](https://tutorials.cellprofiler.org/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/cellprofiler)
+```
 
 #### LoG filtering
 - Open CellProfiler and load the same image (`Image_Processing/Neurons/4_9_13_AVG_Aligned_Stack`) in the Images panel (where it says **Drop files and folders here**)
