@@ -28,7 +28,7 @@ using what you've learned about derivative filters.*
 You will need to have the FeatureJ plugin installed for these exercises. If it's not, check the first analysis lab handout for instructions on how to do it. |
 ```
 
-```{sidebar} Want to learn more about working with Fiji?
+```{margin} Want to learn more about working with Fiji?
 Check out these [User Guides](https://imagej.net/learn/user-guides), or check them out on [the image.sc forum!](https://forum.image.sc/tag/fiji)
 ```
 
@@ -84,7 +84,7 @@ Check out these [User Guides](https://imagej.net/learn/user-guides), or check th
 
 ### Edge detection in CellProfiler
 
-```{sidebar} Want to learn more about working with CellProfiler?
+```{margin} Want to learn more about working with CellProfiler?
 Check out the [manual](https://cellprofiler.org/manuals) and the [tutorials](https://tutorials.cellprofiler.org/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/cellprofiler)
 ```
 
