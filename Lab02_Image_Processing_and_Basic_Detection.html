@@ -538,7 +538,7 @@ your edge detector succeed? Where did it fail?</p></li>
 <li><p>Load the <code class="docutils literal notranslate"><span class="pre">edge_detection_neurons.cppipe</span></code> pipeline file onto the left side pipeline panel (where it says <strong>Drop a pipeline file here</strong>)</p></li>
 <li><p>Enter test mode by hitting the <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Test</span> <span class="pre">Mode</span></code> button  <a class="reference internal" href="_images/StartTestMode.png"><img alt="_images/StartTestMode.png" src="_images/StartTestMode.png" style="height: 30px;" /></a></p></li>
 <li><p>Execute the <code class="docutils literal notranslate"><span class="pre">EnhanceEdges</span></code> module by hitting the <code class="docutils literal notranslate"><span class="pre">Step</span></code> button  <a class="reference internal" href="_images/Step.png"><img alt="_images/Step.png" src="_images/Step.png" style="height: 30px;" /></a></p></li>
-<li><p>How does the LoG filter look? What happens when you change the Gaussian diameter size?</p></li>
+<li><p>How does the LoG filter look? What happens when you change the Gaussian diameter size? (hit <code class="docutils literal notranslate"><span class="pre">Step</span></code> again after changing the diamater size to see the new result).</p></li>
 </ul>
 </section>
 <section id="canny-edge-detection">
@@ -573,7 +573,7 @@ your edge detector succeed? Where did it fail?</p></li>
 <p>There are two main ways to move around in CellProfiler once in test mode - keep</p>
 <ul class="simple">
 <li><p>If you hit the <code class="docutils literal notranslate"><span class="pre">Step</span></code> button  <a class="reference internal" href="_images/Step.png"><img alt="_images/Step.png" src="_images/Step.png" style="height: 30px;" /></a>, the next module (but only the next module) will run</p></li>
-<li><p>If you hit the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button  <a class="reference internal" href="_images/Run.png"><img alt="_images/Run.png" src="_images/Run.png" style="height: 30px;" /></a>, all the remaining modules will run (unless you’ve added a pause button somewhere)</p></li>
+<li><p>If you hit the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button  <a class="reference internal" href="_images/Run.png"><img alt="_images/Run.png" src="_images/Run.png" style="height: 30px;" /></a>, all the remaining modules will run (unless you’ve added a <code class="docutils literal notranslate"><span class="pre">Pause</span></code> <a class="reference internal" href="_images/Pause.png"><img alt="_images/Pause.png" src="_images/Pause.png" style="height: 30px;" /></a> button somewhere)</p></li>
 </ul>
 </div>
 <section id="load-files">
@@ -596,7 +596,7 @@ your edge detector succeed? Where did it fail?</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Curious about how CellProfiler figures out that this is 3 sets of 2 channels each, and not 6 individual images or one 6 channel image? Look at the NamesAndTypes module!</p>
+<p>Curious about how CellProfiler figures out that this is 3 sets of 2 channels each, and not 6 individual images or one 6 channel image? Look at the <code class="docutils literal notranslate"><span class="pre">NamesAndTypes</span></code> module!</p>
 </div>
 </section>
 <section id="smooth-the-images-and-find-local-maxima">
@@ -605,7 +605,7 @@ your edge detector succeed? Where did it fail?</p></li>
 <li><p>Run the <code class="docutils literal notranslate"><span class="pre">Smooth</span></code> module - without going nuts, how does your result change if you change the method? What about the smoothing diameter?</p></li>
 <li><p>Run the <code class="docutils literal notranslate"><span class="pre">FindMaxima</span></code> module to find local maxima in the smoothed image created above</p>
 <ul>
-<li><p>You may find it helpful to increase the maxima preview size.</p></li>
+<li><p>You may find it helpful to increase the maxima preview size and/or color.</p></li>
 <li><p>Is it clear how all of the settings control where maxima are found?</p></li>
 </ul>
 </li>
@@ -751,8 +751,8 @@ injection site, and the autofluorescence of the cell bodies in green.
 <h3>Bonus Exercise: Encapsulating all of <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> into one module<a class="headerlink" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>At the end of your <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> piepeline, you’ll see two modules that are there but inactive - they have an empty checkbox <a class="reference internal" href="_images/InactivatedModule.png"><img alt="_images/InactivatedModule.png" src="_images/InactivatedModule.png" style="height: 20px;" /></a> . Click this box to enable the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - it should now look like this: <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 20px;" /></a></p></li>
-<li><p>Run the IdentifyPrimaryObjects module - how does it do at identifying your nuclei directly from the DNA image?</p></li>
-<li><p>Under the hood, IdentifyPrimaryObjects is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you <code class="docutils literal notranslate"><span class="pre">Identify</span></code> (😉) which setting corresponds to each of our previous steps?</p></li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - how does it do at identifying your nuclei directly from the DNA image?</p></li>
+<li><p>Under the hood, <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you <code class="docutils literal notranslate"><span class="pre">Identify</span></code> (😉) which setting corresponds to each of our previous steps?</p></li>
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -762,7 +762,7 @@ injection site, and the autofluorescence of the cell bodies in green.
 <section id="bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">
 <h3>Bonus Exercise: Using seeded watershed to build Cells from Nuclei<a class="headerlink" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>After you’ve enabled IdentifyPrimaryObjects, you can also enable IdentifySecondaryObjects, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable and run this module.</p></li>
+<li><p>After you’ve enabled <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code>, you can also enable <code class="docutils literal notranslate"><span class="pre">IdentifySecondaryObjects</span></code>, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 25px;" /></a>and run this module.</p></li>
 <li><p>What settings correspond to our <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> steps, as in IdentifyPrimary?</p></li>
 <li><p>Are there any settings that are new? Click the help button (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) to learn about what these do and how they work.</p></li>
 </ul>
