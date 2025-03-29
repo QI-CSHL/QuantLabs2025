@@ -296,6 +296,9 @@ Now that you have segmented your cells, you can measure lots of things in each o
 - Select what image to measure on and what objects to measure in.
 - Press "Add another heatmap display" 
 - Execute the module by pressing <img src="images/lab02/Step.png" height="30px" />
+```{hint}
+These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates'?
 <img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
+```
 - How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
 
