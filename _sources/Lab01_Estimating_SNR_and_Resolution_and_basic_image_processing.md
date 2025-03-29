@@ -15,7 +15,7 @@
 - Subtract background
 - Detect point sources via LoG
 
-**Lab Data** in [this folder](https://www.dropbox.com/scl/fo/tyx0mtyjhnm1kyq0osts2/AHT_u8Gw0UHy5oZ3R1rZAJE?rlkey=ksqxke4pavnh0jvop1pgytsti&st=zwpwk3um&dl=0)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
 
 
 ---
