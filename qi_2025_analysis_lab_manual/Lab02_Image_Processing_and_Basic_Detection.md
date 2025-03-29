@@ -85,7 +85,7 @@ You will need to have the FeatureJ plugin installed for these exercises. If it's
 - Load the `edge_detection_neurons.cppipe` pipeline file onto the left side pipeline panel (where it says **Drop a pipeline file here**)
 - Enter test mode by hitting the `Start Test Mode` button  <img src="images/lab02/StartTestMode.png" height="30px" />
 - Execute the `EnhanceEdges` module by hitting the `Step` button  <img src="images/lab02/Step.png" height="30px" />
-- How does the LoG filter look? What happens when you change the Gaussian diameter size?
+- How does the LoG filter look? What happens when you change the Gaussian diameter size? (hit `Step` again after changing the diamater size to see the new result).
 
 #### Canny edge detection
 - Change to performing Canny edge finding by changing the selected method in `Select an edge finding method`
@@ -112,7 +112,7 @@ Here, we will demonstrate all these steps in CellProfiler, and let you play with
 ```{important}
 There are two main ways to move around in CellProfiler once in test mode - keep 
 - If you hit the `Step` button  <img src="images/lab02/Step.png" height="30px" />, the next module (but only the next module) will run
-- If you hit the `Run` button  <img src="images/lab02/Run.png" height="30px" />, all the remaining modules will run (unless you've added a pause button somewhere)
+- If you hit the `Run` button  <img src="images/lab02/Run.png" height="30px" />, all the remaining modules will run (unless you've added a `Pause` <img src="images/lab02/Pause.png" height="30px" /> button somewhere)
 ```
 
 ### Load files
@@ -128,14 +128,14 @@ CellProfiler `.cppipe` files are just text files. You can open them in a basic t
 - Enter test mode by hitting the `Start Test Mode` button  <img src="images/lab02/StartTestMode.png" height="30px" />
 
 ```{tip}
-Curious about how CellProfiler figures out that this is 3 sets of 2 channels each, and not 6 individual images or one 6 channel image? Look at the NamesAndTypes module!
+Curious about how CellProfiler figures out that this is 3 sets of 2 channels each, and not 6 individual images or one 6 channel image? Look at the `NamesAndTypes` module!
 ```
 
 ### Smooth the images and find local maxima
 
 - Run the `Smooth` module - without going nuts, how does your result change if you change the method? What about the smoothing diameter?
 - Run the `FindMaxima` module to find local maxima in the smoothed image created above 
-  - You may find it helpful to increase the maxima preview size. 
+  - You may find it helpful to increase the maxima preview size and/or color. 
   - Is it clear how all of the settings control where maxima are found?
 
 ### Threshold and fill holes in the threshold masks
@@ -260,15 +260,15 @@ comparison to steerable filters)*
 ### Bonus Exercise: Encapsulating all of {term}`segmentation` into one module
 
 - At the end of your {term}`segmentation` piepeline, you'll see two modules that are there but inactive - they have an empty checkbox <img src="images/lab02/InactivatedModule.png" height="20px" /> . Click this box to enable the `IdentifyPrimaryObjects` module - it should now look like this: <img src="images/lab02/Check.png" height="20px" />
-- Run the IdentifyPrimaryObjects module - how does it do at identifying your nuclei directly from the DNA image?
-- Under the hood, IdentifyPrimaryObjects is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you `Identify` (😉) which setting corresponds to each of our previous steps?
+- Run the `IdentifyPrimaryObjects` module - how does it do at identifying your nuclei directly from the DNA image?
+- Under the hood, `IdentifyPrimaryObjects` is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you `Identify` (😉) which setting corresponds to each of our previous steps?
 ```{hint}
 Two of the steps are combined in a single setting!
 ```
 
 ### Bonus Exercise: Using seeded watershed to build Cells from Nuclei
 
-- After you've enabled IdentifyPrimaryObjects, you can also enable IdentifySecondaryObjects, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable and run this module.
+- After you've enabled `IdentifyPrimaryObjects`, you can also enable `IdentifySecondaryObjects`, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <img src="images/lab02/Check.png" height="25px" />and run this module.
 - What settings correspond to our {term}`segmentation` steps, as in IdentifyPrimary?
 - Are there any settings that are new? Click the help button (<img src="images/lab02/Info.png" height="25px" />) to learn about what these do and how they work.
 
