@@ -423,18 +423,20 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-segmentation"><strong>Bonus Exercises - Segmentation</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module">Bonus Exercise: Encapsulating all of <span class="xref std std-term">segmentation</span> into one module</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">Bonus Exercise: Using seeded watershed to build Cells from Nuclei</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-harder-segmentation">Even harder <span class="xref std std-term">segmentation</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
 </ul>
 </li>
 </ul>
@@ -679,6 +681,65 @@ for basic thresholding?</p></li>
 microtubules?</p></li>
 </ul>
 </section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bonus-exercises-segmentation">
+<h2><strong>Bonus Exercises - Segmentation</strong><a class="headerlink" href="#bonus-exercises-segmentation" title="Link to this heading">#</a></h2>
+<section id="bonus-exercise-encapsulating-all-of-segmentation-into-one-module">
+<h3>Bonus Exercise: Encapsulating all of <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> into one module<a class="headerlink" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>At the end of your <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> piepeline, you’ll see two modules that are there but inactive - they have an empty checkbox <a class="reference internal" href="_images/InactivatedModule.png"><img alt="_images/InactivatedModule.png" src="_images/InactivatedModule.png" style="height: 20px;" /></a> . Click this box to enable the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - it should now look like this: <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 20px;" /></a></p></li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - how does it do at identifying your nuclei directly from the DNA image?</p></li>
+<li><p>Under the hood, <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you <code class="docutils literal notranslate"><span class="pre">Identify</span></code> (😉) which setting corresponds to each of our previous steps?</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Two of the steps are combined in a single setting!</p>
+</div>
+</section>
+<section id="bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">
+<h3>Bonus Exercise: Using seeded watershed to build Cells from Nuclei<a class="headerlink" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>After you’ve enabled <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code>, you can also enable <code class="docutils literal notranslate"><span class="pre">IdentifySecondaryObjects</span></code>, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 25px;" /></a>and run this module.</p></li>
+<li><p>What settings correspond to our <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> steps, as in IdentifyPrimary?</p></li>
+<li><p>Are there any settings that are new? Click the help button (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) to learn about what these do and how they work.</p></li>
+</ul>
+</section>
+<section id="even-harder-segmentation">
+<h3>Even harder <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a><a class="headerlink" href="#even-harder-segmentation" title="Link to this heading">#</a></h3>
+<p>Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
+How well can conventional <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> work on cells, and how easily can it be done?</p>
+<ul class="simple">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">DL4MIA/hard/train</span></code> from <a class="reference external" href="https://tinyurl.com/DL4MIAhard">this link</a></p></li>
+<li><p>Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel</p></li>
+<li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">advanced_untuned.cppipe</span></code> file into the CellProfiler pipeline panel. Other than the input module settings, no <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> settings have been tuned at all in this pipeline.</p></li>
+<li><p>Try to create an accurate <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
+<img alt="_images/CellProfiler_AdvancedIDP.png" src="_images/CellProfiler_AdvancedIDP.png" /></p>
+</div>
+</section>
+<section id="bonus-throw-some-measurements-in-the-mix">
+<h3>Bonus: throw some measurements in the mix<a class="headerlink" href="#bonus-throw-some-measurements-in-the-mix" title="Link to this heading">#</a></h3>
+<p>Now that you have segmented your cells, you can measure lots of things in each one individually!</p>
+<ul class="simple">
+<li><p>Use the (<a class="reference internal" href="_images/AddModule.png"><img alt="_images/AddModule.png" src="_images/AddModule.png" style="height: 25px;" /></a>) button to open the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">modules</span></code> window.</p></li>
+<li><p>Use the search bar and look for <code class="docutils literal notranslate"><span class="pre">MeasureObjectIntensityDistribution</span></code> (or find it under the Category “Measurement” on the list on the left panel). Double click the module or press the (<a class="reference internal" href="_images/AddToPipeline.png"><img alt="_images/AddToPipeline.png" src="_images/AddToPipeline.png" style="height: 25px;" /></a>) button.</p></li>
+<li><p>Select what image to measure on and what objects to measure in.</p></li>
+<li><p>Press “Add another heatmap display”</p></li>
+<li><p>Execute the module by pressing <a class="reference internal" href="_images/Step.png"><img alt="_images/Step.png" src="_images/Step.png" style="height: 30px;" /></a></p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates’?
+<img alt="_images/CellProfiler_MeasureObjIntDist.png" src="_images/CellProfiler_MeasureObjIntDist.png" /></p>
+</div>
+<ul class="simple">
+<li><p>How can you interpret the results shown? Check the  (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) button for the module or for each parameter to understand the output better.</p></li>
+</ul>
 <hr class="docutils" />
 <section id="steerable-filtering">
 <h4>Steerable Filtering<a class="headerlink" href="#steerable-filtering" title="Link to this heading">#</a></h4>
@@ -735,64 +796,6 @@ axons in the image <code class="docutils literal notranslate"><span class="pre">
 avoiding both the large mass of continuous red fluorescence near the
 injection site, and the autofluorescence of the cell bodies in green.
 (You will not need the blue DNA channel)</p></li>
-</ul>
-</section>
-</section>
-<section id="bonus-exercises-segmentation">
-<h2><strong>Bonus Exercises - Segmentation</strong><a class="headerlink" href="#bonus-exercises-segmentation" title="Link to this heading">#</a></h2>
-<section id="bonus-exercise-encapsulating-all-of-segmentation-into-one-module">
-<h3>Bonus Exercise: Encapsulating all of <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> into one module<a class="headerlink" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>At the end of your <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> piepeline, you’ll see two modules that are there but inactive - they have an empty checkbox <a class="reference internal" href="_images/InactivatedModule.png"><img alt="_images/InactivatedModule.png" src="_images/InactivatedModule.png" style="height: 20px;" /></a> . Click this box to enable the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - it should now look like this: <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 20px;" /></a></p></li>
-<li><p>Run the <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> module - how does it do at identifying your nuclei directly from the DNA image?</p></li>
-<li><p>Under the hood, <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code> is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you <code class="docutils literal notranslate"><span class="pre">Identify</span></code> (😉) which setting corresponds to each of our previous steps?</p></li>
-</ul>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Two of the steps are combined in a single setting!</p>
-</div>
-</section>
-<section id="bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">
-<h3>Bonus Exercise: Using seeded watershed to build Cells from Nuclei<a class="headerlink" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>After you’ve enabled <code class="docutils literal notranslate"><span class="pre">IdentifyPrimaryObjects</span></code>, you can also enable <code class="docutils literal notranslate"><span class="pre">IdentifySecondaryObjects</span></code>, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <a class="reference internal" href="_images/Check.png"><img alt="_images/Check.png" src="_images/Check.png" style="height: 25px;" /></a>and run this module.</p></li>
-<li><p>What settings correspond to our <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> steps, as in IdentifyPrimary?</p></li>
-<li><p>Are there any settings that are new? Click the help button (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) to learn about what these do and how they work.</p></li>
-</ul>
-</section>
-<section id="even-harder-segmentation">
-<h3>Even harder <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a><a class="headerlink" href="#even-harder-segmentation" title="Link to this heading">#</a></h3>
-<p>Nuclei are relatively easy to segment relative to cells - they are bright, fairly uniform, and often reasonably well spaced.
-How well can conventional <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> work on cells, and how easily can it be done?</p>
-<ul class="simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">DL4MIA/hard/train</span></code> from <a class="reference external" href="https://tinyurl.com/DL4MIAhard">this link</a></p></li>
-<li><p>Start a new CellProfiler project (or open a new CellProfiler window) and drag and drop that folder of images into the Images panel</p></li>
-<li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">advanced_untuned.cppipe</span></code> file into the CellProfiler pipeline panel. Other than the input module settings, no <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> settings have been tuned at all in this pipeline.</p></li>
-<li><p>Try to create an accurate <a class="reference internal" href="glossary.html#term-Segmentation"><span class="xref std std-term">segmentation</span></a> of these cells - you will want to turn the advanced settings on. How well can you do? What settings seem to make the most difference?</p></li>
-</ul>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
-<img alt="_images/CellProfiler_AdvancedIDP.png" src="_images/CellProfiler_AdvancedIDP.png" /></p>
-</div>
-</section>
-<section id="bonus-throw-some-measurements-in-the-mix">
-<h3>Bonus: throw some measurements in the mix<a class="headerlink" href="#bonus-throw-some-measurements-in-the-mix" title="Link to this heading">#</a></h3>
-<p>Now that you have segmented your cells, you can measure lots of things in each one individually!</p>
-<ul class="simple">
-<li><p>Use the (<a class="reference internal" href="_images/AddModule.png"><img alt="_images/AddModule.png" src="_images/AddModule.png" style="height: 25px;" /></a>) button to open the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">modules</span></code> window.</p></li>
-<li><p>Use the search bar and look for <code class="docutils literal notranslate"><span class="pre">MeasureObjectIntensityDistribution</span></code> (or find it under the Category “Measurement” on the list on the left panel). Double click the module or press the (<a class="reference internal" href="_images/AddToPipeline.png"><img alt="_images/AddToPipeline.png" src="_images/AddToPipeline.png" style="height: 25px;" /></a>) button.</p></li>
-<li><p>Select what image to measure on and what objects to measure in.</p></li>
-<li><p>Press “Add another heatmap display”</p></li>
-<li><p>Execute the module by pressing <a class="reference internal" href="_images/Step.png"><img alt="_images/Step.png" src="_images/Step.png" style="height: 30px;" /></a></p></li>
-</ul>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates’?
-<img alt="_images/CellProfiler_MeasureObjIntDist.png" src="_images/CellProfiler_MeasureObjIntDist.png" /></p>
-</div>
-<ul class="simple">
-<li><p>How can you interpret the results shown? Check the  (<a class="reference internal" href="_images/Info.png"><img alt="_images/Info.png" src="_images/Info.png" style="height: 25px;" /></a>) button for the module or for each parameter to understand the output better.</p></li>
 </ul>
 </section>
 </section>
@@ -883,18 +886,20 @@ How well can conventional <a class="reference internal" href="glossary.html#term
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-filtering"><strong>Bonus Exercises - Filtering</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-steerable-filtering-and-ridge-detection">Bonus Exercise: Steerable Filtering and Ridge Detection</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-thresholding">Basic thresholding</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercises-segmentation"><strong>Bonus Exercises - Segmentation</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-encapsulating-all-of-segmentation-into-one-module">Bonus Exercise: Encapsulating all of <span class="xref std std-term">segmentation</span> into one module</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-using-seeded-watershed-to-build-cells-from-nuclei">Bonus Exercise: Using seeded watershed to build Cells from Nuclei</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-harder-segmentation">Even harder <span class="xref std std-term">segmentation</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-throw-some-measurements-in-the-mix">Bonus: throw some measurements in the mix</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steerable-filtering">Steerable Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><em>References:</em></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-image-filtering-in-harder-data">Bonus Exercise: Image filtering in harder data</a></li>
 </ul>
 </li>
 </ul>
