@@ -2,7 +2,7 @@
 
 *Lab authors: Hunter Elliott, Marcelo Cicconet, & Beth Cimini* . 
 
-<small>This file last updated 2025-03-30.</small>
+<small>This file last updated 2024-04-06.</small>
 
 ---
 
@@ -12,7 +12,7 @@
 - Apply corrections to image data
 - Measure intensities with and without corrections
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (Image_Corrections_&_Intensity_Measurements)
 
 Remember to **unzip** the data folder after downloading.
 
@@ -30,9 +30,9 @@ You’re encouraged to try these corrections on your own data. However, we also 
 If you are using the canned data you can skip this part as we have provided averaged images
 ```
 
-1.  Load your dark correction images
+1.  Load your dark correction images in Fiji
 
-2.  Average them together by going to stack-\>Z-Project and selecting
+2.  Average them together by going to Image -\>stack-\>Z-Project and selecting
     “Average intensity” and clicking OK.
 
 3.  Calculate the mean and STD of the entire dark current image. How

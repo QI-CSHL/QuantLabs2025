@@ -16,7 +16,7 @@
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (DL4MIA)
 
 Remember to **unzip** the data folder after downloading.
 

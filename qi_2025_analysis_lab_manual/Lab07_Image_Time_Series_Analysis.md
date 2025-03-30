@@ -15,7 +15,7 @@
 - Apply and scrutinize photobleach correction
 - Double-normalized FRAP analysis
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (Time_Series)
 
 Remember to **unzip** the data folder after downloading.
 

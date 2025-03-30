@@ -14,7 +14,7 @@
 - Learn to use ilastik {cite}`Berg2019-no`
 - Experiment with how features and data affect performance
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (Machine_Learning)
 
 Remember to **unzip** the data folder after downloading.
 
