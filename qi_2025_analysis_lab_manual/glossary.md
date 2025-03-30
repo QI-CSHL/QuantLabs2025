@@ -14,5 +14,10 @@ Segmentation
 Terms that aren't in the book yet but we know we want to add (anything you type here won't show up in the built book)
 
 Convolution
+Threshold
+Watershed
+Mask - a binary image (background is black, foreground is white)
+TranslationvRotation
+
 
 --->
