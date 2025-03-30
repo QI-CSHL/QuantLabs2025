@@ -462,6 +462,12 @@ document.write(`
 </div>
 <ol class="arabic simple">
 <li><p>Load your dark correction images in Fiji</p></li>
+</ol>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with Fiji?</p>
+<p>Check out these <a class="reference external" href="https://imagej.net/learn/user-guides">User Guides</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/fiji">the image.sc forum!</a></p>
+</aside>
+<ol class="arabic simple" start="2">
 <li><p>Average them together by going to Image -&gt;stack-&gt;Z-Project and selecting
 “Average intensity” and clicking OK.</p></li>
 <li><p>Calculate the mean and STD of the entire dark current image. How
@@ -737,6 +743,10 @@ it onto the Fiji toolbar.</p></li>
 </div>
 </details></div>
 <p>CellProfiler has no ability to “loop” over the same set of images multiple times (to first create a flatfield correction, and then a local background image, and then analysis), so we will need to run 3 separate pipelines, one for each step.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with CellProfiler?</p>
+<p>Check out the <a class="reference external" href="https://cellprofiler.org/manuals">manual</a> and the <a class="reference external" href="https://tutorials.cellprofiler.org/">tutorials</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/cellprofiler">the image.sc forum!</a></p>
+</aside>
 <section id="pipeline-1-create-a-flatfield-correction-image-for-each-channel-wait-time-of-about-5-10-minutes-during-run">
 <h3>Pipeline 1 - Create a flatfield correction image for each channel (wait time of about 5-10 minutes during run)<a class="headerlink" href="#pipeline-1-create-a-flatfield-correction-image-for-each-channel-wait-time-of-about-5-10-minutes-during-run" title="Link to this heading">#</a></h3>
 <p>Since we don’t have flatfield images, we have to calculate our flatfield correction from the actual data itself. We do this by averaging all the images together - under certain conditions (see below), this will allow us to approximate the same kind of flatfield correction we’d more typically take at the microscope before collecting data.</p>

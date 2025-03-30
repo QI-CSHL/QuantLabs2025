@@ -24,6 +24,10 @@ Remember to **unzip** the data folder after downloading.
 - If not already done (on lab computers we have prepared it all), please 
   install napari by following [these instructions](https://napari.org/stable/tutorials/fundamentals/installation.html).
 
+```{margin} Want to learn more about working with napari?
+Check out the [documentation](https://napari.org/stable/usage.html) and [tutorials](https://napari.org/stable/tutorials/index.html#tutorials), or check them out on [the image.sc forum!](https://forum.image.sc/tag/napari)
+```
+
 - Sadly, there are many ways to start napari ([see here](https://napari.org/stable/tutorials/fundamentals/getting_started.html)). On our lab machines this means to:
   - Open an Anaconda prompt.
   - Type `conda activate cellpose` to activate a conda environment we have prepared for you.
@@ -76,6 +80,9 @@ Remember to **unzip** the data folder after downloading.
     image when you rotate it in BDV? 
     If so, can you think of some possible explanations for this?
 
+```{margin} Want to learn more about working with BigDataViewer?
+Check out the [documentation](https://imagej.net/plugins/bdv/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/BigDataViewer)
+```
 
 ## **3D Object Segmentation, Shape and Intensity Measurements**
 
@@ -226,10 +233,12 @@ or Labkit. If you have time, try both!
 
 Labkit can also perform 3D segmentation with a random forest pixel
 classifier, and it lets you work right in Fiji, which must feel like
-home at this point. It visualizes the data with BigDataViewer (which you
-used earlier, more info [<u>here</u>](https://imagej.net/plugins/bdv/))
-and can handle very large datasets. There is more info on Labkit
-available [<u>here</u>](https://imagej.net/plugins/labkit/).
+home at this point. It visualizes the data with BigDataViewer which you
+used earlier and can handle very large datasets. 
+
+```{margin} Want to learn more about working with Labkit?
+Check out the [documentation](https://imagej.net/plugins/labkit/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Labkit)
+```
 
 - This step is not needed on the course computers, but on a new machine, 
   you can install Labkit by going to `Help > Update` and add the “Labkit” 
@@ -252,6 +261,10 @@ available [<u>here</u>](https://imagej.net/plugins/labkit/).
   save the result.
 
 ### ilastik
+
+```{margin} Want to learn more about working with ilastik?
+Check out the [documentation and tutorials list](https://www.ilastik.org/documentation/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/ilastik)
+```
 
 - Open `drosophilus_floriansus.tif`. If you want to keep things simple you
   can select a few crops in a small area containing a few dozen nuclei.
@@ -283,6 +296,10 @@ available [<u>here</u>](https://imagej.net/plugins/labkit/).
 
 ### CellPose
 
+```{margin} Want to learn more about working with Cellpose?
+Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Cellpose)
+```
+
 - We have seen that CellPose can segment 3D data by segmenting orthogonal 
   2D slides and merging them into a consensus 3D segmentation. Interesting!
   Let's try!
@@ -304,12 +321,6 @@ available [<u>here</u>](https://imagej.net/plugins/labkit/).
   what could the reason be and how could you fix it?
   ```
   <!-- note to future us: deeper focal planes are much dimmer... we can use bleach correction in Fiji to make that better... -->
-
-
-### Stardist 3D
-
-- If you have time and feel adventureous, why not trying to segment 
-  `drosophilus_floriansus.tif` using [3D Stardist from Zero](https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb)?
 
 
 ## **Bonus Exercise**

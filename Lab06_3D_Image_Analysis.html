@@ -417,7 +417,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-instance-segmentation">3D instance segmentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cellpose">CellPose</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stardist-3d">Stardist 3D</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise"><strong>Bonus Exercise</strong></a></li>
@@ -454,6 +453,12 @@ document.write(`
 <ul class="simple">
 <li><p>If not already done (on lab computers we have prepared it all), please
 install napari by following <a class="reference external" href="https://napari.org/stable/tutorials/fundamentals/installation.html">these instructions</a>.</p></li>
+</ul>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with napari?</p>
+<p>Check out the <a class="reference external" href="https://napari.org/stable/usage.html">documentation</a> and <a class="reference external" href="https://napari.org/stable/tutorials/index.html#tutorials">tutorials</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/napari">the image.sc forum!</a></p>
+</aside>
+<ul class="simple">
 <li><p>Sadly, there are many ways to start napari (<a class="reference external" href="https://napari.org/stable/tutorials/fundamentals/getting_started.html">see here</a>). On our lab machines this means to:</p>
 <ul>
 <li><p>Open an Anaconda prompt.</p></li>
@@ -507,6 +512,10 @@ If so, can you think of some possible explanations for this?</p></li>
 </ul>
 </li>
 </ul>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with BigDataViewer?</p>
+<p>Check out the <a class="reference external" href="https://imagej.net/plugins/bdv/">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/BigDataViewer">the image.sc forum!</a></p>
+</aside>
 </section>
 <section id="d-object-segmentation-shape-and-intensity-measurements">
 <h2><strong>3D Object Segmentation, Shape and Intensity Measurements</strong><a class="headerlink" href="#d-object-segmentation-shape-and-intensity-measurements" title="Link to this heading">#</a></h2>
@@ -650,10 +659,12 @@ or Labkit. If you have time, try both!</p>
 <h3>Labkit<a class="headerlink" href="#labkit" title="Link to this heading">#</a></h3>
 <p>Labkit can also perform 3D segmentation with a random forest pixel
 classifier, and it lets you work right in Fiji, which must feel like
-home at this point. It visualizes the data with BigDataViewer (which you
-used earlier, more info <a class="reference external" href="https://imagej.net/plugins/bdv/"><u>here</u></a>)
-and can handle very large datasets. There is more info on Labkit
-available <a class="reference external" href="https://imagej.net/plugins/labkit/"><u>here</u></a>.</p>
+home at this point. It visualizes the data with BigDataViewer which you
+used earlier and can handle very large datasets.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with Labkit?</p>
+<p>Check out the <a class="reference external" href="https://imagej.net/plugins/labkit/">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/Labkit">the image.sc forum!</a></p>
+</aside>
 <ul class="simple">
 <li><p>This step is not needed on the course computers, but on a new machine,
 you can install Labkit by going to <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">&gt;</span> <span class="pre">Update</span></code> and add the “Labkit”
@@ -675,6 +686,10 @@ save the result.</p></li>
 </section>
 <section id="ilastik">
 <h3>ilastik<a class="headerlink" href="#ilastik" title="Link to this heading">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with ilastik?</p>
+<p>Check out the <a class="reference external" href="https://www.ilastik.org/documentation/">documentation and tutorials list</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/ilastik">the image.sc forum!</a></p>
+</aside>
 <ul class="simple">
 <li><p>Open <code class="docutils literal notranslate"><span class="pre">drosophilus_floriansus.tif</span></code>. If you want to keep things simple you
 can select a few crops in a small area containing a few dozen nuclei.
@@ -706,6 +721,10 @@ with your favorite 3D visualization tool from earlier in the lab.</p></li>
 <h2>3D instance segmentation<a class="headerlink" href="#d-instance-segmentation" title="Link to this heading">#</a></h2>
 <section id="cellpose">
 <h3>CellPose<a class="headerlink" href="#cellpose" title="Link to this heading">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title">Want to learn more about working with Cellpose?</p>
+<p>Check out the <a class="reference external" href="https://cellpose.readthedocs.io/en/latest/">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/Cellpose">the image.sc forum!</a></p>
+</aside>
 <ul>
 <li><p>We have seen that CellPose can segment 3D data by segmenting orthogonal
 2D slides and merging them into a consensus 3D segmentation. Interesting!
@@ -729,13 +748,6 @@ what could the reason be and how could you fix it?</p>
 </div>
 <!-- note to future us: deeper focal planes are much dimmer... we can use bleach correction in Fiji to make that better... -->
 </li>
-</ul>
-</section>
-<section id="stardist-3d">
-<h3>Stardist 3D<a class="headerlink" href="#stardist-3d" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>If you have time and feel adventureous, why not trying to segment
-<code class="docutils literal notranslate"><span class="pre">drosophilus_floriansus.tif</span></code> using <a class="reference external" href="https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb">3D Stardist from Zero</a>?</p></li>
 </ul>
 </section>
 </section>
@@ -809,7 +821,6 @@ and if you run into trouble just ask us!</p></li>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-instance-segmentation">3D instance segmentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cellpose">CellPose</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stardist-3d">Stardist 3D</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise"><strong>Bonus Exercise</strong></a></li>

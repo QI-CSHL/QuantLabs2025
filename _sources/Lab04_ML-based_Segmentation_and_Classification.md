@@ -22,9 +22,11 @@ Remember to **unzip** the data folder after downloading.
 
 ### Training a Random Forest Pixel Classifier in ilastik
 
-- Welcome to the world of software with good documentation and
-  tutorials! Take a deep breath and really soak it in, then check out
-  the [ilastik pixel classifier tutorial](https://bit.ly/3x11EZf).  
+```{margin} Want to learn more about working with ilastik?
+Check out the [documentation and tutorials list](https://www.ilastik.org/documentation/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/ilastik)
+```
+
+- Today we will be following along with the excellent [ilastik pixel classifier tutorial](https://bit.ly/3x11EZf).  
   Let us know if you hit a snag!
 
 - You can use the data in Machine_Learning/Pixel_Classifier/ (link to

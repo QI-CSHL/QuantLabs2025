@@ -124,7 +124,6 @@ Now we will run the FRAP plugin. You can find this under the plugin menu, under 
 - (Semi-)automated Tracking with Mastodon in Fiji
 - Using Trackmate{cite}`Tinevez2017-fb` from within Mastodon
 - Tracking with ilastik{cite}`Berg2019-no`
-- Bonus: exporting from ilastik, editing in Mastodon - note from Beth - this isn't there
 
 ---
 
@@ -172,6 +171,10 @@ Please start to download the following data:
 Collect screenshots or remember what you learned here.
 Be prepared to show the coolest thing you found out tomorrow morning
 (you absolutely will be volunteered to share your findings ;)).
+```
+
+```{margin} Want to learn more about working with Mastodon?
+Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.html), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Mastodon)
 ```
 
 #### Step 1: Start a Mastodon project from a single tiff File
@@ -270,6 +273,11 @@ Be prepared to show the coolest thing you found out tomorrow morning
 
 #### Step 4: Automatic tracking using the TrackMate plugin
 
+
+```{margin} Want to learn more about working with TrackMate?
+Check out the [documentation](https://imagej.net/plugins/trackmate/) and https://imagej.net/plugins/trackmate/#documentation-and-tutorials, or check them out on [the image.sc forum!](https://forum.image.sc/tag/TrackMate)
+```
+
 1.  Use (in Mastodon, **not** Fiji): `Plugins > Tracking > Detection…`
     and detect cells in some part of the volume (the ROI-box to select a
     part can also be using from within BDV).
@@ -285,6 +293,10 @@ Be prepared to show the coolest thing you found out tomorrow morning
 Please go to
 [the tracking documentation for ilastik](https://ilastik.github.io/documentation/tracking/tracking)
 and follow the instructions.
+
+```{margin} Want to learn more about working with ilastik?
+Check out the [documentation and tutorials list](https://www.ilastik.org/documentation/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/ilastik)
+```
 
 Note that downloads from the ilastik website can be slow. If so, please use
 the following links to get the sample data and projects (*likely you
@@ -325,6 +337,11 @@ There is much more interesting stuff to explore. Here some inspiration:
 
 In napari, there is a quite capable plugin for object tracking called `btrack`.
 Let us install it and then use it.
+
+
+```{margin} Want to learn more about working with btrack?
+Check out the [documentation](https://btrack.readthedocs.io/en/latest/user_guide/index.html)!
+```
 
 **Installation of btrack and napari from scratch**
 - Open a Anaconda Prompt and install all we need by executing...
