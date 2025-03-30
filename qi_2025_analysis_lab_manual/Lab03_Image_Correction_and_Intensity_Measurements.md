@@ -180,7 +180,7 @@ offset and flat field correction to these images.
     coefficient of variation of the bead intensities. Save this
     spreadsheet for later reference.
 
-5.  Now, apply a local background subtraction
+5.  Now, apply a local background subtraction (`Process` -> `Subtract Background`)
 
 6.  Again draw a line scan across the field of view and use plot profile
     to visualize and measure the background variation. How does it
