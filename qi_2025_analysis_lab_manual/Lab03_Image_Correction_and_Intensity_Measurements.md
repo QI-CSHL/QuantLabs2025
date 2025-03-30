@@ -53,11 +53,12 @@ Check out these [User Guides](https://imagej.net/learn/user-guides), or check th
 
 ### Create Averaged and Filtered Flat-field correction (FFC) images
 
-```{note} 
-If you are using the canned data you can skip this part as we have provided averaged images
-```
 
 1.  Load your flat-field correction images
+
+```{note} 
+If you are using the canned data you can skip steps 2 and 3 as we have provided averaged images
+```
 
 2.  Average these images together over time by going to
     stack-\>Z-Project and selecting “Average intensity” and clicking OK.
