@@ -15,7 +15,7 @@
 - Subtract background
 - Detect point sources via LoG
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (Estimating_SNR_&_Resolution)
 
 Remember to **unzip** the data folder after downloading.
 
