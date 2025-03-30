@@ -32,6 +32,10 @@ If you are using the canned data you can skip this part as we have provided aver
 
 1.  Load your dark correction images in Fiji
 
+```{margin} Want to learn more about working with Fiji?
+Check out these [User Guides](https://imagej.net/learn/user-guides), or check them out on [the image.sc forum!](https://forum.image.sc/tag/fiji)
+```
+
 2.  Average them together by going to Image -\>stack-\>Z-Project and selecting
     “Average intensity” and clicking OK.
 
@@ -341,6 +345,10 @@ There are a lot of potentially correct answers here, but cell area should probab
 ````
 
 CellProfiler has no ability to "loop" over the same set of images multiple times (to first create a flatfield correction, and then a local background image, and then analysis), so we will need to run 3 separate pipelines, one for each step.
+
+```{margin} Want to learn more about working with CellProfiler?
+Check out the [manual](https://cellprofiler.org/manuals) and the [tutorials](https://tutorials.cellprofiler.org/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/cellprofiler)
+```
 
 ### Pipeline 1 - Create a flatfield correction image for each channel (wait time of about 5-10 minutes during run)
 

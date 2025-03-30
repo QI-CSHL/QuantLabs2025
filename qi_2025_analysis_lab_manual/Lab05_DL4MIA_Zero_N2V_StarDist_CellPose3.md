@@ -69,10 +69,14 @@ a browser, and buckle up.
       validation are somewhere on this one page. Check if there is
       anything that makes no sense to you and ask us
 
-## **Exercise 2: Play with CellPose** 
+## **Exercise 2: Play with Cellpose** 
 
 ```{note}
 Once back home, you will need [this link](https://cellpose.readthedocs.io/en/latest/installation.html) to get started.
+```
+
+```{margin} Want to learn more about working with Cellpose?
+Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Cellpose)
 ```
 
 Here, at QI, we have taken this annoying step for you already. Hence,
@@ -236,127 +240,16 @@ As of April of 2024, both of these are still using Cellpose 2, which does have h
 
 ````
 
-## **Exercise 3: First steps with Google Colab (don’t waste too much time here…)**
-
-The following steps should get you started in no time:
-
-1.  Please go to
-    [<u>https://drive.google.com</u>](https://drive.google.com) and log
-    in with your google account. If you do not have (and do not want
-    one), please team up with somebody else who has one(or is willing to
-    create one).
-
-2.  If you never used Google Colab:
-
-    - click on
-      <img src="images/lab05/image9.png" style="width:0.56771in;height:0.25547in" />\>
-      More \> Connect more apps
-
-    - search for “Colaboratory” and connect it to your google account
-
-3.  You should now see a new folder in your google drive:
-
-    - <img src="images/lab05/image1.png" style="width:1.26019in;height:0.27604in" />
-
-Now let’s look at some existing tutorial notebook and play a bit with
-it:
-
-1.  Open the [Intro to Google Colab notebook](https://colab.research.google.com/notebooks/intro.ipynb)
-    and try to execute the few code cells you’ll find there.
-
-2.  Now open a [linear regression example](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.06-Linear-Regression.ipynb) available online and follow it until (and including) the section “Simple Linear Regression”.  
-Don’t waste your time today to go any further… it is of course super interesting, but totally out of scope… ;)
-
-> *Credit:*<img src="images/lab05/image5.png" style="width:5.99792in;height:0.66323in" />
-
-3.  *Note:* you can save your own copy of this notebook on your own
-    Google Drive via…  
-    <img src="images/lab05/image17.png" style="width:2.01458in;height:1.61167in" />
-
-## **Exercise 4: First steps with ZeroCostDL4Mic**
-
-ZeroCostDL4Mic{cite}`Von_Chamier2021-ux` is a collection of (hopefully) self-explanatory Jupyter
-Notebooks for Google Colab. They are meant to quickly get you started on
-learning how to use deep-learning methods specifically created for
-microscopy image analysis.
-
-Google Colab itself provides the computations resources needed and does
-so at zero cost. ZeroCostDL4Mic is designed for researchers that have
-little or no coding expertise to quickly test, train and use popular
-neural networks approaches.
-
-1.  Go to the [ZeroCost4DL wiki](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki)
-
-2.  Scroll down and be amazed by the amount of available methods… ;)
-
-3.  You could pick any method now and start playing with… but… why not
-    start with “Noise2Void (2D)”?  
-    <img src="images/lab05/image18.png" style="width:4.74479in;height:1.20549in" />  
-    Find it, download any example data, then click on “Open in Colab”.
-    (Hint: the sample data can also be found behind the “Lab Data” link
-    above…)
-
-4.  You will find yourself at a page looking roughly like this:  
-    <img src="images/lab05/image10.png" style="width:5.23146in;height:3.13021in" />
-
-5.  In order to work on your own data (or also on the test data we
-    downloaded just before), please upload it on your Google Drive (in
-    any folder you’d like).
-
-6.  While uploading, you can start going through the Noise2Void notebook
-    we opened before.
-
-    a.  At some point (at Step 2.2) you will be asked to connect to your
-        Google Drive. Please do so! 🙂
-
-    b.  Note that you will now see the content of your google drive.
-        Click first on the “Files” icon, then go one folder up, and you
-        should see something like this:
-<img src="images/lab05/image19.png" style="width:5.28646in;height:2.91433in" />
-
-    c.  **DONE!** Let’s continue in the next exercise…
-
-## **Exercise 5: Image Denoising with Noise2Void (in “Zero”)**
-
-In this exercise we will denoise some data with Noise2Void. Please
-remember, Noise2Void is removing pixel-noises only (Poisson noise,
-readout noise, etc.).
-
-If you do not have really noisy data at hand, feel free to use the
-example data offered on the ZeroCostDL4Mic wiki (or from within the Lab
-Data link from above, or just use the DL4MIA/noisy/drosophila_noisy_2d.tif image from the
-[Lab Data Share](https://tinyurl.com/QI2025AnalysisLabData).
-Ideally, as a group we use a bunch of different datasets, so we have
-more results to look at…
-
-<img src="images/lab05/image16.png" style="width:4.09252in" />
-
-1.  Decide what data to use (see remarks above).
-
-2.  Copy the data to any sensible place on your Google Drive.  
-    (*Why? Data on Google Drive can be read easily and FAST by Collab…*)
-
-3.  Unfortunately, there is a bug in the published version of N2V in ZeroCost. [Here](https://colab.research.google.com/drive/1xkV3-ENSXW_xcv3FqysODL_p6EEe7_0P?usp=sharing) you will find a copy of the notebook where we have fixed the bug. Be sure to make your own copy of this notebook in your drive ("File" -> "Save a copy in Drive") before you start
-
-4.  Go through the notebook. The first time around this will take a
-    while and be confusing at times. Plow through it, you will soon be
-    happy!  
-    **Ask questions, help each other!**
-
-    a.  *Pro tip:* if you are in a hurry, reduce the number of epochs to
-        some small number, e.g. 10 or 20. Results will be much worse,
-        but you can always crank that number up later…
-
-    b.  Later today, when you are done with the exercises, you might
-        want to re-run your favorite notebook with the suggested number
-        of epochs. Collab will work while you have fun on your free
-        evening… 🙂
 
 ## **Bonus Exercise: Classifying images in the browser in Piximi**
 
 [Piximi](piximi.app) {cite}`Moser2024-vt` is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you're limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don't have to worry about upload times or where in the cloud your data is stored.
 
-Piximi will eventually include 3 major functionalities - Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes an annotation tool. As of April 2024, you can train your own classification models, annotate images, and run pre-trained object detection and/or segmentation models that we provide; we expect measurements to come out by end of Q2 2024 and hope to provide trainable segmentation by the end of 2024. You can keep visiting piximi.app to see what's available!
+```{margin} Want to learn more about working with Piximi?
+Check out the [documentation](https://documentation.piximi.app/intro.html), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Piximi)
+```
+
+Piximi includes 4 major functionalities - 3 major ones you're used to thinking about are Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an Annotation tool. We hope to provide trainable segmentation by the end of 2025. You can keep visiting piximi.app to see what's available!
 
 ### Train a 10-class classification model using MNIST
 
@@ -463,6 +356,10 @@ Piximi's current defaults are to load two-channel images as red and green, and t
 
 In this exercise you will use a Noise2Void plugin in Fiji. You will have
 to install it first.
+
+```{margin} Want to learn more about working with Noise2Void?
+Check out the [documentation](https://csbdeep.bioimagecomputing.com/tools/n2v/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Noise2Void)
+```
 
 1.  Open Fiji.
 

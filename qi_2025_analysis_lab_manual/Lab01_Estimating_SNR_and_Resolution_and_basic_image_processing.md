@@ -29,6 +29,10 @@ Remember to **unzip** the data folder after downloading.
 Fiji stands for **F**iji **I**s **J**ust **I**mageJ
 ```
 
+```{margin} Want to learn more about working with Fiji?
+Check out these [User Guides](https://imagej.net/learn/user-guides), or check them out on [the image.sc forum!](https://forum.image.sc/tag/fiji)
+```
+
 - Open the image stack “One point source 67nm pix variable SNR.ome.tif”
   by dragging the image onto Fiji
 
