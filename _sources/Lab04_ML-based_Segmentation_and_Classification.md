@@ -30,8 +30,8 @@ Check out the [documentation and tutorials list](https://www.ilastik.org/documen
   Let us know if you hit a snag!
 
 - You can use the data in Machine_Learning/Pixel_Classifier/ (link to
-  Lab Data can be found on top of this page!). Note that you’ll need to
-  change the axes to “tyx” because these images are not a z-stack (right click on your image and go to Edit Properties).
+  Lab Data can be found on top of this page!). Load both the 'Train' and the 'Test' files. Note that you’ll need to
+  change the axes of the 'Train' file to “tyx” because these images are not a z-stack (right click on your image and go to Edit Properties).
 
 ```{admonition} Question
 :class: important
@@ -82,6 +82,10 @@ You can change the  contrast of your reference image by right clicking 'raw inpu
 
   - What happens if you only annotate the brightest cell bodies you can
     find? Why?
+
+- To export your pixel predictions, got to the 'Prediction Export' tab, then 'Choose Export Image Settings' and change the format of the output file to `.tif`.
+
+- Now run your final classifier on the 'Test' data (go back to 'Input Data' and add it if you haven't done it before) and export the resulting predictions by clicking on `Export` next to the name of the Test image .
 
 ```{admonition} **Class Challenge** (Optional)  
 :class: important
