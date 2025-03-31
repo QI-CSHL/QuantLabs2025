@@ -1,5 +1,11 @@
 # Glossary
 
+
+```{margin} Looking for more definitions?
+You can also check out the glossary for the [Bioimaging Guide](https://www.bioimagingguide.org/Glossary.html)!
+```
+
+
 ```{glossary}
 
 Segmentation
