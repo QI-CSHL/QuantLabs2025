@@ -18,6 +18,7 @@
 * [Believing is seeing - the deceptive influence of bias in quantitative microscopy](https://doi.org/10.1242/jcs.261567) {cite}`Lee2024-zu` - why even quantification is sometimes not enough to make sure your results are unbiased
 * [The crucial role of bioimage analysts in scientific research and publication](https://doi.org/10.1242/jcs.262322) {cite}`Cimini2024-uh` - why bioimage analysis is so important, and how to work with (and support!) your friendly local bioimage analyst.
 * [Enabling global image data sharing in the life sciences](https://doi.org/10.1038/s41592-024-02585-z) {cite}`Bajcsy2025-kk` - why and how should we share our image data when we're ready to publish it?
+* [This awesome online Nobias Advanced Scripting in Fiji Course](https://nobias-fht.github.io/advanced-scripting/) The course assumes familiarity with Fiji but **no coding experience!**
 
 ## Blog posts you may like
 * [How to write a bug report when your favorite software is broken](https://focalplane.biologists.com/2024/04/03/how-to-write-a-bug-report/)
