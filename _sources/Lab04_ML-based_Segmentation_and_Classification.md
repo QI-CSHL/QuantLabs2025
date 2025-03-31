@@ -2,7 +2,7 @@
 
 *Lab authors: Damian Dalle Nogare and Florian Jug* . 
 
-<small>This file last updated 2024-04-07.</small>
+<small>This file last updated 2025-03-31.</small>
 
 ---
 
@@ -140,14 +140,19 @@ Once you've trained an ilastik classifier, you can also export the images in ila
 
 ##  **Bonus Exercises - Play with Labkit (pixel classification in Fiji)**
 
+```{margin} Want to learn more about Labkit?
+Check out the [documentation](https://imagej.net/plugins/labkit/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Labkit)
+```
+
 - You find Labkit on an update site called “Labkit”. Ask us if you have
   trouble installing it. Try it with the same training data and see how it performs!
+  (We will also be using this software in lab 6!)
 
 ---
 
 ## **Bonus Exercises - Challenging Segmentations**
 
-- Pick the hardest image you’ve seen in the course and try to segment it
+- Pick the hardest image you’ve seen in the course (maybe the neuron images from Lab 2?) and try to segment it
   using the ilastik RF pixel classifier. Can you crack it? Can you
   understand why or why not?
 
