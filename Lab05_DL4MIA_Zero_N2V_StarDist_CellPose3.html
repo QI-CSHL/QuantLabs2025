@@ -672,6 +672,13 @@ segmentation. What might be useful for denoising this image?</p>
 <li><p>Are there any categorizations you aren’t sure about or disagree with?</p></li>
 </ul>
 </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can try to use the filter tool <a class="reference internal" href="_images/filter.png"><img alt="_images/filter.png" src="_images/filter.png" style="height: 25px;" /></a>
+on the right to inspect only one or certain categories at a time.</p>
+</div>
+<ul class="simple">
 <li><p>Tell Piximi you want to fit a classifier for these images</p></li>
 </ul>
 <a class="reference internal image-reference" href="_images/piximi_fit.png"><img alt="_images/piximi_fit.png" src="_images/piximi_fit.png" style="height: 180px;" />
@@ -722,7 +729,7 @@ segmentation. What might be useful for denoising this image?</p>
 </a>
 <p>Depending on why you’re using machine learning, you might choose to fix all the wrong images at this stage, or only some</p>
 <ul>
-<li><p>Is your goal to just get the classifications right and then use them for something, and most of them are?</p>
+<li><p>Is your goal to just get the classifications right and then use them for something, and most of them have already been correctly classified?</p>
 <ul class="simple">
 <li><p>In that case, there’s no harm in just fixing the few mistakes and then moving on to other downstream quantification steps (coming soon!).</p></li>
 <li><p>If this is your goal but there are a lot of mistakes, you might not choose to fix all of them at this stage, but just fix a subset and then try to train again so you can get to a point where the errors are at a small enough level that you CAN do final data cleaning by hand</p></li>
@@ -735,7 +742,7 @@ segmentation. What might be useful for denoising this image?</p>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If this is indeed your goal, you need to have some test unseen data somewhere else that you are not tuning on here! Once you’ve run any version of your model, at any stage, on unseen data, that data is now “seen data”, and can’t be used as a test set anymore. How you plan your data splits (and how much, and which, data you keep locked away as test set(s)) is critical to any kind of machine learning research</p>
+<p>If this is indeed your goal, you need to have some unseen <strong>test</strong> data somewhere else that you are not tuning on here! Once you’ve run any version of your model, at any stage, on unseen data, that data is now “seen data”, and can’t be used as a test set anymore. How you plan your data splits (and how much, and which, data you keep locked away as test set(s)) is critical to any kind of machine learning research</p>
 </div>
 </li>
 </ul>
@@ -757,7 +764,7 @@ segmentation. What might be useful for denoising this image?</p>
 </div>
 <p>This data set is in some ways more challenging, but also shows a more biologically relevant classification scenario, alongside the ability to do more human-in-the-loop retraining since, unlike MNIST, the majority of the data is NOT already categorized for you.</p>
 <ul class="simple">
-<li><p>Refresh Piximi, and then load the U2OS-cells cytoplasm crops dataset</p></li>
+<li><p>Refresh Piximi, and then load the U2OS-cells cytoplasm crops example dataset (Open &gt; Project &gt; Example Project &gt; Human U2OS-cells cytoplasm crops)</p></li>
 </ul>
 <a class="reference internal image-reference" href="_images/piximi_bbbc013.png"><img alt="_images/piximi_bbbc013.png" src="_images/piximi_bbbc013.png" style="height: 180px;" />
 </a>

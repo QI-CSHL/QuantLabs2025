@@ -264,6 +264,12 @@ Piximi is designed for biologists but can be used on non-biological images as we
 <img src="images/lab05/piximi_mnist.png" height="180px" />
 - Scroll through the images - you'll see that most are categorized as a particular digit, but about 60 have been intentionally left un-categorized for testing purposes.
   - Are there any categorizations you aren't sure about or disagree with?
+
+```{tip}
+You can try to use the filter tool <img src="images/lab05/filter.png" height="25px" />
+on the right to inspect only one or certain categories at a time.
+```
+
 - Tell Piximi you want to fit a classifier for these images
 
 <img src="images/lab05/piximi_fit.png" height="180px" />
@@ -308,7 +314,7 @@ If and when (when), you find some errors in the predictions, you can fix them by
 
 Depending on why you're using machine learning, you might choose to fix all the wrong images at this stage, or only some
 
-- Is your goal to just get the classifications right and then use them for something, and most of them are? 
+- Is your goal to just get the classifications right and then use them for something, and most of them have already been correctly classified? 
   - In that case, there's no harm in just fixing the few mistakes and then moving on to other downstream quantification steps (coming soon!). 
   - If this is your goal but there are a lot of mistakes, you might not choose to fix all of them at this stage, but just fix a subset and then try to train again so you can get to a point where the errors are at a small enough level that you CAN do final data cleaning by hand
 
@@ -317,7 +323,7 @@ Depending on why you're using machine learning, you might choose to fix all the 
   - If retraining, once you've done your chosen recategorizations, clear predictions (<img src="images/lab05/piximi_clear_predictions.png" height="40px" />) and then hit fit again.
 
   ```{important} 
-  If this is indeed your goal, you need to have some test unseen data somewhere else that you are not tuning on here! Once you've run any version of your model, at any stage, on unseen data, that data is now "seen data", and can't be used as a test set anymore. How you plan your data splits (and how much, and which, data you keep locked away as test set(s)) is critical to any kind of machine learning research
+  If this is indeed your goal, you need to have some unseen **test** data somewhere else that you are not tuning on here! Once you've run any version of your model, at any stage, on unseen data, that data is now "seen data", and can't be used as a test set anymore. How you plan your data splits (and how much, and which, data you keep locked away as test set(s)) is critical to any kind of machine learning research
   ```
 
 #### Save things for later
@@ -336,7 +342,7 @@ Sometimes this data set takes a long time to load, sometimes it doesn't! We're n
 
 This data set is in some ways more challenging, but also shows a more biologically relevant classification scenario, alongside the ability to do more human-in-the-loop retraining since, unlike MNIST, the majority of the data is NOT already categorized for you.
 
-- Refresh Piximi, and then load the U2OS-cells cytoplasm crops dataset
+- Refresh Piximi, and then load the U2OS-cells cytoplasm crops example dataset (Open \> Project \> Example Project \> Human U2OS-cells cytoplasm crops)
 
 <img src="images/lab05/piximi_bbbc013.png" height="180px" />
 
@@ -350,6 +356,7 @@ Piximi's current defaults are to load two-channel images as red and green, and t
 - Open the channel adjustment bar on the right (which is the three circles), and change color mapping to better lookup tables and values. Hit "Apply to all images open in the annotator" when you're done (and then wait a couple of minutes)
 <img src="images/lab05/piximi_channels.png" height="180px" />
 ```
+
 - Use human-in-the-loop classification to train a high-performing 3 class classifier. How high can you get the evaluation metrics? How many rounds and how many corrected classifications does it take you to get there?
 
 ## **Bonus Exercise: Use Fiji’s Noise2Void Plugin**
