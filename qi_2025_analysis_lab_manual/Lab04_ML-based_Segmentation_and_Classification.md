@@ -96,7 +96,7 @@ If you want to submit your classification model for the competition, save your p
 - Extract features from cells
 - Feature-based cell classification
 
-**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData)
+**Lab Data** in [this folder](https://tinyurl.com/QI2025AnalysisLabData) (under Machine_Learning/Cell_Classifier)
 
 ### Segment Nuclei for Feature Extraction
 
