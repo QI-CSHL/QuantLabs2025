@@ -83,6 +83,8 @@ There is a train and a test stack. Why is that?
 :class: important
 
 Let's make this (even more) interesting! Try to come up with a 'good enough' classifier with as few total annotations as possible. What strategy/reasoning did you use to get there? Compare your results with your labmates and see who manages to win the coveted **"Least pixels for good classification" Crown** :crown: this year!
+
+If you want to submit your classification model for the competition, save your project as `YOUR_NAME_2025.ilp` and upload it to this [Google Drive folder](https://drive.google.com/drive/folders/12V2UAylQlCgq39ScCftEHK-3CxCFQd8I?usp=drive_link). 
 ```
 ---
 
