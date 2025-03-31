@@ -31,7 +31,7 @@ Check out the [documentation and tutorials list](https://www.ilastik.org/documen
 
 - You can use the data in Machine_Learning/Pixel_Classifier/ (link to
   Lab Data can be found on top of this page!). Note that you’ll need to
-  change the axes to “tyx” because these images are not a z-stack.
+  change the axes to “tyx” because these images are not a z-stack (right click on your image and go to Edit Properties).
 
 ```{admonition} Question
 :class: important
