@@ -50,6 +50,10 @@ There is a train and a test stack. Why is that?
 
   - ...and “*Other stuff*”
 
+```{tip}
+You can change the  contrast of your reference image by right clicking 'raw input' in the layer list on the lower-left of the screen and choosing 'Adjust Thresholds'
+```
+
 - Can you unambiguously define/draw labels for each of the classes?  
   - If not, would that be a problem? Why or why not?
 
