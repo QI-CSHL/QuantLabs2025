@@ -7,7 +7,7 @@
 * [AI4Life](https://ai4life.eurobioimaging.eu/)
 * [The Global Bioimage Analysts' Society (GloBIAS)](https://www.globias.org/)
   * Find your local bioimage analyst in [GloBIAS' database](https://www.globias.org/resources/bioimage-analyst-db)
-* [The Center for Open Bioimage Analysis (COBA)]() offers free (though limited) one-on-one consultations with image analysts (among other resources!). You can sign up for their [Office Hours](https://broad.io/imagingofficehours).
+* [The Center for Open Bioimage Analysis (COBA)](https://openbioimageanalysis.org/) offers free (though limited) one-on-one consultations with image analysts (among other resources!). You can sign up for their [Office Hours](https://broad.io/imagingofficehours).
 
 ## Places to learn more (or to learn where to learn more)
 * [The BioImaging Guide](https://www.bioimagingguide.org/) {cite}`Senft2023-zy`
