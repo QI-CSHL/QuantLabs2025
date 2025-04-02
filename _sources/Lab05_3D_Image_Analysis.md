@@ -309,7 +309,7 @@ Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or ch
 - Figure out the rest... 😉
 
   ```{hint}
-  Are there any preporcessing steps that could help to better 
+  Are there any preprocessing steps that could help to better 
   segment this data? Try some. Maybe in Fiji Maybe things we did also 
   in earlier exercises...
   ```
