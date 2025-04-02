@@ -75,6 +75,7 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
   Fiji and you can view your stack in it by going to
   `Plugins > BigDataViewer > open current image`. What might be the pros
   and cons of viewing images like this compared to a 3D view like in napari?
+  If you want to know more about it, you can find the full documentation for this tool [here](https://imagej.net/plugins/bdv/).
 
   - Do you see anything suspicious about the intensity values in this
     image when you rotate it in BDV? 
