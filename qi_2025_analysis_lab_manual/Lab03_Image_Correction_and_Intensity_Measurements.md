@@ -365,8 +365,8 @@ This kind of averaging-based FFC correction is only appropriate when **ALL** of 
 
 - Drag and drop the `BBBC022_20585_AE` folder of images into the Images module.
 - Drag and drop pipeline 1 (`01_FFC.cppipe`) into the pipeline panel
-- Set where you want the output FFC images to be saved by clicking the `OutputSettings` button  <img src="images/lab03/OutputSettings.png" height="30px" />
-- Hit `Analyze Images` <img src="images/lab03/AnalyzeImages.png" height="30px" /> to have CellProfiler create FFC images for each of the 5 channels on 240 images of each.
+- Set where you want the output FFC images to be saved by clicking the `OutputSettings` button  <img src="images/correction_intensity/OutputSettings.png" height="30px" />
+- Hit `Analyze Images` <img src="images/correction_intensity/AnalyzeImages.png" height="30px" /> to have CellProfiler create FFC images for each of the 5 channels on 240 images of each.
 - Optional - explore the pipeline while it runs.
   - It's fine to do it in the same copy that's running, but you can open a second copy if you're worried. 
   - You can see here that we're subtracting an "offset", but since in this case we don't know what it is, we just set it to zero. But this is where you could put a measured offset if adapting this pipeline for your own use in the future. Remember to scale it 0-1 based on your bit depth!
@@ -386,7 +386,7 @@ What kinds of things will this kind of background subtraction help correct for? 
 - Drag in the `02_BackSub.cppipe` pipeline file to the pipeline panel. It's fine to do this with a pipeline already in there.
 - Return to the Images module, and drag in your newly calculated `.npy` flatfield images. If you don't have the raw images loaded in still, drag them in as well.
   - Optional - double click on one or more of the `.npy` files to open them up in CellProfiler's image viewer. What do you notice? (You can also do this after you hit analyze)
-- Hit `Analyze Images` <img src="images/lab03/AnalyzeImages.png" height="30px" /> to have CellProfiler create background correction images for each of the 5 channels on 240 images of each.
+- Hit `Analyze Images` <img src="images/correction_intensity/AnalyzeImages.png" height="30px" /> to have CellProfiler create background correction images for each of the 5 channels on 240 images of each.
 - Optional - once the pipeline is done, load the tiff images produced into ImageJ/Fiji. What do you notice? What are their histograms? What happens if you use Fiji's "Set" function to set all images to have a histogram of ie 100-300?
 
 ### Pipeline 3 - Apply your corrections and then perform some {term}`segmentation`s and measurements

@@ -45,25 +45,25 @@ a browser, and buckle up.
 
     a.  On the classification example that looks like a tiny
         checkerboard, try to get a test loss of 0.001 or less.  
-        <img src="images/lab05/image11.png" style="width:0.71893in;height:0.70313in" /><img src="images/lab05/image4.png" style="width:1.13021in;height:0.68795in" />
+        <img src="images/dl/image11.png" style="width:0.71893in;height:0.70313in" /><img src="images/dl/image4.png" style="width:1.13021in;height:0.68795in" />
 
     b.  For the spiral-shaped classification example, try to find a
         network architecture with the smallest amount of nodes (neurons)
         that will drop below 0.01 (1%) test error.  
-        <img src="images/lab05/image13.png" style="width:0.73438in;height:0.73438in" />
-        <img src="images/lab05/image8.png" style="width:2.33407in;height:0.73431in" />
+        <img src="images/dl/image13.png" style="width:0.73438in;height:0.73438in" />
+        <img src="images/dl/image8.png" style="width:2.33407in;height:0.73431in" />
 
     c.  Now switch from ‘Classification’ to ‘Regression’. What is going
         on here? Can you figure out how regression is different from
         classification?  
-        <img src="images/lab05/image6.png" style="width:1.47396in;height:0.74114in" />
+        <img src="images/dl/image6.png" style="width:1.47396in;height:0.74114in" />
 
     d.  Some other things to try if you feel it…
 
     - Add some noise to your data. What changes? Why?
 
     - Try to find a setup that overfits. How do you identify overfitting?  
-  <img src="images/lab05/image14.png" style="width:2.28646in;height:0.75899in" />
+  <img src="images/dl/image14.png" style="width:2.28646in;height:0.75899in" />
 
     e.  All the important terms and concepts wrt. to training and
       validation are somewhere on this one page. Check if there is
@@ -93,7 +93,7 @@ Once this is opened, type in those two comments (the stuff after
 ```
 
 You should now see something like
-this:<img src="images/lab05/cellpose_gui.png" style="width:6in" />
+this:<img src="images/dl/cellpose_gui.png" style="width:6in" />
 
 Open the file `001_img.tif` by dragging it onto the open window.
 You can find this file in the `DL4MIA/easy` folder in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData)
@@ -170,7 +170,7 @@ train new model with images and masks in folder’.
 
 You should see a window like this one:
 
-<img src="images/lab05/cellpose_training_gui.png" style="width:5in" />
+<img src="images/dl/cellpose_training_gui.png" style="width:5in" />
 
 First, we need to select which initial model to use (in the screenshot
 above, we are retraining the `cyto` model (but of course you may choose
@@ -183,7 +183,7 @@ ready to retrain and finetune the selected model!
 During training you should see something like the following if you check the 
 console (where you started cellpose from). What is going on here? Remember 
 back the lecture when we discussed training steps and epochs.
-<img src="images/lab05/cellpose_training_output.png" style="width:6in" />
+<img src="images/dl/cellpose_training_output.png" style="width:6in" />
 
 Once done, Cellpose will open the next image in the folder and
 automatically use the freshly finetuned model to segment it (NOTE: in cellpose
@@ -258,34 +258,34 @@ Piximi is designed for biologists but can be used on non-biological images as we
 #### Train a classifier
 - Tell Piximi you want to open an example project
 
-<img src="images/lab05/piximi_open.png" height="180px" />
+<img src="images/dl/piximi_open.png" height="180px" />
 
 - Select MNIST
-<img src="images/lab05/piximi_mnist.png" height="180px" />
+<img src="images/dl/piximi_mnist.png" height="180px" />
 - Scroll through the images - you'll see that most are categorized as a particular digit, but about 60 have been intentionally left un-categorized for testing purposes.
   - Are there any categorizations you aren't sure about or disagree with?
 
 ```{tip}
-You can try to use the filter tool <img src="images/lab05/filter.png" height="25px" />
+You can try to use the filter tool <img src="images/dl/filter.png" height="25px" />
 on the right to inspect only one or certain categories at a time.
 ```
 
 - Tell Piximi you want to fit a classifier for these images
 
-<img src="images/lab05/piximi_fit.png" height="180px" />
+<img src="images/dl/piximi_fit.png" height="180px" />
 
-- You will now see Piximi's training dialog; you can choose to tune some of the hyperparameters before training (though we've chosen here reasonable defaults that should work well). Otherwise, hit <img src="images/lab05/piximi_fit_classifer.png" height="40px" /> to train.
+- You will now see Piximi's training dialog; you can choose to tune some of the hyperparameters before training (though we've chosen here reasonable defaults that should work well). Otherwise, hit <img src="images/dl/piximi_fit_classifer.png" height="40px" /> to train.
 - After an initialization step, you will see a performance chart that looks like the below, as well as a loss graph. You can keep hitting `Fit Classifier` to keep adding more epochs of training.
-<img src="images/lab05/piximi_training_performance.png" height="180px" />
+<img src="images/dl/piximi_training_performance.png" height="180px" />
   - Are you overfitting? How can you tell?
 
 #### Evaluate your classifier
 
 Once you're satisfied with your training (either because it's great or because you're satisfied that it has plateaued), close the training dialog. Hit the `Evaluate Model` button to check your confusion matrix. 
 
-<img src="images/lab05/piximi_evaluate.png" height="90px" />
+<img src="images/dl/piximi_evaluate.png" height="90px" />
 
-<img src="images/lab05/piximi_confusion.png" height="180px" />
+<img src="images/dl/piximi_confusion.png" height="180px" />
 
 ```{admonition} Questions for you
 What patterns of mistakes do you notice? Are they the kinds of mistakes you would expect?
@@ -298,19 +298,19 @@ It is quadruple-extra critical when only a small fraction of your data is labele
 ```
 - Hit the `Predict Model` button to apply the model to the unlabeled data
 
-<img src="images/lab05/piximi_predict.png" height="180px" />
+<img src="images/dl/piximi_predict.png" height="180px" />
 
 - Evaluate the performance of the predictions - you may find that hitting one or both of these buttons helps you do that 
 
-<img src="images/lab05/piximi_hide_labeled.png" height="40px" /> 
+<img src="images/dl/piximi_hide_labeled.png" height="40px" /> 
 
-<img src="images/lab05/piximi_hide_other.png" height="90px" />
+<img src="images/dl/piximi_hide_other.png" height="90px" />
 
 #### Fix (some?) mistakes
 
 If and when (when), you find some errors in the predictions, you can fix them by assigning them a new category.
 
-<img src="images/lab05/piximi_recategorize_errors.png" height="180px" />
+<img src="images/dl/piximi_recategorize_errors.png" height="180px" />
 
 Depending on why you're using machine learning, you might choose to fix all the wrong images at this stage, or only some
 
@@ -320,7 +320,7 @@ Depending on why you're using machine learning, you might choose to fix all the 
 
 - Is your goal to create a robust, reusable classifier to use on other sets or in other contexts? 
   - In that case, you might want to fix only a subset of the mistakes before retraining, so you can get a sense of if your model performance is improving.
-  - If retraining, once you've done your chosen recategorizations, clear predictions (<img src="images/lab05/piximi_clear_predictions.png" height="40px" />) and then hit fit again.
+  - If retraining, once you've done your chosen recategorizations, clear predictions (<img src="images/dl/piximi_clear_predictions.png" height="40px" />) and then hit fit again.
 
   ```{important} 
   If this is indeed your goal, you need to have some unseen **test** data somewhere else that you are not tuning on here! Once you've run any version of your model, at any stage, on unseen data, that data is now "seen data", and can't be used as a test set anymore. How you plan your data splits (and how much, and which, data you keep locked away as test set(s)) is critical to any kind of machine learning research
@@ -330,9 +330,9 @@ Depending on why you're using machine learning, you might choose to fix all the 
 
 Reproducible science matters! You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.
 
-<img src="images/lab05/piximi_save_project.png" height="180px" />
+<img src="images/dl/piximi_save_project.png" height="180px" />
 
-<img src="images/lab05/piximi_save_model.png" height="180px" />
+<img src="images/dl/piximi_save_model.png" height="180px" />
 
 ### Train a 3-class classification model on U2OS cells
 
@@ -344,7 +344,7 @@ This data set is in some ways more challenging, but also shows a more biological
 
 - Refresh Piximi, and then load the U2OS-cells cytoplasm crops example dataset (Open \> Project \> Example Project \> Human U2OS-cells cytoplasm crops)
 
-<img src="images/lab05/piximi_bbbc013.png" height="180px" />
+<img src="images/dl/piximi_bbbc013.png" height="180px" />
 
 ```{admonition} Optional: fix how the images look
 You need not do this, since it can be a bit slow, but it is necessary if you want to assess the performance of the no-GFP class (and will make things much easier if you are red-green colorblind).
@@ -352,9 +352,9 @@ You need not do this, since it can be a bit slow, but it is necessary if you wan
 Piximi's current defaults are to load two-channel images as red and green, and to rescale each image min-max individually. While we work to fix those bugs, here's how you can manually set the colors to something better (and more uniform)
 - Hit Ctl+A to select all cells
 - Hit "Annotate" to open the annotation viewer
-<img src="images/lab05/piximi_annotate.png" height="180px" />
+<img src="images/dl/piximi_annotate.png" height="180px" />
 - Open the channel adjustment bar on the right (which is the three circles), and change color mapping to better lookup tables and values. Hit "Apply to all images open in the annotator" when you're done (and then wait a couple of minutes)
-<img src="images/lab05/piximi_channels.png" height="180px" />
+<img src="images/dl/piximi_channels.png" height="180px" />
 ```
 
 - Use human-in-the-loop classification to train a high-performing 3 class classifier. How high can you get the evaluation metrics? How many rounds and how many corrected classifications does it take you to get there?
@@ -385,13 +385,13 @@ Check out the [documentation](https://csbdeep.bioimagecomputing.com/tools/n2v/),
     a.  ***Please ask question at ANY time**!*
 
 7.  If all works out ok, you will see something like…  
-    <img src="images/lab05/image7.png" style="width:4.75346in;height:2.47396in" />
+    <img src="images/dl/image7.png" style="width:4.75346in;height:2.47396in" />
 
 8.  The training will likely be VERY slow, but to sweeten up the wait,
     we show you a nice preview.
 
 9.  Together with the result you also get the trained model for later
-    reuse.<img src="images/lab05/image12.png" style="width:3.14792in;height:2.22703in" />
+    reuse.<img src="images/dl/image12.png" style="width:3.14792in;height:2.22703in" />
 
 10. Try to use the trained model to denoise the same stack or any other image of your choosing.
 
@@ -406,7 +406,7 @@ notebooks, switch it up, do some instance segmentation! We suggest the
 StarDist notebook, but if you feel adventurous, choose something else
 you find most interesting in the context of your own research.
 
-<img src="images/lab05/image15.png" style="width:5.04825in;height:4.40104in" />
+<img src="images/dl/image15.png" style="width:5.04825in;height:4.40104in" />
 
 Go through the notebook you chose. And again:
 

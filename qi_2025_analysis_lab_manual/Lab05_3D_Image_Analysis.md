@@ -44,10 +44,10 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
   When it asks you which image loader to use, select the one we just installed.
 
 - You can now switch to the 3D viewer by clicking on the 2D/3D toggle button (second from the left).
-  <img src="images/lab06/napari-viewer-buttons.png" style="width:0.7in" />
+  <img src="images/3D/napari-viewer-buttons.png" style="width:0.7in" />
 
 - Play around a bit, rotate the volume, change a few viewing options... enjoy!
-  <img src="images/lab06/napari-viewer-with-arrows.png" />
+  <img src="images/3D/napari-viewer-with-arrows.png" />
 
 ## **Visualizing 3D data in Fiji**
 
@@ -198,7 +198,7 @@ the image with point sources. Save the result as "marker".
   not turn out very convincing. How well did this work for you? 
   Below a screenshot of one result we got... is your result comparable?
   ```
-  <img src="images/lab06/seg_results_by_a_pro_aka_Damian.png" />
+  <img src="images/3D/seg_results_by_a_pro_aka_Damian.png" />
 
 - **Shape Measurements**. Select the watershed image. Go to 
   `Plugins > MorphoLibJ > Analyse > Analyze Regions 3D`. Select desired 
