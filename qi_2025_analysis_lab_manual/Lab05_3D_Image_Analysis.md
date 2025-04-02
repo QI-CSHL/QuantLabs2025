@@ -106,7 +106,7 @@ Check out the [documentation](https://imagej.net/plugins/bdv/), or check them ou
   will utilize will use the currently selected slice in the currently
   selected stack as a reference to register all the other slices, so
   scroll to a slice you think would serve as a good reference. Then, go
-  to `Plugins > Registration > StackReg` (if StackReg is not installed,
+  to `Plugins > StackReg` (if StackReg is not installed,
   add 'BIG-EPFL' to the list of update sites, then update and restart
   Fiji). 
   What kind of transform do you think is best to align all these
