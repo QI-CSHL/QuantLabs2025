@@ -197,12 +197,12 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
     - Click on “use an image open in ImageJ” and select the drosophila
       you just opened in Fiji.
 
-> <img src="images/lab07/image2.png" style="width:3.91146in;height:2.20594in" />
+> <img src="images/time_series/image2.png" style="width:3.91146in;height:2.20594in" />
 
 - Click on “create” to create the new Mastodon project. A new window
   will open.
 
-> <img src="images/lab07/image1.png" style="width:2.49479in;height:2.49479in" />
+> <img src="images/time_series/image1.png" style="width:2.49479in;height:2.49479in" />
 
 - In this new window, you can now open BDVs and TrackSchemes by clicking
   the respective buttons.
