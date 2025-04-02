@@ -106,19 +106,23 @@ Check out the [documentation](https://imagej.net/plugins/bdv/), or check them ou
   apply a stack registration to this duplicated stack. The plugin we
   will utilize will use the currently selected slice in the currently
   selected stack as a reference to register all the other slices, so
-  scroll to a slice you think would serve as a good reference. Then, go
-  to `Plugins > StackReg` (if StackReg is not installed,
+  scroll to a slice you think would serve as a good reference. If **StackReg** is not installed, got to Help\>Updates\>Manage Update Sites and
   add 'BIG-EPFL' to the list of update sites, then update and restart
-  Fiji). 
-  What kind of transform do you think is best to align all these
-  slices? Select it and then click OK. Be patient - it will take some
-  time to finish. 
+  Fiji. 
+  StackReg was designed to work on single channel images, so you will first need to split your your image (Image\>Color\>Split Chanels)
   
   ```{note}
   If you ever have to register multi-channel images, there is a plugin 
   called “HyperStackReg”. You can [find it here](https://github.com/ved-sharma/HyperStackReg) 
   and the installation instructions are on that page as well.
-  ```
+  ``` 
+  
+  Now, go to `Plugins > StackReg`. 
+  What kind of transform do you think is best to align all these
+  slices? Select it and then click OK. Be patient - it will take some
+  time to finish. 
+  
+
 
 - Now visualize the registered stack and compare it to the original. 
   Does it look better? What might be necessary to further improve the 

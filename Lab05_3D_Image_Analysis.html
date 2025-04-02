@@ -539,19 +539,20 @@ image stack with the ImageJ viewer. We can fix this!</p></li>
 apply a stack registration to this duplicated stack. The plugin we
 will utilize will use the currently selected slice in the currently
 selected stack as a reference to register all the other slices, so
-scroll to a slice you think would serve as a good reference. Then, go
-to <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">StackReg</span></code> (if StackReg is not installed,
+scroll to a slice you think would serve as a good reference. If <strong>StackReg</strong> is not installed, got to Help&gt;Updates&gt;Manage Update Sites and
 add ‘BIG-EPFL’ to the list of update sites, then update and restart
-Fiji).
-What kind of transform do you think is best to align all these
-slices? Select it and then click OK. Be patient - it will take some
-time to finish.</p>
+Fiji.
+StackReg was designed to work on single channel images, so you will first need to split your your image (Image&gt;Color&gt;Split Chanels)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you ever have to register multi-channel images, there is a plugin
 called “HyperStackReg”. You can <a class="reference external" href="https://github.com/ved-sharma/HyperStackReg">find it here</a>
 and the installation instructions are on that page as well.</p>
 </div>
+<p>Now, go to <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">StackReg</span></code>.
+What kind of transform do you think is best to align all these
+slices? Select it and then click OK. Be patient - it will take some
+time to finish.</p>
 </li>
 <li><p>Now visualize the registered stack and compare it to the original.
 Does it look better? What might be necessary to further improve the
