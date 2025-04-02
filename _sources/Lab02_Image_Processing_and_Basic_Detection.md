@@ -97,8 +97,8 @@ Check out the [manual](https://cellprofiler.org/manuals) and the [tutorials](htt
 #### LoG filtering
 - Open CellProfiler and load the same image (`Image_Processing/Neurons/4_9_13_AVG_Aligned_Stack`) in the Images panel (where it says **Drop files and folders here**)
 - Load the `edge_detection_neurons.cppipe` pipeline file onto the left side pipeline panel (where it says **Drop a pipeline file here**)
-- Enter test mode by hitting the `Start Test Mode` button  <img src="images/lab02/StartTestMode.png" height="30px" />
-- Execute the `EnhanceEdges` module by hitting the `Step` button  <img src="images/lab02/Step.png" height="30px" />
+- Enter test mode by hitting the `Start Test Mode` button  <img src="images/processing_detection/StartTestMode.png" height="30px" />
+- Execute the `EnhanceEdges` module by hitting the `Step` button  <img src="images/processing_detection/Step.png" height="30px" />
 - How does the LoG filter look? What happens when you change the Gaussian diameter size? (hit `Step` again after changing the diamater size to see the new result).
 
 #### Canny edge detection
@@ -125,8 +125,8 @@ Here, we will demonstrate all these steps in CellProfiler, and let you play with
 
 ```{important}
 There are two main ways to move around in CellProfiler once in test mode - keep 
-- If you hit the `Step` button  <img src="images/lab02/Step.png" height="30px" />, the next module (but only the next module) will run
-- If you hit the `Run` button  <img src="images/lab02/Run.png" height="30px" />, all the remaining modules will run (unless you've added a `Pause` <img src="images/lab02/Pause.png" height="30px" /> button somewhere)
+- If you hit the `Step` button  <img src="images/processing_detection/Step.png" height="30px" />, the next module (but only the next module) will run
+- If you hit the `Run` button  <img src="images/processing_detection/Run.png" height="30px" />, all the remaining modules will run (unless you've added a `Pause` <img src="images/processing_detection/Pause.png" height="30px" /> button somewhere)
 ```
 
 ### Load files
@@ -139,7 +139,7 @@ There are two main ways to move around in CellProfiler once in test mode - keep
 CellProfiler `.cppipe` files are just text files. You can open them in a basic text editor such as Notepad to see what's inside. It also makes them easily shareable with your labmates or even to attach as supplemental information on a paper.
 ```
 
-- Enter test mode by hitting the `Start Test Mode` button  <img src="images/lab02/StartTestMode.png" height="30px" />
+- Enter test mode by hitting the `Start Test Mode` button  <img src="images/processing_detection/StartTestMode.png" height="30px" />
 
 ```{tip}
 Curious about how CellProfiler figures out that this is 3 sets of 2 channels each, and not 6 individual images or one 6 channel image? Look at the `NamesAndTypes` module!
@@ -158,7 +158,7 @@ Curious about how CellProfiler figures out that this is 3 sets of 2 channels eac
 - Run the `RemoveHoles` module on the thresholded image to remove any holes in the masks
   - If there aren't any holes, try setting the `Threshold Correction Factor` in the `Threshold` module to something like 1.1 or 1.2 (from 1.0) to create some
     - What do you think that setting may do, mathematically? 
-    - Click the help button (<img src="images/lab02/Info.png" height="25px" />) to learn if you were right.
+    - Click the help button (<img src="images/processing_detection/Info.png" height="25px" />) to learn if you were right.
 
 ### Watershed into objects, and fill holes in the object masks
 
@@ -171,7 +171,7 @@ Curious about how CellProfiler figures out that this is 3 sets of 2 channels eac
   - If not well, where do you think you need to make changes?
 - It is also **_critical_** to see if your settings work well across not just one image, but all of your images. Evaluate your performance on all 3 image sets.
 ```{tip}
-To move between image sets in CellProfiler, use the `NextImageSet` button  <img src="images/lab02/NextImageSet.png" height="30px" />
+To move between image sets in CellProfiler, use the `NextImageSet` button  <img src="images/processing_detection/NextImageSet.png" height="30px" />
 ``` 
   - If your performance is not equal across all 3, in what ways?
   - If your perfomance is not equal across all 3, is there anything you notice about the ones where it does vs does not perform well?
@@ -186,7 +186,7 @@ How do you know when your {term}`segmentation` is "good enough"? It's a SUPER co
 
 ### Bonus Exercise: Encapsulating all of {term}`segmentation` into one module
 
-- At the end of your {term}`segmentation` piepeline, you'll see two modules that are there but inactive - they have an empty checkbox <img src="images/lab02/InactivatedModule.png" height="20px" /> . Click this box to enable the `IdentifyPrimaryObjects` module - it should now look like this: <img src="images/lab02/Check.png" height="20px" />
+- At the end of your {term}`segmentation` piepeline, you'll see two modules that are there but inactive - they have an empty checkbox <img src="images/processing_detection/InactivatedModule.png" height="20px" /> . Click this box to enable the `IdentifyPrimaryObjects` module - it should now look like this: <img src="images/processing_detection/Check.png" height="20px" />
 - Run the `IdentifyPrimaryObjects` module - how does it do at identifying your nuclei directly from the DNA image?
 - Under the hood, `IdentifyPrimaryObjects` is doing all the steps we previously did, plus some filtering out of objects based on criteria you set (like whether they touch the edge). Can you `Identify` (😉) which setting corresponds to each of our previous steps?
 ```{hint}
@@ -195,9 +195,9 @@ Two of the steps are combined in a single setting!
 
 ### Bonus Exercise: Using seeded watershed to build Cells from Nuclei
 
-- After you've enabled `IdentifyPrimaryObjects`, you can also enable `IdentifySecondaryObjects`, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <img src="images/lab02/Check.png" height="25px" />and run this module.
+- After you've enabled `IdentifyPrimaryObjects`, you can also enable `IdentifySecondaryObjects`, which is designed to take an initial, smaller, internal object (nearly always a nucleus) and build a larger object around it (nearly always a cell). Enable <img src="images/processing_detection/Check.png" height="25px" />and run this module.
 - What settings correspond to our {term}`segmentation` steps, as in IdentifyPrimary?
-- Are there any settings that are new? Click the help button (<img src="images/lab02/Info.png" height="25px" />) to learn about what these do and how they work.
+- Are there any settings that are new? Click the help button (<img src="images/processing_detection/Info.png" height="25px" />) to learn about what these do and how they work.
 
 ### Even harder {term}`segmentation`
 
@@ -211,23 +211,23 @@ How well can conventional {term}`segmentation` work on cells, and how easily can
 
 ```{hint}
 Here is what an experienced image analyst came up with - so at least this level of accuracy is possible!
-<img src="images/lab02/CellProfiler_AdvancedIDP.png"/>
+<img src="images/processing_detection/CellProfiler_AdvancedIDP.png"/>
 ```
 
 ### Bonus: throw some measurements in the mix
 
 Now that you have segmented your cells, you can measure lots of things in each one individually!
 
-- Use the (<img src="images/lab02/AddModule.png" height="25px" />) button to open the `Add modules` window.
-- Use the search bar and look for `MeasureObjectIntensityDistribution` (or find it under the Category "Measurement" on the list on the left panel). Double click the module or press the (<img src="images/lab02/AddToPipeline.png" height="25px" />) button.
+- Use the (<img src="images/processing_detection/AddModule.png" height="25px" />) button to open the `Add modules` window.
+- Use the search bar and look for `MeasureObjectIntensityDistribution` (or find it under the Category "Measurement" on the list on the left panel). Double click the module or press the (<img src="images/processing_detection/AddToPipeline.png" height="25px" />) button.
 - Select what image to measure on and what objects to measure in.
 - Press "Add another heatmap display" 
-- Execute the module by pressing <img src="images/lab02/Step.png" height="30px" />
+- Execute the module by pressing <img src="images/processing_detection/Step.png" height="30px" />
 ```{hint}
 These are the results obtained from the example segmentation. How do your results compare to these? How about you labmates'?
-<img src="images/lab02/CellProfiler_MeasureObjIntDist.png"/>
+<img src="images/processing_detection/CellProfiler_MeasureObjIntDist.png"/>
 ```
-- How can you interpret the results shown? Check the  (<img src="images/lab02/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
+- How can you interpret the results shown? Check the  (<img src="images/processing_detection/Info.png" height="25px" />) button for the module or for each parameter to understand the output better.
 
 ---
 ## **Bonus Exercises - Filtering**
