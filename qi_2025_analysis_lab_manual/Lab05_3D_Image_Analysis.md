@@ -30,7 +30,7 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
 
 - Sadly, there are many ways to start napari ([see here](https://napari.org/stable/tutorials/fundamentals/getting_started.html)). On our lab machines this means to:
   - Open an Anaconda prompt.
-  - Type `conda activate cellpose` to activate a conda environment we have prepared for you.
+  - Type `conda activate napari` to activate a conda environment we have prepared for you.
   - Type `napari` and hit enter!
 
 - Out of the box, napari doesn't like to open images in usefuls ways.
