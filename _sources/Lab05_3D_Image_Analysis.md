@@ -300,9 +300,12 @@ Check out the [documentation and tutorials list](https://www.ilastik.org/documen
 Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Cellpose)
 ```
 
-- We have seen that CellPose can segment 3D data by segmenting orthogonal 
-  2D slides and merging them into a consensus 3D segmentation. Interesting!
-  Let's try!
+- We have seen in the lecture that CellPose, a 2D segmentation approach, can segment 3D data by segmenting orthogonal 
+  2D slides and merging them into a consensus 3D segmentation. Interesting! Let's try!
+  In tomorrow's deep learing lab, we will use cellpose more extensively, including fine-tuning a model to work better on our data. But for today, we will just use the default model. 
+
+- 
+
 - Open a Anaconda prompt and activate the CellPose environment by typing
   `conda activate cellpose`.
 - Start CellPose by typing `cellpose`. 
