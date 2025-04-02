@@ -62,12 +62,13 @@ a browser, and buckle up.
 
     - Add some noise to your data. What changes? Why?
 
-    - Try to find a setup that overfits. How do you identify overfitting?  
-  <img src="images/dl/image14.png" style="width:2.28646in;height:0.75899in" />
+    - Try to find a setup that overfits. How do you identify overfitting?
+
+      <img src="images/dl/image14.png" style="width:2.28646in;height:0.75899in" />
 
     e.  All the important terms and concepts wrt. to training and
-      validation are somewhere on this one page. Check if there is
-      anything that makes no sense to you and ask us
+        validation are somewhere on this one page. Check if there is
+        anything that makes no sense to you and ask us
 
 ## **Exercise 2: Play with Cellpose** 
 
