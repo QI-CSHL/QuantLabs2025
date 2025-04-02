@@ -413,6 +413,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-image-restoration-functions">Using the image restoration functions</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics">*Exercise 3: Denosing with Careamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing Careamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using Careamics in a Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>
@@ -447,8 +450,8 @@ document.write(`
 <ul class="simple">
 <li><p>Appreciate how Neural Networks are trained</p></li>
 <li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25" title="Carsen Stringer and Marius Pachitariu. Cellpose3: one-click image restoration for improved cellular segmentation. bioRxiv, pages 2024.02.10.579780, February 2024.">18</a></sup></span></p></li>
-<li><p>Learn how to get to and use Google Colab</p></li>
-<li><p>Denoising with Noise2Void<span id="id2"><sup><a class="reference internal" href="bibliography.html#id9" title="Alexander Krull, Tim-Oliver Buchholz, and Florian Jug. Noise2Void - learning denoising from single noisy images. In 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2124–2132. IEEE, June 2019.">19</a></sup></span> in “Zero”</p></li>
+<li><p>Learn how to make your own conda environment and install packages from pip</p></li>
+<li><p>Denoising with Careamics in python</p></li>
 <li><p>Bonus: Try in-browser classification with Piximi</p></li>
 <li><p>Bonus: Use Noise2Void in Fiji</p></li>
 <li><p>Bonus: Segmentation with StarDist in “Zero”</p></li>
@@ -460,7 +463,7 @@ document.write(`
 <h2><strong>Overview</strong><a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>Neural networks can do useful things. Their deployment within
 user-friendly tools is, unfortunately, lagging behind. Hence, methods we
-would like to apply to our data are not always available in Fiji or ilastik<span id="id3"><sup><a class="reference internal" href="bibliography.html#id8" title="Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N Straehle, Bernhard X Kausler, Carsten Haubold, Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A Hamprecht, and Anna Kreshuk. Ilastik: interactive machine learning for (bio)image analysis. Nat. Methods, 16(12):1226–1232, December 2019.">8</a></sup></span>
+would like to apply to our data are not always available in Fiji or ilastik<span id="id2"><sup><a class="reference internal" href="bibliography.html#id8" title="Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N Straehle, Bernhard X Kausler, Carsten Haubold, Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A Hamprecht, and Anna Kreshuk. Ilastik: interactive machine learning for (bio)image analysis. Nat. Methods, 16(12):1226–1232, December 2019.">8</a></sup></span>
 quite yet (or only with a fair amount of command line work and difficulty). The latest methods can only be used by the ones “brave”
 enough to expose themselves to some amount of computer source code…</p>
 <p>Today we will all be brave! 😊</p>
@@ -512,8 +515,8 @@ anything that makes no sense to you and ask us</p>
 </aside>
 <p>Here, at QI, we have taken this annoying step for you already. Hence,
 you will find Cellpose pre-installed on the lab computers. To start it,
-go to the Windows search next to the start menu, and type “anaconda”.
-Pick and start the option “anaconda prompt”.</p>
+go to the Windows search next to the start menu, and type <code class="docutils literal notranslate"><span class="pre">miniforge</span></code>.
+Pick and start the option <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code>.</p>
 <p>Once this is opened, type in those two comments (the stuff after
 “<strong>&gt;</strong>”):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">cellpose</span>  
@@ -525,12 +528,12 @@ this:<img alt="_images/cellpose_gui.png" src="_images/cellpose_gui.png" /></p>
 <p>Open the file <code class="docutils literal notranslate"><span class="pre">001_img.tif</span></code> by dragging it onto the open window.
 You can find this file in the <code class="docutils literal notranslate"><span class="pre">DL4MIA/easy</span></code> folder in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Lab Data share</a>
 ).</p>
-<p>We need to tell cellpose (roughly) how large our objects are (you can do
+<p>Like we did in the 3D lab yesterday, we need to tell cellpose (roughly) how large our objects are (you can do
 so via the <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">diameter</span></code>) field. How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.</p>
 <p>You can now segment this image by selecting one of the pre-trained
 models from within the <code class="docutils literal notranslate"><span class="pre">dataset-specific</span> <span class="pre">models</span></code> box. Try segmenting this image using
-the <code class="docutils literal notranslate"><span class="pre">cyto</span></code> model. How good are the results?</p>
+the <code class="docutils literal notranslate"><span class="pre">cyto2</span></code> model. How good are the results?</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can toggle the visibility of segmentation masks on and off
@@ -637,7 +640,7 @@ segmentation. What might be useful for denoising this image?</p>
 <li><p>Downsides: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
 </ul>
 </li>
-<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">20</a></sup></span></p>
+<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id3"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">19</a></sup></span></p>
 <ul>
 <li><p>Upsides: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker <code class="docutils literal notranslate"><span class="pre">.app</span></code> or <code class="docutils literal notranslate"><span class="pre">.exe</span></code> files from their respective websites, download <a class="reference external" href="https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py">the plugin</a>, and then point CellProfiler at the location of the downloaded file.</p></li>
 <li><p>Downsides: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you’re in analysis mode and running all your images unsupervised). You’re limited to the hardware you have locally.</p></li>
@@ -647,9 +650,48 @@ segmentation. What might be useful for denoising this image?</p>
 </div>
 </section>
 </section>
+<section id="exercise-3-denosing-with-careamics">
+<h2>*Exercise 3: Denosing with Careamics<a class="headerlink" href="#exercise-3-denosing-with-careamics" title="Link to this heading">#</a></h2>
+</section>
+<section id="installing-careamics">
+<h2>Installing Careamics<a class="headerlink" href="#installing-careamics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>In previous exercises, we’ve given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won’t have this option. So, let’s install careamics from scratch!</p></li>
+<li><p>The documentation for Careamics can be found <a class="reference external" href="https://careamics.github.io/0.1/">here</a></p></li>
+<li><p>If you are familiar with conda and pip, the installation instructions can be found <a class="reference external" href="https://careamics.github.io/0.1/installation/">here</a>. If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the careamics instructions use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, whereas we will use <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If that doesn’t make sense to you, then read on to the next section!</p></li>
+<li><p>The first step in installing a python-based software package is to make what is called an <code class="docutils literal notranslate"><span class="pre">environment</span></code>. You can think of a <code class="docutils literal notranslate"><span class="pre">package</span></code> as a particular software tool (ie, careamics is a python <code class="docutils literal notranslate"><span class="pre">package</span></code>). An <code class="docutils literal notranslate"><span class="pre">environment</span></code> is a particular (separate) place on your computer where we can install <code class="docutils literal notranslate"><span class="pre">packages</span></code> and have them be isolated from the other environments we might have. We do this because different python packages require different ‘dependencies’ (ie other pieces of software that the package requires in order to run). So, for example, package A might require a particular version of package B (say, version 1.0), while package C might require a different version of package B (say, version 2.0). In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this is an unavoidable part of working with bleeding-edge python software packages, and is often called <code class="docutils literal notranslate"><span class="pre">dependency</span> <span class="pre">hell</span></code>.</p></li>
+</ul>
+<p>However, today we will not (hopefully!) run into dependency hell. Let’s start by creating an environment.</p>
+<ul class="simple">
+<li><p>Open a new terminal by opening <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code>. If you’re using an existing terminal, make sure you deactivate any current environments that are open by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p></li>
+<li><p>Make a new environment by typing <code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">-n</span> <span class="pre">careamics</span> <span class="pre">python=3.10</span></code>.</p></li>
+</ul>
+<p>What are we doing here? Well we are asking a particular piece of software (in this case, <code class="docutils literal notranslate"><span class="pre">conda</span></code>) to <code class="docutils literal notranslate"><span class="pre">create</span></code> a new enviroment with the name careamics (<code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">careamics</span></code>) and telling it to pre-install python version 3.10 into that environment.</p>
+<ul class="simple">
+<li><p>Activate the environment by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">careamics</span></code>. As we saw yesterday and earier today, the prompt should change from <code class="docutils literal notranslate"><span class="pre">(base)</span></code> to <code class="docutils literal notranslate"><span class="pre">(careamics)</span></code>. We are now ‘inside’ this environment. Anything we will install will be restricted to this environment.</p></li>
+<li><p>Now, we need to install some packages that will allow us to activate the GPU. Remember that in deep learning, it is advantageous to run computation on the GPU as they contain specialized hardware to do very fast matrix multiplications – exacty the kind of thing that deep learning needs a lot of!</p></li>
+</ul>
+<p>Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found <a class="reference external" href="https://pytorch.org/get-started/locally/">here</a>. but we need to be careful here to match the particular version to our computer specifications. In our case, we need to install pytorch using the following command</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">torch</span> <span class="pre">torchvision</span> <span class="pre">torchaudio</span> <span class="pre">--index-url</span> <span class="pre">https://download.pytorch.org/whl/cu124</span></code></p>
+<ul class="simple">
+<li><p>We can confirm that this step worked and we can see the GPU, by typing the following command:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;import</span> <span class="pre">torch;</span> <span class="pre">print([torch.cuda.get_device_properties(i)</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(torch.cuda.device_count())])&quot;</span></code></p>
+<p>After running this, you should see an output that lists the type of GPU we have (in this case a Nvidia Geforce 1080 Ti).</p>
+<ul class="simple">
+<li><p>Finally, we are ready to install Careamics. We can do this by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;careamics[examples]&quot;</span></code>. This will use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, a package installer, to install the Careamics library.</p></li>
+</ul>
+</section>
+<section id="using-careamics-in-a-jupyter-notebook">
+<h2>Using Careamics in a Jupyter Notebook<a class="headerlink" href="#using-careamics-in-a-jupyter-notebook" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We will use careamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like <code class="docutils literal notranslate"><span class="pre">(careamics)</span> <span class="pre">C:\Users\Admin</span></code>. This means that our prompt is currently active in the folder <code class="docutils literal notranslate"><span class="pre">C:\Users\Admin</span></code>. From where you downloaded the sample data, copy the <code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code> into this folder. Now go back to the terminal, and start jupyter by typing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and pressing enter.</p></li>
+</ul>
+<p>You should see a window with a list of files. Find the file you just copied into this folder (<code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code>) and click on it. The notebook should open. Instructions on how to run careamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask!</p>
+</section>
 <section id="bonus-exercise-classifying-images-in-the-browser-in-piximi">
 <h2><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id5"><sup><a class="reference internal" href="bibliography.html#id27" title="Levin M Moser, Nodar Gogoberidze, Andréa Papaleo, Alice Lucas, David Dao, Christoph A Friedrich, Lassi Paavolainen, Csaba Molnar, David R Stirling, Jane Hung, Rex Wang, Callum Tromans-Coia, Bin Li, Edward L Evans, Kevin W Eliceiri, Peter Horvath, Anne E Carpenter, and Beth A Cimini. Piximi - an images to discovery web tool for bioimages and beyond. bioRxiv, pages 2024.06.03.597232, June 2024.">21</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
+<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id27" title="Levin M Moser, Nodar Gogoberidze, Andréa Papaleo, Alice Lucas, David Dao, Christoph A Friedrich, Lassi Paavolainen, Csaba Molnar, David R Stirling, Jane Hung, Rex Wang, Callum Tromans-Coia, Bin Li, Edward L Evans, Kevin W Eliceiri, Peter Horvath, Anne E Carpenter, and Beth A Cimini. Piximi - an images to discovery web tool for bioimages and beyond. bioRxiv, pages 2024.06.03.597232, June 2024.">20</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">Want to learn more about working with Piximi?</p>
 <p>Check out the <a class="reference external" href="https://documentation.piximi.app/intro.html">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/Piximi">the image.sc forum!</a></p>
@@ -657,7 +699,7 @@ segmentation. What might be useful for denoising this image?</p>
 <p>Piximi includes 4 major functionalities - 3 major ones you’re used to thinking about are Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an Annotation tool. We hope to provide trainable segmentation by the end of 2025. You can keep visiting piximi.app to see what’s available!</p>
 <section id="train-a-10-class-classification-model-using-mnist">
 <h3>Train a 10-class classification model using MNIST<a class="headerlink" href="#train-a-10-class-classification-model-using-mnist" title="Link to this heading">#</a></h3>
-<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">22</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
+<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id5"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">21</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
 <section id="train-a-classifier">
 <h4>Train a classifier<a class="headerlink" href="#train-a-classifier" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -836,7 +878,7 @@ you find most interesting in the context of your own research.</p>
 Collab will work while you have fun on your free evening… 🙂</p>
 <div class="admonition-super-excited-about-deep-learning-now-and-want-to-know-where-to-find-the-latest-models admonition">
 <p class="admonition-title">Super excited about deep learning now and want to know where to find the latest models?</p>
-<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id7"><sup><a class="reference internal" href="bibliography.html#id26" title="Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin Pape, Tom Burke, Carlos Garcia-López-de-Haro, Craig Russell, Lucía Moya-Sans, Cristina de-la-Torre-Gutiérrez, Deborah Schmidt, Dominik Kutra, Maksim Novikov, Martin Weigert, Uwe Schmidt, Peter Bankhead, Guillaume Jacquemet, Daniel Sage, Ricardo Henriques, Arrate Muñoz-Barrutia, Emma Lundberg, Florian Jug, and Anna Kreshuk. BioImage model zoo: a Community-Driven resource for accessible deep learning in BioImage analysis. bioRxiv, pages 2022.06.07.495102, June 2022.">23</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
+<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id26" title="Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin Pape, Tom Burke, Carlos Garcia-López-de-Haro, Craig Russell, Lucía Moya-Sans, Cristina de-la-Torre-Gutiérrez, Deborah Schmidt, Dominik Kutra, Maksim Novikov, Martin Weigert, Uwe Schmidt, Peter Bankhead, Guillaume Jacquemet, Daniel Sage, Ricardo Henriques, Arrate Muñoz-Barrutia, Emma Lundberg, Florian Jug, and Anna Kreshuk. BioImage model zoo: a Community-Driven resource for accessible deep learning in BioImage analysis. bioRxiv, pages 2022.06.07.495102, June 2022.">22</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
 </div>
 </section>
 </section>
@@ -895,6 +937,9 @@ Collab will work while you have fun on your free evening… 🙂</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-image-restoration-functions">Using the image restoration functions</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics">*Exercise 3: Denosing with Careamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing Careamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using Careamics in a Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>

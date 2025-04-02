@@ -304,9 +304,9 @@ Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or ch
   2D slides and merging them into a consensus 3D segmentation. Interesting! Let's try!
   In tomorrow's deep learing lab, we will use cellpose more extensively, including fine-tuning a model to work better on our data. But for today, we will just use the default model. 
 
-- Cellpose is a python based program. We will use python and conda more tomorrow, but for now we have installed cellpose for you.
+- Cellpose is a python based program. We will use python and conda more tomorrow, but for now we have installed cellpose for you using the miniforge open-source python package manager.
 
-- Open a Anaconda prompt by going to the search bar in windows and typing `miniforge`. Select the option `miniforge prompt`, and a black terminal window should appear. 
+- Open a terminal by going to the search bar in windows and typing `miniforge`. Select the option `miniforge prompt`, and a black terminal window should appear. 
 - In miniforge, cellpose lives in it's own space, called an environment. You can activate the CellPose environment by typing
   `conda activate cellpose`. Once this happens, the text of the terminal prompt should say something like `(cellpose)`.
 
