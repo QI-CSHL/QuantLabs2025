@@ -304,12 +304,21 @@ Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or ch
   2D slides and merging them into a consensus 3D segmentation. Interesting! Let's try!
   In tomorrow's deep learing lab, we will use cellpose more extensively, including fine-tuning a model to work better on our data. But for today, we will just use the default model. 
 
-- 
+- Cellpose is a python based program. We will use python and conda more tomorrow, but for now we have installed cellpose for you.
 
-- Open a Anaconda prompt and activate the CellPose environment by typing
-  `conda activate cellpose`.
+- Open a Anaconda prompt by going to the search bar in windows and typing `miniforge`. Select the option `miniforge prompt`, and a black terminal window should appear. 
+- In miniforge, cellpose lives in it's own space, called an environment. You can activate the CellPose environment by typing
+  `conda activate cellpose`. Once this happens, the text of the terminal prompt should say something like `(cellpose)`.
+
 - Start CellPose by typing `cellpose`. 
-- Figure out the rest... 😉
+
+- You should see a window that looks like this: <img src="images/dl/cellpose_gui.png" style="width:6in" />
+
+- open your image (`drosophilus_floriansus.tif`) by dragging it into the cellpose window. Note that cellpose expects a certain 'object size', determined by the `diameter (pixels)` parameter/ What size should we use? Look at the scale circle on the bottom left to estimate a good parameter. How could this change when we are doing 3D segmentation? (Remember that what we're actually doing is sequential 2D segmentation along each image axis)
+
+- Once you have decided on a diameter, run a segmentation by clicking `run cyto3`. This will apply the `cyto3` pre-trained cellpose model to the image. Note that it might take some time to fully segment the image. You can check on the progress by looking at the terminal window.
+
+- How was your segementation? Do any of the other cellpose models work better? Try some other models. Tomorrow we will play around more with cellpose, including retraining a model so that it works better!
 
   ```{hint}
   Are there any preprocessing steps that could help to better 

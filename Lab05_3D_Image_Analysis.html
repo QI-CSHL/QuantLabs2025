@@ -731,11 +731,15 @@ with your favorite 3D visualization tool from earlier in the lab.</p></li>
 <li><p>We have seen in the lecture that CellPose, a 2D segmentation approach, can segment 3D data by segmenting orthogonal
 2D slides and merging them into a consensus 3D segmentation. Interesting! Let’s try!
 In tomorrow’s deep learing lab, we will use cellpose more extensively, including fine-tuning a model to work better on our data. But for today, we will just use the default model.</p></li>
-<li></li>
-<li><p>Open a Anaconda prompt and activate the CellPose environment by typing
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">cellpose</span></code>.</p></li>
+<li><p>Cellpose is a python based program. We will use python and conda more tomorrow, but for now we have installed cellpose for you.</p></li>
+<li><p>Open a Anaconda prompt by going to the search bar in windows and typing <code class="docutils literal notranslate"><span class="pre">miniforge</span></code>. Select the option <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code>, and a black terminal window should appear.</p></li>
+<li><p>In miniforge, cellpose lives in it’s own space, called an environment. You can activate the CellPose environment by typing
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">cellpose</span></code>. Once this happens, the text of the terminal prompt should say something like <code class="docutils literal notranslate"><span class="pre">(cellpose)</span></code>.</p></li>
 <li><p>Start CellPose by typing <code class="docutils literal notranslate"><span class="pre">cellpose</span></code>.</p></li>
-<li><p>Figure out the rest… 😉</p>
+<li><p>You should see a window that looks like this: <img alt="_images/cellpose_gui.png" src="_images/cellpose_gui.png" /></p></li>
+<li><p>open your image (<code class="docutils literal notranslate"><span class="pre">drosophilus_floriansus.tif</span></code>) by dragging it into the cellpose window. Note that cellpose expects a certain ‘object size’, determined by the <code class="docutils literal notranslate"><span class="pre">diameter</span> <span class="pre">(pixels)</span></code> parameter/ What size should we use? Look at the scale circle on the bottom left to estimate a good parameter. How could this change when we are doing 3D segmentation? (Remember that what we’re actually doing is sequential 2D segmentation along each image axis)</p></li>
+<li><p>Once you have decided on a diameter, run a segmentation by clicking <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">cyto3</span></code>. This will apply the <code class="docutils literal notranslate"><span class="pre">cyto3</span></code> pre-trained cellpose model to the image. Note that it might take some time to fully segment the image. You can check on the progress by looking at the terminal window.</p></li>
+<li><p>How was your segementation? Do any of the other cellpose models work better? Try some other models. Tomorrow we will play around more with cellpose, including retraining a model so that it works better!</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Are there any preprocessing steps that could help to better
