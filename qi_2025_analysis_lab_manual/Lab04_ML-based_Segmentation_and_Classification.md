@@ -42,11 +42,11 @@ There is a train and a test stack. Why is that?
 - Try to segment the images by providing training examples for four
   classes: 
 
-  - Cell bodies: <img src="images/lab04/image1.png" height="100px" />
+  - Cell bodies: <img src="images/ml_seg_class/image1.png" height="100px" />
 
-  - Synapses: <img src="images/lab04/image2.png" height="100px" />
+  - Synapses: <img src="images/ml_seg_class/image2.png" height="100px" />
 
-  - Granule cell layer: <img src="images/lab04/image3.png" height="100px" />
+  - Granule cell layer: <img src="images/ml_seg_class/image3.png" height="100px" />
 
   - ...and “*Other stuff*”
 
