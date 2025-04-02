@@ -310,11 +310,11 @@ Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or ch
 - In miniforge, cellpose lives in it's own space, called an environment. You can activate the CellPose environment by typing
   `conda activate cellpose`. Once this happens, the text of the terminal prompt should say something like `(cellpose)`.
 
-- Start CellPose by typing `cellpose`. 
+- Start CellPose by typing `cellpose --Zstack` (because we will be working with 3D data, we need to add the 'flag' `--Zstack` sot htat Cellpose knows hoe to interpret the additional dimension (z) of the image). 
 
 - You should see a window that looks like this: <img src="images/dl/cellpose_gui.png" style="width:6in" />
 
-- open your image (`drosophilus_floriansus.tif`) by dragging it into the cellpose window. Note that cellpose expects a certain 'object size', determined by the `diameter (pixels)` parameter/ What size should we use? Look at the scale circle on the bottom left to estimate a good parameter. How could this change when we are doing 3D segmentation? (Remember that what we're actually doing is sequential 2D segmentation along each image axis)
+- open your image (`drosophilus_floriansus_single_t.tif`) by dragging it into the cellpose window. Note that cellpose expects a certain 'object size', determined by the `diameter (pixels)` parameter/ What size should we use? Look at the scale circle on the bottom left to estimate a good parameter. How could this change when we are doing 3D segmentation? (Remember that what we're actually doing is sequential 2D segmentation along each image axis)
 
 - Once you have decided on a diameter, run a segmentation by clicking `run cyto3`. This will apply the `cyto3` pre-trained cellpose model to the image. Note that it might take some time to fully segment the image. You can check on the progress by looking at the terminal window.
 
