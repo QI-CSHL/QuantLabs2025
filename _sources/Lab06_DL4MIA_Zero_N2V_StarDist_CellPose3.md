@@ -258,13 +258,13 @@ Open a new terminal by opening `miniforge prompt`. If you're using an existing t
 
 Make a new environment by typing `create -n careamics python=3.10`.  
 
-What are we doing here? Well we are asking a particular piece of software (in this case, `conda`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
+What are we doing here? Well we are asking a particular piece of software called a package manager (in this case, `conda`, although in the careamics installation instructions, they use a related but slightly different package manager called `mamba`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
 
 Activate the environment by typing `conda activate careamics`. As we saw yesterday and earier today, the prompt should change from `(base)` to `(careamics)`. We are now 'inside' this environment. Anything we will install will be restricted to this environment.
 
 Now, we need to install some packages that will allow us to activate the GPU. Remember that in deep learning, it is advantageous to run computation on the GPU as they contain specialized hardware to do very fast matrix multiplications -- exacty the kind of thing that deep learning needs a lot of! 
 
-Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found [here](https://pytorch.org/get-started/locally/). but we need to be careful here to match the particular version to our computer specifications. In our case, we need to install pytorch using the following command
+Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found [here](https://pytorch.org/get-started/locally/). but we need to be careful here to match the particular version to our computer specifications (specifically, the version of our GPU drivers). In our case, we need to install pytorch using the following command
 
 `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
 
@@ -272,7 +272,7 @@ We can confirm that this step worked and we can see the GPU, by typing the follo
 
 `python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"`
 
-After running this, you should see an output that lists the type of GPU we have (in this case a Nvidia Geforce 1080 Ti).
+After running this, you should see an output that lists the type of GPU we have (in this case an Nvidia Geforce 1080 Ti).
 
 Finally, we are ready to install Careamics. We can do this by typing `pip install "careamics[examples]"`. This will use `pip`, a package installer, to install the Careamics library.
 
