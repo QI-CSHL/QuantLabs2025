@@ -33,13 +33,6 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
   - Type `conda activate napari` to activate a conda environment we have prepared for you.
   - Type `napari` and hit enter!
 
-- Out of the box, napari doesn't like to open images in usefuls ways.
-  But behold, there is a solution.
-  You can install a plugin that allows you to open many file-types the right way. 
-  (Feel free to go on without installing this plugin and you will see what we are taling about).
-  To install the plugin go to `Plugins > Install/Unistall Plugins`, then filter for 
-  `aicsimageio`. Then click on "install" and restart napari.
-
 - In napari, load the file `Drosophila_zstack-20x-medium.tif`, a 3-channel, 3D volume. 
   When it asks you which image loader to use, select the one we just installed.
 
