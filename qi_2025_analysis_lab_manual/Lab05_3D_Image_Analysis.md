@@ -29,7 +29,7 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
 ```
 
 - Sadly, there are many ways to start napari ([see here](https://napari.org/stable/tutorials/fundamentals/getting_started.html)). On our lab machines this means to:
-  - Open an Anaconda prompt.
+  - Open an Conda Miniforge prompt (you can find it in the Windows Start menu).
   - Type `conda activate napari` to activate a conda environment we have prepared for you.
   - Type `napari` and hit enter!
 
