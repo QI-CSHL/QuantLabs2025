@@ -244,13 +244,13 @@ As of April of 2024, both of these are still using Cellpose 2, which does have h
 
 ## Installing Careamics
 
-In previous exercises, we've given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won't have this option. So, let's install careamics from scratch!
+In previous exercises, we've given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won't have this option. So, let's install Careamics from scratch!
 
 The documentation for Careamics can be found [here](https://careamics.github.io/0.1/) 
 
-If you are familiar with conda and pip, the installation instructions can be found [here](https://careamics.github.io/0.1/installation/). If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the careamics instructions use `mamba`, whereas we will use `conda`. If that doesn't make sense to you, then read on to the next section!
+If you are familiar with conda and pip, the installation instructions can be found [here](https://careamics.github.io/0.1/installation/). If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the Careamics instructions use `mamba`, whereas we will use `conda`. If that doesn't make sense to you, then read on to the next section!
 
-The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (ie, careamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might have. We do this because different python packages require different 'dependencies' (ie other pieces of software that the package requires in order to run). So a certain package might 'depend' on a specific version of another package, for example:
+The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (ie, Careamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might have. We do this because different python packages require different 'dependencies' (ie other pieces of software that the package requires in order to run). So a certain package might 'depend' on a specific version of another package, for example:
 
 Package A --> requires Package B, version 1.0
 Package C --> requires Package B, version 2.0
@@ -267,7 +267,7 @@ Make a new environment by typing:
 
 ```{note}
 **What are we doing here?** 
-Well we are asking a particular piece of software called a package manager (in this case, `conda`, although in the careamics installation instructions, they use a related but slightly different package manager called `mamba`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
+Well we are asking a particular piece of software called a package manager (in this case, `conda`, although in the Careamics installation instructions, they use a related but slightly different package manager called `mamba`) to `create` a new enviroment with the name Careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
 ```
 
 Activate the environment by typing: 
@@ -296,9 +296,9 @@ This will use `pip`, a package installer, to install the Careamics library.
 
 ## Using Careamics in a Jupyter Notebook
 
-- We will use careamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like `(careamics) C:\Users\Admin`. This means that our prompt is currently active in the folder `C:\Users\Admin`. From where you downloaded the sample data, copy the `careamics.ipynb` into this folder. Now go back to the terminal, and start jupyter by typing `jupyter notebook` and pressing enter. 
+- We will use Careamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like `(careamics) C:\Users\Admin`. This means that our prompt is currently active in the folder `C:\Users\Admin`. From where you downloaded the sample data, copy the `careamics.ipynb` into this folder. Now go back to the terminal, and start jupyter by typing `jupyter notebook` and pressing enter. 
 
-You should see a window with a list of files. Find the file you just copied into this folder (`careamics.ipynb`) and click on it. The notebook should open. Instructions on how to run careamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask! 
+You should see a window with a list of files. Find the file you just copied into this folder (`careamics.ipynb`) and click on it. The notebook should open. Instructions on how to run Careamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask! 
 
 ## **Bonus Exercise: Classifying images in the browser in Piximi**
 
