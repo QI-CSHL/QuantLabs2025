@@ -2,7 +2,7 @@
 
 *Lab authors: Hunter Elliott, Damian Dalle Nogare and Florian Jug* . 
 
-<small>This file last updated 2024-04-10.</small>
+<small>This file last updated 2025-04-02.</small>
 
 ---
 
@@ -83,6 +83,45 @@ Check out the [documentation](https://napari.org/stable/usage.html) and [tutoria
 ```{margin} Want to learn more about working with BigDataViewer?
 Check out the [documentation](https://imagej.net/plugins/bdv/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/BigDataViewer)
 ```
+
+## **Registration for 3D Volume Reconstruction**
+
+- Open the `mouse_brain_sections_downsampled32x_arpy.ome.tif` stack.
+  You’ve seen a single tissue section from this brain before, but now
+  we’re going to try to visualize the entire brain.
+
+- Visualize this stack in in some way. This should look like most of a
+  mouse brain but likely appears “squished”. Why? Look at the voxel
+  dimensions - the actual voxel size in this image is (x,y,z) =
+  (10.5,10.5,40) microns - adjust the voxel size (find out how if you 
+  don't know) and try again! 
+  Remember the discussion of voxel size calibration.
+
+- Notice the misalignment between the tissue sections - this gives the
+  brain a rough outline. You can also see this by scrolling through the
+  image stack with the ImageJ viewer. We can fix this!
+
+- Duplicate the original image stack. We will
+  apply a stack registration to this duplicated stack. The plugin we
+  will utilize will use the currently selected slice in the currently
+  selected stack as a reference to register all the other slices, so
+  scroll to a slice you think would serve as a good reference. Then, go
+  to `Plugins > Registration > StackReg` (if StackReg is not installed,
+  add 'BIG-EPFL' to the list of update sites, then update and restart
+  Fiji). 
+  What kind of transform do you think is best to align all these
+  slices? Select it and then click OK. Be patient - it will take some
+  time to finish. 
+  
+  ```{note}
+  If you ever have to register multi-channel images, there is a plugin 
+  called “HyperStackReg”. You can [find it here](https://github.com/ved-sharma/HyperStackReg) 
+  and the installation instructions are on that page as well.
+  ```
+
+- Now visualize the registered stack and compare it to the original. 
+  Does it look better? What might be necessary to further improve the 
+  registration?
 
 ## **3D Object Segmentation, Shape and Intensity Measurements**
 
@@ -183,45 +222,6 @@ the image with point sources. Save the result as "marker".
 
 - Merge the resulting channels (`Image > Color > Merge Channels`), and
   visualize the result in 3D if interested.
-
-## **Registration for 3D Volume Reconstruction**
-
-- Open the `mouse_brain_sections_downsampled32x_arpy.ome.tif` stack.
-  You’ve seen a single tissue section from this brain before, but now
-  we’re going to try to visualize the entire brain.
-
-- Visualize this stack in in some way. This should look like most of a
-  mouse brain but likely appears “squished”. Why? Look at the voxel
-  dimensions - the actual voxel size in this image is (x,y,z) =
-  (10.5,10.5,40) microns - adjust the voxel size (find out how if you 
-  don't know) and try again! 
-  Remember the discussion of voxel size calibration.
-
-- Notice the misalignment between the tissue sections - this gives the
-  brain a rough outline. You can also see this by scrolling through the
-  image stack with the ImageJ viewer. We can fix this!
-
-- Duplicate the original image stack. We will
-  apply a stack registration to this duplicated stack. The plugin we
-  will utilize will use the currently selected slice in the currently
-  selected stack as a reference to register all the other slices, so
-  scroll to a slice you think would serve as a good reference. Then, go
-  to `Plugins > Registration > StackReg` (if StackReg is not installed,
-  add 'BIG-EPFL' to the list of update sites, then update and restart
-  Fiji). 
-  What kind of transform do you think is best to align all these
-  slices? Select it and then click OK. Be patient - it will take some
-  time to finish. 
-  
-  ```{note}
-  If you ever have to register multi-channel images, there is a plugin 
-  called “HyperStackReg”. You can [find it here](https://github.com/ved-sharma/HyperStackReg) 
-  and the installation instructions are on that page as well.
-  ```
-
-- Now visualize the registered stack and compare it to the original. 
-  Does it look better? What might be necessary to further improve the 
-  registration?
 
 ## **3D Pixel Classifier Choose-your-own-adventure**
 
