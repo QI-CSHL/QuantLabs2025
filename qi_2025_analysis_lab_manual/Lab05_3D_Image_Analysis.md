@@ -157,21 +157,6 @@ Check out the [documentation](https://imagej.net/plugins/bdv/), or check them ou
   the image: `Edit > Invert`. This is the watershed surface. To clean up
   your workspace, save it (`File > Save as > Tiff`) and close it.
 
-- **Marker**. To find markers, we will treat the nuclei as "point
-sources", and detect them by finding local maxima in the Laplacian of
-Gaussian image. Select the "marker" image. We now compute the proper
-sigma to locate the nuclei. We want to detect nuclei, so what should
-we measure to determine this sigma? Now go to `Plugins > FeatureJ > FeatureJ Laplacian`, 
-adjust the smoothing scale (don’t forget about the
-voxel calibration!), and click OK. Candidates for markers are the
-local minima in the resulting filtered image. To find them, go to
-`Plugins > MorphoLibJ > Minima and Maxima > Regional Min & Max 3D`.
-Select Regional Minima with Connectivity 26 and click Ok. What do you
-think? Too many point sources in the background? We can filter them
-using our previously computed mask. Load "mask" by dragging it into
-Fiji. Now go to `Process > Image Calculator`. And multiply the mask by
-the image with point sources. Save the result as "marker".
-
 - **Mask**. This will restrict the area into which the watershed regions
   will grow. It can be obtained by thresholding a blurred version of the
   nuclei image, where the sigmas are a bit larger than the ones used
@@ -188,6 +173,22 @@ the image with point sources. Save the result as "marker".
   in your Fiji.
   You can, and will have to, install it by activating the `IJPB-plugins` plugin site.
   ```
+
+
+- **Marker**. To find markers, we will treat the nuclei as "point
+sources", and detect them by finding local maxima in the Laplacian of
+Gaussian image. Select the "marker" image. We now compute the proper
+sigma to locate the nuclei. We want to detect nuclei, so what should
+we measure to determine this sigma? Now go to `Plugins > FeatureJ > FeatureJ Laplacian`, 
+adjust the smoothing scale (don’t forget about the
+voxel calibration!), and click OK. Candidates for markers are the
+local minima in the resulting filtered image. To find them, go to
+`Plugins > MorphoLibJ > Minima and Maxima > Regional Min & Max 3D`.
+Select Regional Minima with Connectivity 26 and click Ok. What do you
+think? Too many point sources in the background? We can filter them
+using our previously computed mask. Load "mask" by dragging it into
+Fiji. Now go to `Process > Image Calculator`. And multiply the mask by
+the image with point sources. Save the result as "marker".
 
 - **Watershed**. Now close all secondary windows and load the "surface",
   "mask", and "marker" images. Go to `Plugins > MorphoLibJ > Segmentation > Marker-Controlled Watershed`. 
