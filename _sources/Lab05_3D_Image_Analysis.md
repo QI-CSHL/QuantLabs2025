@@ -224,7 +224,7 @@ the image with point sources. Save the result as "marker".
   Go to `Plugins > Stacks > Crop (3D)`. 
   Check "Three pane view" and uncheck "Change origin". Click Ok.
   In the Crop Options window, check all options under "Also crop these
-  images". Set the bounding boxes as desired and click Crop.
+  images". Set the bounding boxes as desired, click on `Set from fields above` and click `Crop`.
 
 - Merge the resulting channels (`Image > Color > Merge Channels`), and
   visualize the result in 3D if interested.
