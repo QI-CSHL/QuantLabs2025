@@ -413,9 +413,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-image-restoration-functions">Using the image restoration functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics"><strong>Exercise 3: Denosing with Careamics</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing Careamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using Careamics in a Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics"><strong>Exercise 3: Denosing with CAREamics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing CAREamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using CAREamics in a Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>
@@ -451,7 +451,7 @@ document.write(`
 <li><p>Appreciate how Neural Networks are trained</p></li>
 <li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25" title="Carsen Stringer and Marius Pachitariu. Cellpose3: one-click image restoration for improved cellular segmentation. bioRxiv, pages 2024.02.10.579780, February 2024.">18</a></sup></span></p></li>
 <li><p>Learn how to make your own conda environment and install packages from pip</p></li>
-<li><p>Denoising with Careamics in python</p></li>
+<li><p>Denoising with CAREamics in python</p></li>
 <li><p>Bonus: Try in-browser classification with Piximi</p></li>
 <li><p>Bonus: Use Noise2Void in Fiji</p></li>
 <li><p>Bonus: Segmentation with StarDist in “Zero”</p></li>
@@ -651,14 +651,14 @@ segmentation. What might be useful for denoising this image?</p>
 </section>
 </section>
 <section id="exercise-3-denosing-with-careamics">
-<h2><strong>Exercise 3: Denosing with Careamics</strong><a class="headerlink" href="#exercise-3-denosing-with-careamics" title="Link to this heading">#</a></h2>
+<h2><strong>Exercise 3: Denosing with CAREamics</strong><a class="headerlink" href="#exercise-3-denosing-with-careamics" title="Link to this heading">#</a></h2>
 </section>
 <section id="installing-careamics">
-<h2>Installing Careamics<a class="headerlink" href="#installing-careamics" title="Link to this heading">#</a></h2>
-<p>In previous exercises, we’ve given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won’t have this option. So, let’s install Careamics from scratch!</p>
-<p>The documentation for Careamics can be found <a class="reference external" href="https://careamics.github.io/0.1/">here</a></p>
-<p>If you are familiar with conda and pip, the installation instructions can be found <a class="reference external" href="https://careamics.github.io/0.1/installation/">here</a>. If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the Careamics instructions use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, whereas we will use <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If that doesn’t make sense to you, then read on to the next section!</p>
-<p>The first step in installing a python-based software package is to make what is called an <code class="docutils literal notranslate"><span class="pre">environment</span></code>. You can think of a <code class="docutils literal notranslate"><span class="pre">package</span></code> as a particular software tool (ie, Careamics is a python <code class="docutils literal notranslate"><span class="pre">package</span></code>). An <code class="docutils literal notranslate"><span class="pre">environment</span></code> is a particular (separate) place on your computer where we can install <code class="docutils literal notranslate"><span class="pre">packages</span></code> and have them be isolated from the other environments we might have. We do this because different python packages require different ‘dependencies’ (ie other pieces of software that the package requires in order to run). So a certain package might ‘depend’ on a specific version of another package, for example:</p>
+<h2>Installing CAREamics<a class="headerlink" href="#installing-careamics" title="Link to this heading">#</a></h2>
+<p>In previous exercises, we’ve given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won’t have this option. So, let’s install CAREamics from scratch!</p>
+<p>The documentation for CAREamics can be found <a class="reference external" href="https://careamics.github.io/0.1/">here</a></p>
+<p>If you are familiar with conda and pip, the installation instructions can be found <a class="reference external" href="https://careamics.github.io/0.1/installation/">here</a>. If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the CAREamics instructions use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, whereas we will use <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If that doesn’t make sense to you, then read on to the next section!</p>
+<p>The first step in installing a python-based software package is to make what is called an <code class="docutils literal notranslate"><span class="pre">environment</span></code>. You can think of a <code class="docutils literal notranslate"><span class="pre">package</span></code> as a particular software tool (ie, CAREamics is a python <code class="docutils literal notranslate"><span class="pre">package</span></code>). An <code class="docutils literal notranslate"><span class="pre">environment</span></code> is a particular (separate) place on your computer where we can install <code class="docutils literal notranslate"><span class="pre">packages</span></code> and have them be isolated from the other environments we might have. We do this because different python packages require different ‘dependencies’ (ie other pieces of software that the package requires in order to run). So a certain package might ‘depend’ on a specific version of another package, for example:</p>
 <p>Package A –&gt; requires Package B, version 1.0
 Package C –&gt; requires Package B, version 2.0</p>
 <p>In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this (commonly referred to as <code class="docutils literal notranslate"><span class="pre">dependency</span> <span class="pre">hell</span></code>) is an unavoidable part of working with bleeding-edge python software packages.</p>
@@ -671,7 +671,7 @@ Package C –&gt; requires Package B, version 2.0</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>What are we doing here?</strong>
-Well we are asking a particular piece of software called a package manager (in this case, <code class="docutils literal notranslate"><span class="pre">conda</span></code>, although in the Careamics installation instructions, they use a related but slightly different package manager called <code class="docutils literal notranslate"><span class="pre">mamba</span></code>) to <code class="docutils literal notranslate"><span class="pre">create</span></code> a new enviroment with the name Careamics (<code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">careamics</span></code>) and telling it to pre-install python version 3.10 into that environment.</p>
+Well we are asking a particular piece of software called a package manager (in this case, <code class="docutils literal notranslate"><span class="pre">conda</span></code>, although in the CAREamics installation instructions, they use a related but slightly different package manager called <code class="docutils literal notranslate"><span class="pre">mamba</span></code>) to <code class="docutils literal notranslate"><span class="pre">create</span></code> a new enviroment with the name CAREamics (<code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">careamics</span></code>) and telling it to pre-install python version 3.10 into that environment.</p>
 </div>
 <p>Activate the environment by typing:</p>
 <blockquote>
@@ -679,7 +679,7 @@ Well we are asking a particular piece of software called a package manager (in t
 </div></blockquote>
 <p>As we saw yesterday and earier today, the prompt should change from <code class="docutils literal notranslate"><span class="pre">(base)</span></code> to <code class="docutils literal notranslate"><span class="pre">(careamics)</span></code>. We are now ‘inside’ this environment. Anything we will install will be restricted to this environment (and, thus not accesible to software outside of that environment).</p>
 <p>Now, we need to install some packages that will allow us to activate the GPU. Remember that in deep learning, it is advantageous to run computation on the GPU as they contain specialized hardware to do very fast matrix multiplications – exacty the kind of thing that deep learning needs a lot of!</p>
-<p>Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found <a class="reference external" href="https://pytorch.org/get-started/locally/">here</a>. but we need to be careful here to match the particular version to our computer specifications (specifically, the version of our GPU drivers). In our case, we need to install pytorch using the following command:</p>
+<p>CAREamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found <a class="reference external" href="https://pytorch.org/get-started/locally/">here</a>. but we need to be careful here to match the particular version to our computer specifications (specifically, the version of our GPU drivers). In our case, we need to install pytorch using the following command:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">torch</span> <span class="pre">torchvision</span> <span class="pre">torchaudio</span> <span class="pre">--index-url</span> <span class="pre">https://download.pytorch.org/whl/cu124</span></code></p>
 </div></blockquote>
@@ -688,18 +688,18 @@ Well we are asking a particular piece of software called a package manager (in t
 <div><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;import</span> <span class="pre">torch;</span> <span class="pre">print([torch.cuda.get_device_properties(i)</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(torch.cuda.device_count())])&quot;</span></code></p>
 </div></blockquote>
 <p>After running this, you should see an output that lists the type of GPU we have (in this case an Nvidia Geforce 1080 Ti).</p>
-<p>Finally, we are ready to install Careamics! We can do this by typing:</p>
+<p>Finally, we are ready to install CAREamics! We can do this by typing:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;careamics[examples]&quot;</span></code></p>
 </div></blockquote>
-<p>This will use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, a package installer, to install the Careamics library.</p>
+<p>This will use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, a package installer, to install the CAREamics library.</p>
 </section>
 <section id="using-careamics-in-a-jupyter-notebook">
-<h2>Using Careamics in a Jupyter Notebook<a class="headerlink" href="#using-careamics-in-a-jupyter-notebook" title="Link to this heading">#</a></h2>
+<h2>Using CAREamics in a Jupyter Notebook<a class="headerlink" href="#using-careamics-in-a-jupyter-notebook" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>We will use Careamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like <code class="docutils literal notranslate"><span class="pre">(careamics)</span> <span class="pre">C:\Users\Admin</span></code>. This means that our prompt is currently active in the folder <code class="docutils literal notranslate"><span class="pre">C:\Users\Admin</span></code>. From where you downloaded the sample data, copy the <code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code> into this folder. Now go back to the terminal, and start jupyter by typing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and pressing enter.</p></li>
+<li><p>We will use CAREamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like <code class="docutils literal notranslate"><span class="pre">(careamics)</span> <span class="pre">C:\Users\Admin</span></code>. This means that our prompt is currently active in the folder <code class="docutils literal notranslate"><span class="pre">C:\Users\Admin</span></code>. From where you downloaded the sample data, copy the <code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code> into this folder. Now go back to the terminal, and start jupyter by typing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and pressing enter.</p></li>
 </ul>
-<p>You should see a window with a list of files. Find the file you just copied into this folder (<code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code>) and click on it. The notebook should open. Instructions on how to run Careamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask!</p>
+<p>You should see a window with a list of files. Find the file you just copied into this folder (<code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code>) and click on it. The notebook should open. Instructions on how to run CAREamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask!</p>
 </section>
 <section id="bonus-exercise-classifying-images-in-the-browser-in-piximi">
 <h2><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi" title="Link to this heading">#</a></h2>
@@ -949,9 +949,9 @@ Collab will work while you have fun on your free evening… 🙂</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-image-restoration-functions">Using the image restoration functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics"><strong>Exercise 3: Denosing with Careamics</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing Careamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using Careamics in a Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denosing-with-careamics"><strong>Exercise 3: Denosing with CAREamics</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing CAREamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using CAREamics in a Jupyter Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>
