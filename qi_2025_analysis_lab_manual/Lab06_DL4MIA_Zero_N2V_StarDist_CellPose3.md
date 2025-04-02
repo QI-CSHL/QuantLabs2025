@@ -10,8 +10,8 @@
 
 - Appreciate how Neural Networks are trained
 - Segmentation with Cellpose{cite}`Stringer2024-gd`
-- Learn how to get to and use Google Colab
-- Denoising with Noise2Void{cite}`Krull2019-al` in “Zero”
+- Learn how to make your own conda environment and install packages from pip
+- Denoising with Careamics in python
 - Bonus: Try in-browser classification with Piximi
 - Bonus: Use Noise2Void in Fiji
 - Bonus: Segmentation with StarDist in “Zero”
@@ -81,8 +81,8 @@ Check out the [documentation](https://cellpose.readthedocs.io/en/latest/), or ch
 
 Here, at QI, we have taken this annoying step for you already. Hence,
 you will find Cellpose pre-installed on the lab computers. To start it,
-go to the Windows search next to the start menu, and type “anaconda”.
-Pick and start the option “anaconda prompt”.
+go to the Windows search next to the start menu, and type `miniforge`.
+Pick and start the option `miniforge prompt`.
 
 Once this is opened, type in those two comments (the stuff after
 “**\>**”):
@@ -99,13 +99,13 @@ Open the file `001_img.tif` by dragging it onto the open window.
 You can find this file in the `DL4MIA/easy` folder in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData)
 ).
 
-We need to tell cellpose (roughly) how large our objects are (you can do
+Like we did in the 3D lab yesterday, we need to tell cellpose (roughly) how large our objects are (you can do
 so via the `cell diameter`) field. How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.
 
 You can now segment this image by selecting one of the pre-trained
 models from within the `dataset-specific models` box. Try segmenting this image using
-the `cyto` model. How good are the results?
+the `cyto2` model. How good are the results?
 
 ```{tip}
 You can toggle the visibility of segmentation masks on and off
@@ -240,6 +240,47 @@ As of April of 2024, both of these are still using Cellpose 2, which does have h
 
 ````
 
+## *Exercise 3: Denosing with Careamics
+
+## Installing Careamics
+
+- In previous exercises, we've given you a pre-made environment with the appropriate software packages (ie cellpose) already installed. When you go to use a new tool once you leave QI, however, you won't have this option. So, let's install careamics from scratch!
+
+- The documentation for Careamics can be found [here](https://careamics.github.io/0.1/) 
+
+- If you are familiar with conda and pip, the installation instructions can be found [here](https://careamics.github.io/0.1/installation/). If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the careamics instructions use `mamba`, whereas we will use `conda`. If that doesn't make sense to you, then read on to the next section!
+
+- The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (ie, careamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might have. We do this because different python packages require different 'dependencies' (ie other pieces of software that the package requires in order to run). So, for example, package A might require a particular version of package B (say, version 1.0), while package C might require a different version of package B (say, version 2.0). In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this is an unavoidable part of working with bleeding-edge python software packages, and is often called `dependency hell`.
+
+However, today we will not (hopefully!) run into dependency hell. Let's start by creating an environment. 
+
+- Open a new terminal by opening `miniforge prompt`. If you're using an existing terminal, make sure you deactivate any current environments that are open by typing `conda deactivate`.
+
+- Make a new environment by typing `create -n careamics python=3.10`.  
+
+What are we doing here? Well we are asking a particular piece of software (in this case, `conda`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
+
+- Activate the environment by typing `conda activate careamics`. As we saw yesterday and earier today, the prompt should change from `(base)` to `(careamics)`. We are now 'inside' this environment. Anything we will install will be restricted to this environment.
+
+- Now, we need to install some packages that will allow us to activate the GPU. Remember that in deep learning, it is advantageous to run computation on the GPU as they contain specialized hardware to do very fast matrix multiplications -- exacty the kind of thing that deep learning needs a lot of! 
+
+Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found [here](https://pytorch.org/get-started/locally/). but we need to be careful here to match the particular version to our computer specifications. In our case, we need to install pytorch using the following command
+
+`pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
+
+- We can confirm that this step worked and we can see the GPU, by typing the following command:
+
+`python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"`
+
+After running this, you should see an output that lists the type of GPU we have (in this case a Nvidia Geforce 1080 Ti).
+
+- Finally, we are ready to install Careamics. We can do this by typing `pip install "careamics[examples]"`. This will use `pip`, a package installer, to install the Careamics library.
+
+## Using Careamics in a Jupyter Notebook
+
+- We will use careamics via a Jupter Notebook. Jupyter notebooks are interactive python notebook where we can mix text and code, and they can be run in a browser window. We have provided a notebook in the data folder which we will use. First, we need to place this notebook somewhere where can see it. Note your terminal window should say something like `(careamics) C:\Users\Admin`. This means that our prompt is currently active in the folder `C:\Users\Admin`. From where you downloaded the sample data, copy the `careamics.ipynb` into this folder. Now go back to the terminal, and start jupyter by typing `jupyter notebook` and pressing enter. 
+
+You should see a window with a list of files. Find the file you just copied into this folder (`careamics.ipynb`) and click on it. The notebook should open. Instructions on how to run careamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask! 
 
 ## **Bonus Exercise: Classifying images in the browser in Piximi**
 
