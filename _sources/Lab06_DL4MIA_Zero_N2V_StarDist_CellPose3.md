@@ -250,31 +250,49 @@ The documentation for Careamics can be found [here](https://careamics.github.io/
 
 If you are familiar with conda and pip, the installation instructions can be found [here](https://careamics.github.io/0.1/installation/). If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the careamics instructions use `mamba`, whereas we will use `conda`. If that doesn't make sense to you, then read on to the next section!
 
-The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (ie, careamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might have. We do this because different python packages require different 'dependencies' (ie other pieces of software that the package requires in order to run). So, for example, package A might require a particular version of package B (say, version 1.0), while package C might require a different version of package B (say, version 2.0). In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this is an unavoidable part of working with bleeding-edge python software packages, and is often called `dependency hell`.
+The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (ie, careamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might have. We do this because different python packages require different 'dependencies' (ie other pieces of software that the package requires in order to run). So a certain package might 'depend' on a specific version of another package, for example:
 
-However, today we will not (hopefully!) run into dependency hell. Let's start by creating an environment. 
+Package A --> requires Package B, version 1.0
+Package C --> requires Package B, version 2.0
+
+In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this (commonly referred to as `dependency hell`) is an unavoidable part of working with bleeding-edge python software packages.
+
+However, we will not (hopefully!) run into dependency hell today. Let's start by creating an environment. 
 
 Open a new terminal by opening `miniforge prompt`. If you're using an existing terminal, make sure you deactivate any current environments that are open by typing `conda deactivate`.
 
-Make a new environment by typing `create -n careamics python=3.10`.  
+Make a new environment by typing:
 
-What are we doing here? Well we are asking a particular piece of software called a package manager (in this case, `conda`, although in the careamics installation instructions, they use a related but slightly different package manager called `mamba`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
+> `create -n careamics python=3.10`
 
-Activate the environment by typing `conda activate careamics`. As we saw yesterday and earier today, the prompt should change from `(base)` to `(careamics)`. We are now 'inside' this environment. Anything we will install will be restricted to this environment.
+```{note}
+**What are we doing here?** 
+Well we are asking a particular piece of software called a package manager (in this case, `conda`, although in the careamics installation instructions, they use a related but slightly different package manager called `mamba`) to `create` a new enviroment with the name careamics (`-n careamics`) and telling it to pre-install python version 3.10 into that environment. 
+```
+
+Activate the environment by typing: 
+
+> `conda activate careamics` 
+
+As we saw yesterday and earier today, the prompt should change from `(base)` to `(careamics)`. We are now 'inside' this environment. Anything we will install will be restricted to this environment (and, thus not accesible to software outside of that environment).
 
 Now, we need to install some packages that will allow us to activate the GPU. Remember that in deep learning, it is advantageous to run computation on the GPU as they contain specialized hardware to do very fast matrix multiplications -- exacty the kind of thing that deep learning needs a lot of! 
 
-Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found [here](https://pytorch.org/get-started/locally/). but we need to be careful here to match the particular version to our computer specifications (specifically, the version of our GPU drivers). In our case, we need to install pytorch using the following command
+Careamics is a deep learning package built around PyTorch, an open-source deep learning framework made by Meta. Installation instructions can be found [here](https://pytorch.org/get-started/locally/). but we need to be careful here to match the particular version to our computer specifications (specifically, the version of our GPU drivers). In our case, we need to install pytorch using the following command:
 
-`pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
+> `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
 
 We can confirm that this step worked and we can see the GPU, by typing the following command:
 
-`python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"`
+> `python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"`
 
 After running this, you should see an output that lists the type of GPU we have (in this case an Nvidia Geforce 1080 Ti).
 
-Finally, we are ready to install Careamics. We can do this by typing `pip install "careamics[examples]"`. This will use `pip`, a package installer, to install the Careamics library.
+Finally, we are ready to install Careamics! We can do this by typing:
+
+> `pip install "careamics[examples]"`
+
+This will use `pip`, a package installer, to install the Careamics library.
 
 ## Using Careamics in a Jupyter Notebook
 
