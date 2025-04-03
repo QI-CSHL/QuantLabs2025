@@ -467,9 +467,9 @@ would like to apply to our data are not always available in Fiji or ilastik<span
 quite yet (or only with a fair amount of command line work and difficulty). The latest methods can only be used by the ones “brave”
 enough to expose themselves to some amount of computer source code…</p>
 <p>Today we will all be brave! 😊</p>
-<p>I’m very much looking forward to hearing about your successes and
+<p>We’re very much looking forward to hearing about your successes and
 struggles tomorrow during the Q&amp;A session. Now, please take a seat, open
-a browser, and buckle up.</p>
+a browser, and buckle up!</p>
 </section>
 <section id="exercise-1-remind-yourself-about-what-weve-heard-in-the-lecture">
 <h2><strong>Exercise 1: Remind yourself about what we’ve heard in the lecture</strong><a class="headerlink" href="#exercise-1-remind-yourself-about-what-weve-heard-in-the-lecture" title="Link to this heading">#</a></h2>
@@ -508,7 +508,7 @@ anything that makes no sense to you and ask us</p>
 <h2><strong>Exercise 2: Play with Cellpose</strong><a class="headerlink" href="#exercise-2-play-with-cellpose" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Once back home, you will need <a class="reference external" href="https://cellpose.readthedocs.io/en/latest/installation.html">this link</a> to get started.</p>
+<p>Once back home, you will need <a class="reference external" href="https://cellpose.readthedocs.io/en/latest/installation.html">this installation instructions</a> to get started with Cellpose.</p>
 </div>
 <aside class="margin sidebar">
 <p class="sidebar-title">Want to learn more about working with Cellpose?</p>
@@ -518,76 +518,94 @@ anything that makes no sense to you and ask us</p>
 you will find Cellpose pre-installed on the lab computers. To start it,
 go to the Windows search next to the start menu, and type <code class="docutils literal notranslate"><span class="pre">miniforge</span></code>.
 Pick and start the option <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code>.</p>
-<p>Once this is opened, type in those two comments (the stuff after
-“<strong>&gt;</strong>”):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">cellpose</span>  
+<p>Once this is opened, type in those two lines:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only copy the stuff after “<strong>&gt;</strong>”</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>           <span class="o">&gt;</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">cellpose</span>  
 <span class="p">(</span><span class="n">cellpose</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">cellpose</span>
 </pre></div>
 </div>
 <p>You should now see something like
 this:<img alt="_images/cellpose_gui.png" src="_images/cellpose_gui.png" /></p>
 <p>Open the file <code class="docutils literal notranslate"><span class="pre">001_img.tif</span></code> by dragging it onto the open window.
-You can find this file in the <code class="docutils literal notranslate"><span class="pre">DL4MIA/easy</span></code> folder in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Lab Data share</a>
-).</p>
+You can find this file in the <code class="docutils literal notranslate"><span class="pre">DL4MIA/easy</span></code> folder in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Lab Data share</a>.</p>
 <p>Like we did in the 3D lab yesterday, we need to tell cellpose (roughly) how large our objects are (you can do
-so via the <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">diameter</span></code>) field. How might we estimate this? Keep in
+so via the <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">diameter</span></code>) field.</p>
+<p>How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.</p>
 <p>You can now segment this image by selecting one of the pre-trained
-models from within the <code class="docutils literal notranslate"><span class="pre">dataset-specific</span> <span class="pre">models</span></code> box. Try segmenting this image using
-the <code class="docutils literal notranslate"><span class="pre">cyto2</span></code> model. How good are the results?</p>
+models from within the <code class="docutils literal notranslate"><span class="pre">dataset-specific</span> <span class="pre">models</span></code> box. Try segmenting this image using the <code class="docutils literal notranslate"><span class="pre">cyto2</span></code> model. How good are the results?</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can toggle the visibility of segmentation masks on and off
 by hitting ‘<strong>x</strong>’ on your keyboard. Similarly, you can toggle cell
 outlines with the keyboard shortcut ‘<strong>z</strong>’. Alternatively you can do so
-in the <code class="docutils literal notranslate"><span class="pre">Drawing</span></code> tab.</p>
+in the <code class="docutils literal notranslate"><span class="pre">Drawing</span></code> box on the menu to the left.</p>
 </div>
-<p>How well did cellpose segment your image? Where (if anywhere) did it
+<p>How well did Cellpose segment your image? Where (if anywhere) did it
 fail? Try some of the different dataset-specific models. Do any of these
 work better? Worse? Why might that be?</p>
-<p>Let’s now try some more challenging data. From the link above, or from
-the DL4MIA folder in the lab data share, download the entire folder
-named ‘hard’, and place it somewhere convenient (like the desktop).</p>
-<p>From within this folder, open the ‘test’ folder and drag the file
-test_img.tif to cellpose to open it. Try segmenting it as well as
+<p>Let’s now try some more challenging data. From
+the <code class="docutils literal notranslate"><span class="pre">DL4MIA</span></code> folder in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">lab data share</a>, download the entire folder
+named <code class="docutils literal notranslate"><span class="pre">hard</span></code>, and place it somewhere convenient (like the Desktop).</p>
+<p>From within this folder, open the <code class="docutils literal notranslate"><span class="pre">test</span></code> folder and drag the file
+<code class="docutils literal notranslate"><span class="pre">test_img.tif</span></code> to Cellpose to open it. Try segmenting it as well as
 possible. Can you find setting and a model that work perfectly?</p>
 <p>Spoiler, none of the models are perfectly suited to this data, but we
-can iteratively retrain a model from within the Cellpose GUI…
-interested? Ok, let’s do it! 🙂</p>
+can iteratively retrain a custom model that will work better on this specific kind of data from within the Cellpose GUI…</p>
+<p>Interested? Ok, let’s do it! 🙂</p>
 <section id="human-in-the-loop-retraining">
 <h3>Human-in-the-loop retraining<a class="headerlink" href="#human-in-the-loop-retraining" title="Link to this heading">#</a></h3>
-<p>In the ‘hard’ folder you download earlier you will find a folder called
-‘train’. In this folder you will find a number of images. Open the image
-104_img.tif’ in cellpose. Note that we are not going to train a model
+<p>In the <code class="docutils literal notranslate"><span class="pre">hard</span></code> folder you downloaded earlier you will find a folder called
+<code class="docutils literal notranslate"><span class="pre">train</span></code>. In this folder you will find a number of images. Open the image
+<code class="docutils literal notranslate"><span class="pre">104_img.tif</span></code> in Cellpose.</p>
+<p>Note that we are <strong>not</strong> going to train a model
 from scratch, instead we are going to finetune one of the existing
-models (ideally starting from one that does a pretty good job already).
-Choose the model that you think gave you the best segmentations in the
-previous part of this exercise and apply it to this image.</p>
-<p>We are going to iteratively finetune this model, one image at a time.
-Once the current image is segmented well, we will open another one and
-repeat until results are (hopefully) making us happy! Here a little
-sketch:</p>
-<p>Everytime we see a result, you can correct the segmentation errors by
-redrawing some of the segmentation masks. The corrected image can then
+models (ideally starting from one that does a pretty good job already).</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The general human-in-the-loop training in the Cellpose GUI:</p>
+<ul class="simple">
+<li><p>Segment an image using a model of your choice</p></li>
+<li><p>Correct segmentation errors manually</p></li>
+<li><p>Use the corrected image to retrain the original model</p></li>
+<li><p>Apply the retrained model on another (similar) image</p></li>
+<li><p>Correct segmentation erros (hopefully there are fewer this time!)</p></li>
+<li><p>Further retrain your model</p></li>
+<li><p>Repeat this steps until the results are <a class="reference external" href="https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough">‘good enough’</a> for your analysis needs.</p></li>
+<li><p>Test your model on unseen data to evaluate generalizability!</p></li>
+</ul>
+</aside>
+<p>Choose the model that you think gave you the best segmentations in the
+previous part of this exercise and apply it to this image.
+Because we want to re-train our own model, we need to provide it with <code class="docutils literal notranslate"><span class="pre">ground</span> <span class="pre">truth</span> <span class="pre">data</span></code>. In this case, this means showing it what kind of segmentation we would like to see, given the current image.
+So, we need to manually curate the automatic segmentation provided by the model.</p>
+<p>You can see now how starting from an already kind-of-good model will make the manual correction easier and faster.</p>
+<p>You can correct the segmentation errors by
+removing, adding or redrawing some of the segmentation masks. The corrected image can then
 be used to further finetune (retrain) the model.</p>
-<p>You can correct errors in one of two ways:</p>
+<p>To correct errors in the segmentation:</p>
 <ol class="arabic simple">
 <li><p>Delete a mask by holding down the ‘control’ key and clicking on it.</p></li>
+</ol>
+<p>and/or</p>
+<ol class="arabic simple" start="2">
 <li><p>Draw a new mask by right-clicking anywhere in the image and tracing
 an outline, ending where you began to draw.</p></li>
 </ol>
 <p>Try correcting some of the segmentations. It might be easier if you
-switch between masks and outlines (use ‘z’ and ‘x’ as explained before).</p>
+switch between masks and outlines (use the ‘z’ and ‘x’ keys as explained before).</p>
 <p>Once you are happy with your corrected masks, take a look in the folder
 containing all of the training images. You will notice there is a new
 file there, called ‘hard\train\104_img_seg.npy’. This contains your
 corrected segmentation and will become a new bit of ground truth used
 during finetuning the model. But… how do you start this finetuning step?</p>
-<p>In Cellpose, start: `models →<br />
-train new model with images and masks in folder’.</p>
+<p>In the Cellpose menu bar, go to <code class="docutils literal notranslate"><span class="pre">models</span> <span class="pre">→</span>&#160;&#160; <span class="pre">train</span> <span class="pre">new</span> <span class="pre">model</span> <span class="pre">with</span> <span class="pre">images</span> <span class="pre">and</span> <span class="pre">masks</span> <span class="pre">in</span> <span class="pre">folder</span></code>.</p>
 <p>You should see a window like this one:</p>
 <img alt="_images/cellpose_training_gui.png" src="_images/cellpose_training_gui.png" />
-<p>First, we need to select which initial model to use (in the screenshot
+<p>First, we need to select which initial model to use. In the screenshot
 above, we are retraining the <code class="docutils literal notranslate"><span class="pre">cyto</span></code> model (but of course you may choose
 to retrain any available model). You can, and should, give your new
 model a name. You can also see which (corrected) images you are going to
@@ -595,15 +613,17 @@ retrain the model on under ‘filenames’, and the number of masks that
 will be used for retraining in that image. Click OK whenever you are
 ready to retrain and finetune the selected model!</p>
 <p>During training you should see something like the following if you check the
-console (where you started cellpose from). What is going on here? Remember
+console (where you started Cellpose from). What is going on here? Remember
 back the lecture when we discussed training steps and epochs.
 <img alt="_images/cellpose_training_output.png" src="_images/cellpose_training_output.png" /></p>
-<p>Once done, Cellpose will open the next image in the folder and
-automatically use the freshly finetuned model to segment it (NOTE: in cellpose
-3 there seems to be a bug where the new model is not being used to segment
+<p>Once done, Cellpose will automatically open the next image in the folder and use the freshly finetuned model to segment it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Cellpose 3 there seems to be a bug where the new model is not being used to segment
 the newly loaded image. If you notice the segmentation isn’t very good, manually
-select your newly trained model under the “other models” dropdown and run it).
-You can now repeat this process as often as needed. Cellpose will in each iteration
+select your newly trained model under the “other models” dropdown and run it.</p>
+</div>
+<p>You can now repeat this process as often as needed. Cellpose will in each iteration
 finetune the same original model, but will do so with an ever increasing
 number of user labeled masks (the ones you have created). Eventually you
 will either loose hope or find that Cellpose’s prediction become good
@@ -619,7 +639,7 @@ with the initial model you started with?</p>
 <p>Cellpose also has some ability to restore images by denoising and deblurring.
 This is used to aid the segmentation of noisy data. Let’s  test it!</p>
 <p>From the folder you downloaded earlier, open the “noisy” folder and open “convollaria.tif”
-in cellpose.</p>
+in Cellpose.</p>
 <p>Try using the Cyto3 model to segment this image (you can leave the diameter at 30 pixels).</p>
 <p>Not a very satisfying result is it?</p>
 <p>This is partially because the data is very noisy. Let’s try to add some denoising befre we segment.</p>
@@ -656,7 +676,7 @@ segmentation. What might be useful for denoising this image?</p>
 </section>
 <section id="installing-careamics">
 <h2>Installing CAREamics<a class="headerlink" href="#installing-careamics" title="Link to this heading">#</a></h2>
-<p>In previous exercises, we’ve given you a pre-made environment with the appropriate software packages (<em>i.e.</em> cellpose) already installed. When you go to use a new tool once you leave QI, however, you won’t have this option. So, let’s install CAREamics from scratch!</p>
+<p>In previous exercises, we’ve given you a pre-made environment with the appropriate software packages (<em>i.e.</em> Cellpose) already installed. When you go to use a new tool once you leave QI, however, you won’t have this option. So, let’s install CAREamics from scratch!</p>
 <p>The documentation for CAREamics can be found <a class="reference external" href="https://careamics.github.io/0.1/">here</a>.</p>
 <p>If you are familiar with <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the installation instructions can be found <a class="reference external" href="https://careamics.github.io/0.1/installation/">here</a>. If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the CAREamics instructions use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, whereas we will use <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If that doesn’t make sense to you, then read on to the next section!</p>
 <p>The first step in installing a python-based software package is to make what is called an <code class="docutils literal notranslate"><span class="pre">environment</span></code>. You can think of a <code class="docutils literal notranslate"><span class="pre">package</span></code> as a particular software tool (<em>i.e.</em>, CAREamics is a python <code class="docutils literal notranslate"><span class="pre">package</span></code>). An <code class="docutils literal notranslate"><span class="pre">environment</span></code> is a particular (separate) place on your computer where we can install <code class="docutils literal notranslate"><span class="pre">packages</span></code> and have them be isolated from the other environments we might also need for other purposes. We do this because different python packages require different ‘dependencies’ (<em>i.e.</em> other pieces of software that the package requires in order to run). So a certain package might ‘depend’ on a specific version of another package, for example:</p>
