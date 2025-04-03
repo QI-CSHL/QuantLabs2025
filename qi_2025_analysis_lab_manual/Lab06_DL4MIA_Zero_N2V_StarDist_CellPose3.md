@@ -30,9 +30,9 @@ enough to expose themselves to some amount of computer source code...
 
 Today we will all be brave! 😊
 
-I’m very much looking forward to hearing about your successes and
+We're very much looking forward to hearing about your successes and
 struggles tomorrow during the Q&A session. Now, please take a seat, open
-a browser, and buckle up.
+a browser, and buckle up!
 
 ## **Exercise 1: Remind yourself about what we’ve heard in the lecture**
 
@@ -73,7 +73,7 @@ a browser, and buckle up.
 ## **Exercise 2: Play with Cellpose** 
 
 ```{note}
-Once back home, you will need [this link](https://cellpose.readthedocs.io/en/latest/installation.html) to get started.
+Once back home, you will need [this installation instructions](https://cellpose.readthedocs.io/en/latest/installation.html) to get started with Cellpose.
 ```
 
 ```{margin} Want to learn more about working with Cellpose?
@@ -85,11 +85,13 @@ you will find Cellpose pre-installed on the lab computers. To start it,
 go to the Windows search next to the start menu, and type `miniforge`.
 Pick and start the option `miniforge prompt`.
 
-Once this is opened, type in those two comments (the stuff after
-“**\>**”):
+Once this is opened, type in those two lines:
+```{warning}
+Only copy the stuff after “**\>**”
+```
 
 ```  
-> conda activate cellpose  
+           > conda activate cellpose  
 (cellpose) > cellpose
 ```
 
@@ -97,68 +99,85 @@ You should now see something like
 this:<img src="images/dl/cellpose_gui.png" style="width:6in" />
 
 Open the file `001_img.tif` by dragging it onto the open window.
-You can find this file in the `DL4MIA/easy` folder in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData)
-).
+You can find this file in the `DL4MIA/easy` folder in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData).
 
 Like we did in the 3D lab yesterday, we need to tell cellpose (roughly) how large our objects are (you can do
-so via the `cell diameter`) field. How might we estimate this? Keep in
+so via the `cell diameter`) field. 
+
+How might we estimate this? Keep in
 mind that this diameter must be reported in pixels.
 
 You can now segment this image by selecting one of the pre-trained
-models from within the `dataset-specific models` box. Try segmenting this image using
-the `cyto2` model. How good are the results?
+models from within the `dataset-specific models` box. Try segmenting this image using the `cyto2` model. How good are the results?
 
 ```{tip}
 You can toggle the visibility of segmentation masks on and off
 by hitting ‘**x**’ on your keyboard. Similarly, you can toggle cell
 outlines with the keyboard shortcut ‘**z**’. Alternatively you can do so
-in the `Drawing` tab.
+in the `Drawing` box on the menu to the left.
 ```
 
-How well did cellpose segment your image? Where (if anywhere) did it
+How well did Cellpose segment your image? Where (if anywhere) did it
 fail? Try some of the different dataset-specific models. Do any of these
 work better? Worse? Why might that be?
 
-Let’s now try some more challenging data. From the link above, or from
-the DL4MIA folder in the lab data share, download the entire folder
-named ‘hard’, and place it somewhere convenient (like the desktop).
+Let’s now try some more challenging data. From
+the `DL4MIA` folder in the [lab data share](https://tinyurl.com/QI2025AnalysisLabData), download the entire folder
+named `hard`, and place it somewhere convenient (like the Desktop).
 
-From within this folder, open the ‘test’ folder and drag the file
-test_img.tif to cellpose to open it. Try segmenting it as well as
+From within this folder, open the `test` folder and drag the file
+`test_img.tif` to Cellpose to open it. Try segmenting it as well as
 possible. Can you find setting and a model that work perfectly?
 
 Spoiler, none of the models are perfectly suited to this data, but we
-can iteratively retrain a model from within the Cellpose GUI…
-interested? Ok, let’s do it! 🙂
+can iteratively retrain a custom model that will work better on this specific kind of data from within the Cellpose GUI…
+
+Interested? Ok, let’s do it! 🙂
 
 ### Human-in-the-loop retraining
 
-In the ‘hard’ folder you download earlier you will find a folder called
-‘train’. In this folder you will find a number of images. Open the image
-104_img.tif’ in cellpose. Note that we are not going to train a model
+In the `hard` folder you downloaded earlier you will find a folder called
+`train`. In this folder you will find a number of images. Open the image
+`104_img.tif` in Cellpose. 
+
+Note that we are **not** going to train a model
 from scratch, instead we are going to finetune one of the existing
 models (ideally starting from one that does a pretty good job already).
+
+```{margin}
+The general human-in-the-loop training in the Cellpose GUI:
+- Segment an image using a model of your choice
+- Correct segmentation errors manually
+- Use the corrected image to retrain the original model
+- Apply the retrained model on another (similar) image
+- Correct segmentation erros (hopefully there are fewer this time!)
+- Further retrain your model 
+- Repeat this steps until the results are ['good enough'](https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough) for your analysis needs.
+- Test your model on unseen data to evaluate generalizability!
+```
+
 Choose the model that you think gave you the best segmentations in the
 previous part of this exercise and apply it to this image.
+Because we want to re-train our own model, we need to provide it with `ground truth data`. In this case, this means showing it what kind of segmentation we would like to see, given the current image.
+So, we need to manually curate the automatic segmentation provided by the model.
 
-We are going to iteratively finetune this model, one image at a time.
-Once the current image is segmented well, we will open another one and
-repeat until results are (hopefully) making us happy! Here a little
-sketch:
+You can see now how starting from an already kind-of-good model will make the manual correction easier and faster.
 
-Everytime we see a result, you can correct the segmentation errors by
-redrawing some of the segmentation masks. The corrected image can then
+You can correct the segmentation errors by
+removing, adding or redrawing some of the segmentation masks. The corrected image can then
 be used to further finetune (retrain) the model.
 
-You can correct errors in one of two ways:
+To correct errors in the segmentation:
 
 1)  Delete a mask by holding down the ‘control’ key and clicking on it.
+
+and/or
 
 2)  Draw a new mask by right-clicking anywhere in the image and tracing
     an outline, ending where you began to draw.
 
 Try correcting some of the segmentations. It might be easier if you
-switch between masks and outlines (use ‘z’ and ‘x’ as explained before).
+switch between masks and outlines (use the ‘z’ and ‘x’ keys as explained before).
 
 Once you are happy with your corrected masks, take a look in the folder
 containing all of the training images. You will notice there is a new
@@ -166,14 +185,14 @@ file there, called ‘hard\train\104_img_seg.npy’. This contains your
 corrected segmentation and will become a new bit of ground truth used
 during finetuning the model. But… how do you start this finetuning step?
 
-In Cellpose, start: `models →  
-train new model with images and masks in folder’.
+In the Cellpose menu bar, go to `models →  
+train new model with images and masks in folder`.
 
 You should see a window like this one:
 
 <img src="images/dl/cellpose_training_gui.png" style="width:5in" />
 
-First, we need to select which initial model to use (in the screenshot
+First, we need to select which initial model to use. In the screenshot
 above, we are retraining the `cyto` model (but of course you may choose
 to retrain any available model). You can, and should, give your new
 model a name. You can also see which (corrected) images you are going to
@@ -182,15 +201,18 @@ will be used for retraining in that image. Click OK whenever you are
 ready to retrain and finetune the selected model!
 
 During training you should see something like the following if you check the 
-console (where you started cellpose from). What is going on here? Remember 
+console (where you started Cellpose from). What is going on here? Remember 
 back the lecture when we discussed training steps and epochs.
 <img src="images/dl/cellpose_training_output.png" style="width:6in" />
 
-Once done, Cellpose will open the next image in the folder and
-automatically use the freshly finetuned model to segment it (NOTE: in cellpose
-3 there seems to be a bug where the new model is not being used to segment
+Once done, Cellpose will automatically open the next image in the folder and use the freshly finetuned model to segment it. 
+
+```{note}
+In Cellpose 3 there seems to be a bug where the new model is not being used to segment
 the newly loaded image. If you notice the segmentation isn't very good, manually 
-select your newly trained model under the "other models" dropdown and run it). 
+select your newly trained model under the "other models" dropdown and run it.
+```
+
 You can now repeat this process as often as needed. Cellpose will in each iteration
 finetune the same original model, but will do so with an ever increasing
 number of user labeled masks (the ones you have created). Eventually you
@@ -209,7 +231,7 @@ Cellpose also has some ability to restore images by denoising and deblurring.
 This is used to aid the segmentation of noisy data. Let's  test it!
 
 From the folder you downloaded earlier, open the "noisy" folder and open "convollaria.tif"
-in cellpose.
+in Cellpose.
 
 Try using the Cyto3 model to segment this image (you can leave the diameter at 30 pixels).
 
@@ -245,7 +267,7 @@ As of April of 2024, both of these are still using Cellpose 2, which does have h
 
 ## Installing CAREamics
 
-In previous exercises, we've given you a pre-made environment with the appropriate software packages (_i.e._ cellpose) already installed. When you go to use a new tool once you leave QI, however, you won't have this option. So, let's install CAREamics from scratch!
+In previous exercises, we've given you a pre-made environment with the appropriate software packages (_i.e._ Cellpose) already installed. When you go to use a new tool once you leave QI, however, you won't have this option. So, let's install CAREamics from scratch!
 
 The documentation for CAREamics can be found [here](https://careamics.github.io/0.1/). 
 
