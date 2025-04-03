@@ -145,15 +145,15 @@ from scratch, instead we are going to finetune one of the existing
 models (ideally starting from one that does a pretty good job already).
 
 ```{margin}
-The general human-in-the-loop training in the Cellpose GUI:
-- Segment an image using a model of your choice
-- Correct segmentation errors manually
-- Use the corrected image to retrain the original model
-- Apply the retrained model on another (similar) image
-- Correct segmentation erros (hopefully there are fewer this time!)
-- Further retrain your model 
-- Repeat this steps until the results are ['good enough'](https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough) for your analysis needs.
-- Test your model on unseen data to evaluate generalizability!
+Human-in-the-loop training scheme in the Cellpose GUI:
+* Segment an image using a model of your choice
+* Correct segmentation errors manually
+* Use the corrected image to retrain the original model
+* Apply the retrained model on another (similar) image
+* Correct segmentation erros (hopefully there are fewer this time!)
+* Further retrain your model 
+* Repeat this steps until the results are ['good enough'](https://carpenter-singh-lab.broadinstitute.org/blog/when-to-say-good-enough) for your analysis needs.
+* Test your model on unseen data to evaluate generalizability!
 ```
 
 Choose the model that you think gave you the best segmentations in the
@@ -227,7 +227,7 @@ with the initial model you started with?
 
 ### Using the image restoration functions
 
-Cellpose also has some ability to restore images by denoising and deblurring.
+The version of Cellpose that we are using (Cellpose 3) also has some ability to restore images by denoising and deblurring.
 This is used to aid the segmentation of noisy data. Let's  test it!
 
 From the folder you downloaded earlier, open the "noisy" folder and open "convollaria.tif"
@@ -239,7 +239,7 @@ Not a very satisfying result is it?
 
 This is partially because the data is very noisy. Let's try to add some denoising befre we segment.
 
-Under "Image restoration, press the "denoise" button. What do you notice about the image?
+Under `Image restoration` box in the lower part of the menu to the left, press the `Denoise` button. What do you notice about the image?
 
 Try using the same parameters and mode to segment this image. Did it improve?
 

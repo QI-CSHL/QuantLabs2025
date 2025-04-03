@@ -567,7 +567,7 @@ from scratch, instead we are going to finetune one of the existing
 models (ideally starting from one that does a pretty good job already).</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>The general human-in-the-loop training in the Cellpose GUI:</p>
+<p>Human-in-the-loop training scheme in the Cellpose GUI:</p>
 <ul class="simple">
 <li><p>Segment an image using a model of your choice</p></li>
 <li><p>Correct segmentation errors manually</p></li>
@@ -637,14 +637,14 @@ with the initial model you started with?</p>
 </section>
 <section id="using-the-image-restoration-functions">
 <h3>Using the image restoration functions<a class="headerlink" href="#using-the-image-restoration-functions" title="Link to this heading">#</a></h3>
-<p>Cellpose also has some ability to restore images by denoising and deblurring.
+<p>The version of Cellpose that we are using (Cellpose 3) also has some ability to restore images by denoising and deblurring.
 This is used to aid the segmentation of noisy data. Let’s  test it!</p>
 <p>From the folder you downloaded earlier, open the “noisy” folder and open “convollaria.tif”
 in Cellpose.</p>
 <p>Try using the Cyto3 model to segment this image (you can leave the diameter at 30 pixels).</p>
 <p>Not a very satisfying result is it?</p>
 <p>This is partially because the data is very noisy. Let’s try to add some denoising befre we segment.</p>
-<p>Under “Image restoration, press the “denoise” button. What do you notice about the image?</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">restoration</span></code> box in the lower part of the menu to the left, press the <code class="docutils literal notranslate"><span class="pre">Denoise</span></code> button. What do you notice about the image?</p>
 <p>Try using the same parameters and mode to segment this image. Did it improve?</p>
 <p>Try some other restoration modes. Try using some custom filters and see if you can improve the
 segmentation. What might be useful for denoising this image?</p>
