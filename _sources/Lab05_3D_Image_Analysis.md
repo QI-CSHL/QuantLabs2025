@@ -195,6 +195,8 @@ the image with point sources. Save the result as "marker".
   Set Input, Marker, and Mask appropriately. Check all checkboxes. 
   Click Ok.
 
+  Tou can add cool colors to your segmentation by chooosing a LUT in Image\>Lookup Tables. Try 'Glasbey on Dark' ;\)
+
   - *Bonus:* Can you overlay the original image and watershed segmentation to
     visualize them simultaneously in 3D?
 
