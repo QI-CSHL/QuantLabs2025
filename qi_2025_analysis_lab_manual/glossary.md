@@ -24,7 +24,8 @@ Threshold
 Watershed
 Mask - a binary image (background is black, foreground is white)
 Translation/Rotation
-
+Environment
+Conda/miniconda/mamba, package managers
 
 
 --->
