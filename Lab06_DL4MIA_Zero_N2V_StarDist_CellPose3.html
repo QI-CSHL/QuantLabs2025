@@ -417,7 +417,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denoising-with-careamics"><strong>Exercise 3: Denoising with CAREamics</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing CAREamics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using CAREamics in a Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-with-piximi"><strong>Bonus Exercise: Classifying images in the browser with Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-your-classifier">Evaluate your classifier</a></li>
@@ -658,14 +658,14 @@ segmentation. What might be useful for denoising this image?</p>
 <ul class="simple">
 <li><p>EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with <a class="reference external" href="https://bandv1.denbi.uni-tuebingen.de/#/eosc-landingpage">&gt;20 helpful image analysis tools pre-installed</a>.</p>
 <ul>
-<li><p>Upsides: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs</p></li>
-<li><p>Downsides: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
+<li><p><strong>Upsides</strong>: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs</p></li>
+<li><p><strong>Downsides</strong>: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
 </ul>
 </li>
 <li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id3"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">10</a></sup></span></p>
 <ul>
-<li><p>Upsides: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker <code class="docutils literal notranslate"><span class="pre">.app</span></code> or <code class="docutils literal notranslate"><span class="pre">.exe</span></code> files from their respective websites, download <a class="reference external" href="https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py">the plugin</a>, and then point CellProfiler at the location of the downloaded file.</p></li>
-<li><p>Downsides: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you’re in analysis mode and running all your images unsupervised). You’re limited to the hardware you have locally.</p></li>
+<li><p><strong>Upsides</strong>: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker <code class="docutils literal notranslate"><span class="pre">.app</span></code> or <code class="docutils literal notranslate"><span class="pre">.exe</span></code> files from their respective websites, download <a class="reference external" href="https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py">the plugin</a>, and then point CellProfiler at the location of the downloaded file.</p></li>
+<li><p><strong>Downsides</strong>: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you’re in analysis mode and running all your images unsupervised). You’re limited to the hardware you have locally.</p></li>
 </ul>
 </li>
 </ul>
@@ -681,15 +681,20 @@ segmentation. What might be useful for denoising this image?</p>
 <p>The documentation for CAREamics can be found <a class="reference external" href="https://careamics.github.io/0.1/">here</a>.</p>
 <p>If you are familiar with <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the installation instructions can be found <a class="reference external" href="https://careamics.github.io/0.1/installation/">here</a>. If you are comfortable with what is there, go ahead and follow the instructions. Otherwise we will go through each step here. Keep in mind that the CAREamics instructions use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, whereas we will use <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If that doesn’t make sense to you, then read on to the next section!</p>
 <p>The first step in installing a python-based software package is to make what is called an <code class="docutils literal notranslate"><span class="pre">environment</span></code>. You can think of a <code class="docutils literal notranslate"><span class="pre">package</span></code> as a particular software tool (<em>i.e.</em>, CAREamics is a python <code class="docutils literal notranslate"><span class="pre">package</span></code>). An <code class="docutils literal notranslate"><span class="pre">environment</span></code> is a particular (separate) place on your computer where we can install <code class="docutils literal notranslate"><span class="pre">packages</span></code> and have them be isolated from the other environments we might also need for other purposes. We do this because different python packages require different ‘dependencies’ (<em>i.e.</em> other pieces of software that the package requires in order to run). So a certain package might ‘depend’ on a specific version of another package, for example:</p>
-<p>Package A –&gt; requires Package B, version 1.0
-Package C –&gt; requires Package B, version 2.0</p>
+<p>Package A –&gt; requires Package B, version 1.0</p>
+<p>Package C –&gt; requires Package B, version 2.0</p>
 <p>In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this (commonly referred to as <code class="docutils literal notranslate"><span class="pre">dependency</span> <span class="pre">hell</span></code>) is an unavoidable part of working with bleeding-edge python software packages.</p>
 <p>However, we will not (hopefully!) run into dependency hell today. Let’s start by creating an environment.</p>
 <p>Open a new terminal by opening <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code>. If you’re using an existing terminal, make sure you deactivate any current environments that are open by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p>
 <p>Make a new environment by typing:</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">-n</span> <span class="pre">careamics</span> <span class="pre">python=3.10</span></code></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">careamics</span> <span class="pre">python=3.10</span></code></p>
 </div></blockquote>
+<p>You will be prompted to approve of all the software packages that need to be installed:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Proceed</span> <span class="pre">([y]/n)?</span></code></p>
+</div></blockquote>
+<p>Enter <code class="docutils literal notranslate"><span class="pre">y</span></code> (yes) to proceed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>What are we doing here?</strong>
@@ -723,14 +728,24 @@ Well we are asking a particular piece of software called a package manager (in t
 </ul>
 <p>You should see a window with a list of all the files in the folder you started Jupyter Notebook in. Find the file you just copied into this folder (<code class="docutils literal notranslate"><span class="pre">careamics.ipynb</span></code>) and click on it. The notebook will open in a tab in your browser. Instructions on how to run CAREamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask! If some problem arises, ask! If all works and you are done – brag a little! 😸</p>
 </section>
-<section id="bonus-exercise-classifying-images-in-the-browser-in-piximi">
-<h2><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi" title="Link to this heading">#</a></h2>
+<section id="bonus-exercise-classifying-images-in-the-browser-with-piximi">
+<h2><strong>Bonus Exercise: Classifying images in the browser with Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-with-piximi" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id27" title="Levin M Moser, Nodar Gogoberidze, Andréa Papaleo, Alice Lucas, David Dao, Christoph A Friedrich, Lassi Paavolainen, Csaba Molnar, David R Stirling, Jane Hung, Rex Wang, Callum Tromans-Coia, Bin Li, Edward L Evans, Kevin W Eliceiri, Peter Horvath, Anne E Carpenter, and Beth A Cimini. Piximi - an images to discovery web tool for bioimages and beyond. bioRxiv, pages 2024.06.03.597232, June 2024.">11</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">Want to learn more about working with Piximi?</p>
 <p>Check out the <a class="reference external" href="https://documentation.piximi.app/intro.html">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/Piximi">the image.sc forum!</a></p>
 </aside>
-<p>Piximi includes 4 major functionalities - 3 major ones you’re used to thinking about are Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an Annotation tool. We hope to provide trainable segmentation by the end of 2025. You can keep visiting piximi.app to see what’s available!</p>
+<p>Piximi includes 4 major functionalities. Three major ones you’re used to thinking about are:</p>
+<ul class="simple">
+<li><p><strong>Segmentation and Object Detection</strong></p></li>
+<li><p><strong>Classification</strong>, and</p></li>
+<li><p><strong>Measurement</strong></p></li>
+</ul>
+<p>In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an <strong>Annotation</strong> tool.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>We hope to provide <em>trainable</em> segmentation options by the end of 2025. You can keep visiting <a class="reference external" href="https://piximi.app/">piximi.app</a> to see what’s available!</p>
+</aside>
 <section id="train-a-10-class-classification-model-using-mnist">
 <h3>Train a 10-class classification model using MNIST<a class="headerlink" href="#train-a-10-class-classification-model-using-mnist" title="Link to this heading">#</a></h3>
 <p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id5"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">12</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
@@ -804,9 +819,9 @@ on the right to inspect only one or certain categories at a time.</p>
 <p>If and when (when), you find some errors in the predictions, you can fix them by assigning them a new category.</p>
 <a class="reference internal image-reference" href="_images/piximi_recategorize_errors.png"><img alt="_images/piximi_recategorize_errors.png" src="_images/piximi_recategorize_errors.png" style="height: 180px;" />
 </a>
-<p>Depending on why you’re using machine learning, you might choose to fix all the wrong images at this stage, or only some</p>
+<p>Depending on why you’re using machine learning, you might choose to fix all the wrong images at this stage, or only some:</p>
 <ul>
-<li><p>Is your goal to just get the classifications right and then use them for something, and most of them have already been correctly classified?</p>
+<li><p>Is your goal to just get the classifications right and then use them for something else, and most of them have already been correctly classified?</p>
 <ul class="simple">
 <li><p>In that case, there’s no harm in just fixing the few mistakes and then moving on to other downstream quantification steps (coming soon!).</p></li>
 <li><p>If this is your goal but there are a lot of mistakes, you might not choose to fix all of them at this stage, but just fix a subset and then try to train again so you can get to a point where the errors are at a small enough level that you CAN do final data cleaning by hand</p></li>
@@ -826,7 +841,8 @@ on the right to inspect only one or certain categories at a time.</p>
 </section>
 <section id="save-things-for-later">
 <h4>Save things for later<a class="headerlink" href="#save-things-for-later" title="Link to this heading">#</a></h4>
-<p>Reproducible science matters! You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.</p>
+<p>Reproducible science matters!</p>
+<p>You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.</p>
 <a class="reference internal image-reference" href="_images/piximi_save_project.png"><img alt="_images/piximi_save_project.png" src="_images/piximi_save_project.png" style="height: 180px;" />
 </a>
 <a class="reference internal image-reference" href="_images/piximi_save_model.png"><img alt="_images/piximi_save_model.png" src="_images/piximi_save_model.png" style="height: 180px;" />
@@ -850,10 +866,10 @@ on the right to inspect only one or certain categories at a time.</p>
 <p>You need not do this, since it can be a bit slow, but it is necessary if you want to assess the performance of the no-GFP class (and will make things much easier if you are red-green colorblind).</p>
 <p>Piximi’s current defaults are to load two-channel images as red and green, and to rescale each image min-max individually. While we work to fix those bugs, here’s how you can manually set the colors to something better (and more uniform)</p>
 <ul class="simple">
-<li><p>Hit Ctl+A to select all cells</p></li>
+<li><p>Hit Ctrl+A to select all cells</p></li>
 <li><p>Hit “Annotate” to open the annotation viewer
 <a class="reference internal" href="_images/piximi_annotate.png"><img alt="_images/piximi_annotate.png" src="_images/piximi_annotate.png" style="height: 180px;" /></a></p></li>
-<li><p>Open the channel adjustment bar on the right (which is the three circles), and change color mapping to better lookup tables and values. Hit “Apply to all images open in the annotator” when you’re done (and then wait a couple of minutes)
+<li><p>Open the channel adjustment bar on the right (<a class="reference internal" href="_images/Piximi_channel_tool.png"><img alt="_images/Piximi_channel_tool.png" src="_images/Piximi_channel_tool.png" style="height: 25px;" /></a>), and change color mapping to better lookup tables and values. Hit “Apply to all images open in the annotator” when you’re done (and then wait a couple of minutes)
 <a class="reference internal" href="_images/piximi_channels.png"><img alt="_images/piximi_channels.png" src="_images/piximi_channels.png" style="height: 180px;" /></a></p></li>
 </ul>
 </div>
@@ -897,19 +913,21 @@ reuse.<img alt="_images/image12.png" src="_images/image12.png" /></p></li>
 </section>
 <section id="bonus-exercise-image-segmentation-with-stardist-in-zero">
 <h2><strong>Bonus Exercise: Image Segmentation with StarDist (in “Zero”)</strong><a class="headerlink" href="#bonus-exercise-image-segmentation-with-stardist-in-zero" title="Link to this heading">#</a></h2>
-<p>Now that you have experienced how to use ZeroCostDL4Mic Collab
-notebooks, switch it up, do some instance segmentation! We suggest the
-StarDist notebook, but if you feel adventurous, choose something else
+<p>As you heard in the lecture, <a class="reference external" href="https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki">ZeroCostDL4Mic Collab
+notebooks</a> is a collection of jupyter notebooks for various image analysis tools using deep learning that run in Google Colab, taking advantage of its ‘free’ (albeit limited) GPU resources.</p>
+<p>Let’s try some instance segmentation notebooks!</p>
+<p>We suggest the
+<code class="docutils literal notranslate"><span class="pre">StarDist</span></code> notebook, but if you feel adventurous, choose something else
 you find most interesting in the context of your own research.</p>
 <img alt="_images/image15.png" src="_images/image15.png" />
 <p>Go through the notebook you chose. And again:</p>
-<p><strong>Ask questions, help each other</strong>!</p>
+<p><strong>Ask questions, discuss, help each other</strong>!</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Reduce the number of epochs to some small number to save yourself long waiting times!</p>
+<p>Reduce the number of <em>epochs</em> to some small number to save yourself long waiting times!</p>
 </div>
 <p>Later today, when you are done with the exercises, you might want to re-run your favorite notebook with the suggested number of epochs.
-Collab will work while you have fun on your free evening… 🙂</p>
+Colab will work while you have fun on your free evening… 🙂</p>
 <div class="admonition-super-excited-about-deep-learning-now-and-want-to-know-where-to-find-the-latest-models admonition">
 <p class="admonition-title">Super excited about deep learning now and want to know where to find the latest models?</p>
 <p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id26" title="Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin Pape, Tom Burke, Carlos Garcia-López-de-Haro, Craig Russell, Lucía Moya-Sans, Cristina de-la-Torre-Gutiérrez, Deborah Schmidt, Dominik Kutra, Maksim Novikov, Martin Weigert, Uwe Schmidt, Peter Bankhead, Guillaume Jacquemet, Daniel Sage, Ricardo Henriques, Arrate Muñoz-Barrutia, Emma Lundberg, Florian Jug, and Anna Kreshuk. BioImage model zoo: a Community-Driven resource for accessible deep learning in BioImage analysis. bioRxiv, pages 2022.06.07.495102, June 2022.">13</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
@@ -992,7 +1010,7 @@ Collab will work while you have fun on your free evening… 🙂</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-denoising-with-careamics"><strong>Exercise 3: Denoising with CAREamics</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-careamics">Installing CAREamics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-careamics-in-a-jupyter-notebook">Using CAREamics in a Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi"><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-exercise-classifying-images-in-the-browser-with-piximi"><strong>Bonus Exercise: Classifying images in the browser with Piximi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-10-class-classification-model-using-mnist">Train a 10-class classification model using MNIST</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-a-classifier">Train a classifier</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-your-classifier">Evaluate your classifier</a></li>

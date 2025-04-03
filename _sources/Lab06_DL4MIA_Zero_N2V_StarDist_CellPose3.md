@@ -255,11 +255,11 @@ As of April of 2024, both of these are still using Cellpose 2, which does have h
 ```
 
 - EMBL has the Bioimage ANalysis Desktop (BAND) program, which allows you to check out virtual machines in the cloud. You simply visit a website, tell them the resources you need, and get a machine with [>20 helpful image analysis tools pre-installed](https://bandv1.denbi.uni-tuebingen.de/#/eosc-landingpage). 
-  - Upsides: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs
-  - Downsides: They have limited capacity and sometimes machines aren't available due to EMBL courses. You have to upload your data to their servers, and download your results from them. 
+  - **Upsides**: No installation, everything is correctly configured and ready to go, simulataneous access to lots of tools at once, you can ask for machines with GPUs
+  - **Downsides**: They have limited capacity and sometimes machines aren't available due to EMBL courses. You have to upload your data to their servers, and download your results from them. 
 - Cellpose can be used with CellProfiler, both in Python if you have both programs `pip` or `conda` installed, but [CellProfiler also offers a way to use a pre-built version using Docker](https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements) {cite}`Weisbart2023-kc`
-  - Upsides: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker `.app` or `.exe` files from their respective websites, download [the plugin](https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py), and then point CellProfiler at the location of the downloaded file. 
-  - Downsides: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you're in analysis mode and running all your images unsupervised). You're limited to the hardware you have locally.
+  - **Upsides**: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker `.app` or `.exe` files from their respective websites, download [the plugin](https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py), and then point CellProfiler at the location of the downloaded file. 
+  - **Downsides**: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you're in analysis mode and running all your images unsupervised). You're limited to the hardware you have locally.
 
 ````
 
@@ -276,6 +276,7 @@ If you are familiar with `conda` and `pip`, the installation instructions can be
 The first step in installing a python-based software package is to make what is called an `environment`. You can think of a `package` as a particular software tool (_i.e._, CAREamics is a python `package`). An `environment` is a particular (separate) place on your computer where we can install `packages` and have them be isolated from the other environments we might also need for other purposes. We do this because different python packages require different 'dependencies' (_i.e._ other pieces of software that the package requires in order to run). So a certain package might 'depend' on a specific version of another package, for example:
 
 Package A --> requires Package B, version 1.0
+
 Package C --> requires Package B, version 2.0
 
 In this case we cannot install package A and C in the same environment, because they will interfere with each other by each requiring a different vesion of package B. Unfortunatley, solving issues like this (commonly referred to as `dependency hell`) is an unavoidable part of working with bleeding-edge python software packages.
@@ -286,7 +287,13 @@ Open a new terminal by opening `miniforge prompt`. If you're using an existing t
 
 Make a new environment by typing:
 
-> `create -n careamics python=3.10`
+> `conda create -n careamics python=3.10`
+
+You will be prompted to approve of all the software packages that need to be installed:
+
+>`Proceed ([y]/n)?`
+
+Enter `y` (yes) to proceed.
 
 ```{note}
 **What are we doing here?** 
@@ -323,7 +330,7 @@ This will use `pip`, a package installer, to install the CAREamics library.
 
 You should see a window with a list of all the files in the folder you started Jupyter Notebook in. Find the file you just copied into this folder (`careamics.ipynb`) and click on it. The notebook will open in a tab in your browser. Instructions on how to run CAREamics are contained within this notebook. Follow along with the notebook, but try to understand what is going on at each step! If you are confused, ask! If some problem arises, ask! If all works and you are done -- brag a little! 😸
 
-## **Bonus Exercise: Classifying images in the browser in Piximi**
+## **Bonus Exercise: Classifying images in the browser with Piximi**
 
 [Piximi](piximi.app) {cite}`Moser2024-vt` is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you're limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don't have to worry about upload times or where in the cloud your data is stored.
 
@@ -331,7 +338,16 @@ You should see a window with a list of all the files in the folder you started J
 Check out the [documentation](https://documentation.piximi.app/intro.html), or check them out on [the image.sc forum!](https://forum.image.sc/tag/Piximi)
 ```
 
-Piximi includes 4 major functionalities - 3 major ones you're used to thinking about are Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an Annotation tool. We hope to provide trainable segmentation by the end of 2025. You can keep visiting piximi.app to see what's available!
+Piximi includes 4 major functionalities. Three major ones you're used to thinking about are:
+* **Segmentation and Object Detection**
+* **Classification**, and
+* **Measurement** 
+
+In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an **Annotation** tool. 
+
+```{margin}
+We hope to provide *trainable* segmentation options by the end of 2025. You can keep visiting [piximi.app](https://piximi.app/) to see what's available!
+```
 
 ### Train a 10-class classification model using MNIST
 
@@ -394,9 +410,9 @@ If and when (when), you find some errors in the predictions, you can fix them by
 
 <img src="images/dl/piximi_recategorize_errors.png" height="180px" />
 
-Depending on why you're using machine learning, you might choose to fix all the wrong images at this stage, or only some
+Depending on why you're using machine learning, you might choose to fix all the wrong images at this stage, or only some:
 
-- Is your goal to just get the classifications right and then use them for something, and most of them have already been correctly classified? 
+- Is your goal to just get the classifications right and then use them for something else, and most of them have already been correctly classified? 
   - In that case, there's no harm in just fixing the few mistakes and then moving on to other downstream quantification steps (coming soon!). 
   - If this is your goal but there are a lot of mistakes, you might not choose to fix all of them at this stage, but just fix a subset and then try to train again so you can get to a point where the errors are at a small enough level that you CAN do final data cleaning by hand
 
@@ -410,7 +426,9 @@ Depending on why you're using machine learning, you might choose to fix all the 
 
 #### Save things for later
 
-Reproducible science matters! You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.
+Reproducible science matters! 
+
+You can therefore save your Piximi project file for later, as well as save your model for later use. You might find the former handy if you want to add more data later, and/or you just want to confer with someone else (including a paper reviewer, or future you) about how difficult data points were handled.
 
 <img src="images/dl/piximi_save_project.png" height="180px" />
 
@@ -432,10 +450,10 @@ This data set is in some ways more challenging, but also shows a more biological
 You need not do this, since it can be a bit slow, but it is necessary if you want to assess the performance of the no-GFP class (and will make things much easier if you are red-green colorblind).
 
 Piximi's current defaults are to load two-channel images as red and green, and to rescale each image min-max individually. While we work to fix those bugs, here's how you can manually set the colors to something better (and more uniform)
-- Hit Ctl+A to select all cells
+- Hit Ctrl+A to select all cells
 - Hit "Annotate" to open the annotation viewer
 <img src="images/dl/piximi_annotate.png" height="180px" />
-- Open the channel adjustment bar on the right (which is the three circles), and change color mapping to better lookup tables and values. Hit "Apply to all images open in the annotator" when you're done (and then wait a couple of minutes)
+- Open the channel adjustment bar on the right (<img src="images/dl/Piximi_channel_tool.png" height="25px" />), and change color mapping to better lookup tables and values. Hit "Apply to all images open in the annotator" when you're done (and then wait a couple of minutes)
 <img src="images/dl/piximi_channels.png" height="180px" />
 ```
 
@@ -483,23 +501,27 @@ Check out the [documentation](https://csbdeep.bioimagecomputing.com/tools/n2v/),
     
 ## **Bonus Exercise: Image Segmentation with StarDist (in “Zero”)**
 
-Now that you have experienced how to use ZeroCostDL4Mic Collab
-notebooks, switch it up, do some instance segmentation! We suggest the
-StarDist notebook, but if you feel adventurous, choose something else
+As you heard in the lecture, [ZeroCostDL4Mic Collab
+notebooks](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki) is a collection of jupyter notebooks for various image analysis tools using deep learning that run in Google Colab, taking advantage of its 'free' (albeit limited) GPU resources.
+
+Let's try some instance segmentation notebooks! 
+
+We suggest the
+`StarDist` notebook, but if you feel adventurous, choose something else
 you find most interesting in the context of your own research.
 
 <img src="images/dl/image15.png" style="width:5.04825in;height:4.40104in" />
 
 Go through the notebook you chose. And again:
 
-**Ask questions, help each other**!
+**Ask questions, discuss, help each other**!
 
 ```{tip} 
-Reduce the number of epochs to some small number to save yourself long waiting times!
+Reduce the number of *epochs* to some small number to save yourself long waiting times!
 ```
 
 Later today, when you are done with the exercises, you might want to re-run your favorite notebook with the suggested number of epochs.
-Collab will work while you have fun on your free evening… 🙂
+Colab will work while you have fun on your free evening… 🙂
 
 ```{admonition} Super excited about deep learning now and want to know where to find the latest models?
 The [Bioimage Model Zoo](https://bioimage.io/) {cite}`Ouyang2022-fm` contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network. 
