@@ -61,6 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lab06_DL4MIA_Zero_N2V_StarDist_CellPose3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Helpful links for now and the future" href="links.html" />
+    <link rel="prev" title="3D Image Analysis" href="Lab05_3D_Image_Analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,12 +181,13 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantitative analysis labs</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Lab01_Estimating_SNR_and_Resolution_and_basic_image_processing.html">Estimating SNR &amp; Resolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lab02_Image_Processing_and_Basic_Detection.html">Image Processing and Basic Segmentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lab03_Image_Correction_and_Intensity_Measurements.html">Image Correction and Intensity Measurements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lab04_ML-based_Segmentation_and_Classification.html">Segmentation and Pixel Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lab05_3D_Image_Analysis.html">3D Image Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deep Learning for Microscopy Image Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -449,7 +450,7 @@ document.write(`
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Appreciate how Neural Networks are trained</p></li>
-<li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25" title="Carsen Stringer and Marius Pachitariu. Cellpose3: one-click image restoration for improved cellular segmentation. bioRxiv, pages 2024.02.10.579780, February 2024.">18</a></sup></span></p></li>
+<li><p>Segmentation with Cellpose<span id="id1"><sup><a class="reference internal" href="bibliography.html#id25" title="Carsen Stringer and Marius Pachitariu. Cellpose3: one-click image restoration for improved cellular segmentation. bioRxiv, pages 2024.02.10.579780, February 2024.">9</a></sup></span></p></li>
 <li><p>Learn how to make your own <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment and install packages from <code class="docutils literal notranslate"><span class="pre">pip</span></code></p></li>
 <li><p>Denoising with CAREamics in python</p></li>
 <li><p>Bonus: Try in-browser classification with Piximi</p></li>
@@ -661,7 +662,7 @@ segmentation. What might be useful for denoising this image?</p>
 <li><p>Downsides: They have limited capacity and sometimes machines aren’t available due to EMBL courses. You have to upload your data to their servers, and download your results from them.</p></li>
 </ul>
 </li>
-<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id3"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">19</a></sup></span></p>
+<li><p>Cellpose can be used with CellProfiler, both in Python if you have both programs <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed, but <a class="reference external" href="https://plugins.cellprofiler.org/using_plugins.html?installing-plugins-with-dependencies-using-cellprofiler-from-source#using-docker-to-bypass-installation-requirements">CellProfiler also offers a way to use a pre-built version using Docker</a> <span id="id3"><sup><a class="reference internal" href="bibliography.html#id24" title="Erin Weisbart, Callum Tromans-Coia, Barbara Diaz-Rohrer, David R Stirling, Fernanda Garcia-Fossa, Rebecca A Senft, Mark C Hiner, Marcelo B de Jesus, Kevin W Eliceiri, and Beth A Cimini. CellProfiler plugins - an easy image analysis platform integration for containers and python tools. J. Microsc., September 2023.">10</a></sup></span></p>
 <ul>
 <li><p>Upsides: You can use Cellpose models without ever touching your terminal, and while keeping your data local - you only need to install CellProfiler and Docker <code class="docutils literal notranslate"><span class="pre">.app</span></code> or <code class="docutils literal notranslate"><span class="pre">.exe</span></code> files from their respective websites, download <a class="reference external" href="https://github.com/CellProfiler/CellProfiler-plugins/blob/master/active_plugins/runcellpose.py">the plugin</a>, and then point CellProfiler at the location of the downloaded file.</p></li>
 <li><p>Downsides: this only lets you run pre-trained Cellpose models, not train your own. Running Cellpose in CellProfiler via Docker is also MUCH slower than running it when installed via Python (though it will mostly be compute time, rather than human time, once you’re in analysis mode and running all your images unsupervised). You’re limited to the hardware you have locally.</p></li>
@@ -724,7 +725,7 @@ Well we are asking a particular piece of software called a package manager (in t
 </section>
 <section id="bonus-exercise-classifying-images-in-the-browser-in-piximi">
 <h2><strong>Bonus Exercise: Classifying images in the browser in Piximi</strong><a class="headerlink" href="#bonus-exercise-classifying-images-in-the-browser-in-piximi" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id27" title="Levin M Moser, Nodar Gogoberidze, Andréa Papaleo, Alice Lucas, David Dao, Christoph A Friedrich, Lassi Paavolainen, Csaba Molnar, David R Stirling, Jane Hung, Rex Wang, Callum Tromans-Coia, Bin Li, Edward L Evans, Kevin W Eliceiri, Peter Horvath, Anne E Carpenter, and Beth A Cimini. Piximi - an images to discovery web tool for bioimages and beyond. bioRxiv, pages 2024.06.03.597232, June 2024.">20</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
+<p><a class="reference internal" href="#piximi.app"><span class="xref myst">Piximi</span></a> <span id="id4"><sup><a class="reference internal" href="bibliography.html#id27" title="Levin M Moser, Nodar Gogoberidze, Andréa Papaleo, Alice Lucas, David Dao, Christoph A Friedrich, Lassi Paavolainen, Csaba Molnar, David R Stirling, Jane Hung, Rex Wang, Callum Tromans-Coia, Bin Li, Edward L Evans, Kevin W Eliceiri, Peter Horvath, Anne E Carpenter, and Beth A Cimini. Piximi - an images to discovery web tool for bioimages and beyond. bioRxiv, pages 2024.06.03.597232, June 2024.">11</a></sup></span> is a web app currently in development for training and running deep learning models in your web browser. Under most circumstances (with Cellpose as the major exception), all compute happens locally - you load your images into your web browser, but they are NOT sent to the internet, they stay locally on your machine. While this has some disadvantages (namely, that you’re limited to the resources on your own machine), this means you get the benefit of web applications (namely, no need to install anything) but don’t have to worry about upload times or where in the cloud your data is stored.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">Want to learn more about working with Piximi?</p>
 <p>Check out the <a class="reference external" href="https://documentation.piximi.app/intro.html">documentation</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/Piximi">the image.sc forum!</a></p>
@@ -732,7 +733,7 @@ Well we are asking a particular piece of software called a package manager (in t
 <p>Piximi includes 4 major functionalities - 3 major ones you’re used to thinking about are Segmentation and Object Detection, Classification, and Measurement. In order to train deep learning models for object detection and segmentation, it also includes a 4th major component - an Annotation tool. We hope to provide trainable segmentation by the end of 2025. You can keep visiting piximi.app to see what’s available!</p>
 <section id="train-a-10-class-classification-model-using-mnist">
 <h3>Train a 10-class classification model using MNIST<a class="headerlink" href="#train-a-10-class-classification-model-using-mnist" title="Link to this heading">#</a></h3>
-<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id5"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">21</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
+<p>Piximi is designed for biologists but can be used on non-biological images as well. Here, we’ll use 1,000 handwritten digits from the classic <a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a> <span id="id5"><sup><a class="reference internal" href="bibliography.html#id28" title="Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278-2324, 1998. doi:10.1109/5.726791.">12</a></sup></span> , which consists of cropped images of digits from old census data and high school students.</p>
 <section id="train-a-classifier">
 <h4>Train a classifier<a class="headerlink" href="#train-a-classifier" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -911,7 +912,7 @@ you find most interesting in the context of your own research.</p>
 Collab will work while you have fun on your free evening… 🙂</p>
 <div class="admonition-super-excited-about-deep-learning-now-and-want-to-know-where-to-find-the-latest-models admonition">
 <p class="admonition-title">Super excited about deep learning now and want to know where to find the latest models?</p>
-<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id26" title="Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin Pape, Tom Burke, Carlos Garcia-López-de-Haro, Craig Russell, Lucía Moya-Sans, Cristina de-la-Torre-Gutiérrez, Deborah Schmidt, Dominik Kutra, Maksim Novikov, Martin Weigert, Uwe Schmidt, Peter Bankhead, Guillaume Jacquemet, Daniel Sage, Ricardo Henriques, Arrate Muñoz-Barrutia, Emma Lundberg, Florian Jug, and Anna Kreshuk. BioImage model zoo: a Community-Driven resource for accessible deep learning in BioImage analysis. bioRxiv, pages 2022.06.07.495102, June 2022.">22</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
+<p>The <a class="reference external" href="https://bioimage.io/">Bioimage Model Zoo</a> <span id="id6"><sup><a class="reference internal" href="bibliography.html#id26" title="Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin Pape, Tom Burke, Carlos Garcia-López-de-Haro, Craig Russell, Lucía Moya-Sans, Cristina de-la-Torre-Gutiérrez, Deborah Schmidt, Dominik Kutra, Maksim Novikov, Martin Weigert, Uwe Schmidt, Peter Bankhead, Guillaume Jacquemet, Daniel Sage, Ricardo Henriques, Arrate Muñoz-Barrutia, Emma Lundberg, Florian Jug, and Anna Kreshuk. BioImage model zoo: a Community-Driven resource for accessible deep learning in BioImage analysis. bioRxiv, pages 2022.06.07.495102, June 2022.">13</a></sup></span> contains a number of deep learning models, applications, and example data sets you can use on your own data or to train your own network.</p>
 </div>
 </section>
 </section>
@@ -946,6 +947,24 @@ Collab will work while you have fun on your free evening… 🙂</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Lab05_3D_Image_Analysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3D Image Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="links.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Helpful links for now and the future</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
