@@ -230,36 +230,38 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 1.  Check the **Mastodon cheat sheet** (`Time_Series/Tracking/Mastodon_cheatsheet.pdf`)
 
 2.  Figure out how to:
+
 ```{tip}
 Many of these tools work only if you are hovering you mouse pointer on the selection of interest.
 ```
-    1.  Manually add cell detections (**a**)
 
-    2.  Change their size to better fit the data (**q/e**).
+  1.  Manually add cell detections (**a**)
 
-    3.  Move detections around (**hold space + drag**)
+  2.  Change their size to better fit the data (**q/e**).
 
-    4.  Look at the detections you created using the TrackSceme view
+  3.  Move detections around (**hold space + drag**)
 
-    5.  Link detections across time (**hold L + drag**)
+  4.  Look at the detections you created using the TrackSceme view
 
-        1.  Do this in TrackScheme
+  5.  Link detections across time (**hold L + drag**)
 
-        2.  Do this in one in a BDV window
+      1.  Do this in TrackScheme
 
-    6.  Delete detections/links (**d**)
+      2.  Do this in one in a BDV window
 
-    7.  Figure out what the lock symbols in the top left of each view
-        window are for…
+  6.  Delete detections/links (**d**)
 
-    8.  Figure out what the ‘context’ in a TrackSceme controls (you will
-        need to have tracked some lineages for this).
+  7.  Figure out what the lock symbols in the top left of each view
+      window are for…
 
-    9.  Did you spot the undo function yet? (**Ctrl + z**)
+  8.  Figure out what the ‘context’ in a TrackSceme controls (you will
+      need to have tracked some lineages for this).
 
-    10. Ask yourself how long it would take to manually track every
-        single nucleus in this really quite small dataset. Once this
-        sunk in, pity everyone who has to do that for their project.
+  9.  Did you spot the undo function yet? (**Ctrl + z**)
+
+  10. Ask yourself how long it would take to manually track every
+      single nucleus in this really quite small dataset. Once this
+      sunk in, pity everyone who has to do that for their project.
 
 #### Step 3: Semi-automatic tracking to speed things up
 
