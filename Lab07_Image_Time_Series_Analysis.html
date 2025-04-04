@@ -787,14 +787,13 @@ Let us install it and then use it.</p>
 </aside>
 <p><strong>Installation of btrack and napari from scratch</strong></p>
 <ul class="simple">
-<li><p>Open a Anaconda Prompt and install all we need by executing…</p>
+<li><p>Open a new Miniforge Prompt and install all we need by executing…</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-y</span> <span class="pre">-n</span> <span class="pre">btrack</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-y</span> <span class="pre">-n</span> <span class="pre">btrack</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">python=3.11</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">btrack</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">pip</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">btrack</span></code></p></li>
-<li><p>If working on Apple Silicon: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">pyqt</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">napari</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">btrack[napari]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">napari</span> <span class="pre">pyqt</span></code></p></li>
 </ul>
 </li>
 </ul>
