@@ -2,7 +2,7 @@
 
 *Lab authors: Hunter Elliott, Damian Dalle Nogare and Florian Jug* . 
 
-<small>This file last updated 2024-04-10.</small>
+<small>This file last updated 2025-04-10.</small>
 
 <!-- Maybe add some UlTrac and/or TracX -->
 
@@ -261,7 +261,7 @@ Many of these tools work only if you are hovering you mouse pointer on the selec
 
     10. Ask yourself how long it would take to manually track every
         single nucleus in this really quite small dataset. Once this
-        sunk in, pity everyone who has to do that for his/her project.
+        sunk in, pity everyone who has to do that for their project.
 
 #### Step 3: Semi-automatic tracking to speed things up
 
