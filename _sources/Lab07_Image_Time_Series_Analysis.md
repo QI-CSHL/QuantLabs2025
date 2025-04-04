@@ -57,6 +57,10 @@ Apply Fiji's built-in photobleach correction plugin
   perform the photobleach correction again. What do you see now? Why is
   this? What is the “right” way to photobleach correct these images?
 
+```{tip}
+You can easily compare two plot in Fiji by plotting them together on the same window. In the plot window, go to `Data > Add from Plot...` and select the data that you want to add to your current plot.
+```
+
 - Make a note of the decay rate (parameter 'b') from the exponential
   fit.
 
