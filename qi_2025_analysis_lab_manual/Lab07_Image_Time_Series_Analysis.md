@@ -163,7 +163,6 @@ Please start to download the `Time_Series/Tracking` folder from the [Data Lab Sh
 
 ### (Semi-)automated Tracking in Mastodon
 
-***Required:** Fiji + Mastodon + drosophila.tif*
 
 ```{important}
 Collect screenshots or remember what you learned here.
