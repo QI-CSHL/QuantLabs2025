@@ -721,22 +721,28 @@ and follow the instructions.</p>
 <p class="sidebar-title">Want to learn more about working with ilastik?</p>
 <p>Check out the <a class="reference external" href="https://www.ilastik.org/documentation/">documentation and tutorials list</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/ilastik">the image.sc forum!</a></p>
 </aside>
-<p>Note that downloads from the ilastik website can be slow. If so, please use
-the following links to get the sample data and projects (<em>likely you
-have downloaded this in Exercise 0 already, no need to download it
-again</em>):</p>
+<p>You can download plenty of <a class="reference external" href="https://ilastik.github.io/download.html">example datasets</a> from the ilastik website, although it can be a bit slow.</p>
+<p>If so, you can find the same examples in the Lab Data Share under <code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking/ilastik_tracking_projects</span></code> (note that each one is a folder containing several files):</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://drive.google.com/file/d/1y-Gijufvq40guOszqL_CGNzj32NTgEnE/view?usp=drive_link">2D+t tracking example for ilastik</a></p></li>
-<li><p><a class="reference external" href="https://drive.google.com/file/d/14QOMHZ2z7WU47UnifXOV2LCf30jXodxe/view?usp=drive_link">3D+t tracking example for ilastik</a></p></li>
+<li><p>2D+t tracking example for ilastik</p></li>
+<li><p>3D+t tracking example for ilastik</p></li>
 </ol>
 <p>The 2D example will be way faster to work with, but please choose any of
-the two. After the download is completed, unzip the file and open
-“<em><strong>conservationTracking.ilp</strong></em>” in ilastik (double click should do it).</p>
+the two. After the download is completed, unzip the file and open the project file
+“<em><strong>conservationTracking.ilp</strong></em>” in ilastik (Project &gt; Open project).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Please collect some screenshots or remember what you liked most. Be
 prepared to show the coolest thing you found out tomorrow morning. Some
 of you will be volunteered to share their findings… ;)</p>
+</div>
 <p>Some things to try after you start feeling comfortable with ilastik.
 There is much more interesting stuff to explore. Here some inspiration:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Does this data look familiar? Maybe from the object classification exercise in Ilastik from the ML lab?
+If you’re curious, you can check all the previous steps that have already been done in the Tracking pipeline, like thresholding, identifying divisions, categorizing double and triple nuclei.</p>
+</aside>
 <ol class="arabic simple">
 <li><p>For the 2D+t example…</p>
 <ol class="arabic simple">
@@ -754,6 +760,22 @@ speed this up? (Ask the online manual…)</p></li>
 </ol>
 </li>
 </ol>
+<p>If you want to export the result of your tracking, you can do so in the <code class="docutils literal notranslate"><span class="pre">Tracking</span> <span class="pre">Result</span> <span class="pre">Export</span></code> tab.</p>
+<ul class="simple">
+<li><p>Choose ‘Tracking Result’ as your source.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Image</span> <span class="pre">Export</span> <span class="pre">Settings...</span></code> and choose a suitable format. The default <code class="docutils literal notranslate"><span class="pre">.h5</span></code> format cannot be easily read in Fiji, maybe try <code class="docutils literal notranslate"><span class="pre">.tif</span> <span class="pre">sequence</span></code> (because this is time lapse data). Also choose the output directory and how the output images should be named.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ilastik has some useful <em>terms</em> that make naming files easy:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{dataset_dir}</span></code> replaces the full path to where your input data is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{nickname}</span></code> replaces the name of the file being processed (excluding extension)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{result_type}</span></code> replaces the type of result you’re exporting (in this case it would be ‘Tracking_result’)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{slice_index}</span></code> is the index for the frame (or slice if this was 3D) being exported (only for image sequence exports)</p></li>
+</ul>
+<p>You can learn more about the export setting for Ilastik from their <a class="reference external" href="https://www.ilastik.org/documentation/basics/export#settings">documentation</a>.</p>
+</div>
 </section>
 <section id="tracking-with-btrack-in-napari">
 <h3>Tracking with btrack in napari<a class="headerlink" href="#tracking-with-btrack-in-napari" title="Link to this heading">#</a></h3>
