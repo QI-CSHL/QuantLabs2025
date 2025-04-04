@@ -363,13 +363,12 @@ Check out the [documentation](https://btrack.readthedocs.io/en/latest/user_guide
 ```
 
 **Installation of btrack and napari from scratch**
-- Open a Anaconda Prompt and install all we need by executing...
-  - `conda create -y -n btrack`
+- Open a new Miniforge Prompt and install all we need by executing...
+  - `conda create -y -n btrack -c conda-forge python=3.11`
   - `conda activate btrack`
   - `conda install -y pip`
-  - `pip install btrack`
-  - If working on Apple Silicon: `conda install -y -c conda-forge pyqt`
-  - `pip install -U napari`
+  - `pip install btrack[napari]`
+  - `conda install -y -c conda-forge napari pyqt`
 
 **Using btrack to track objects we segmented**
 - Next, we need a dataset to track. Actually, we need not only a dataset, we need
