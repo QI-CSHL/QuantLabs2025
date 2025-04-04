@@ -155,13 +155,7 @@ features.
 
 ### Get the data we need
 
-Please start to download the following data:
-
-1.  [Drosophila example](https://tinyurl.com/trackDrosophila)
-
-2.  [2D+t tracking example for ilastik](https://tinyurl.com/tracking2dt)
-
-3.  [3D+t tracking example for ilastik](https://tinyurl.com/tracking3dt)
+Please start to download the `Time_Series/Tracking` folder from the [Data Lab Share](https://tinyurl.com/QI2025AnalysisLabData). It might take some time so better start early :\)
 
 ### (Semi-)automated Tracking in Mastodon
 
@@ -229,7 +223,7 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 
 #### Step 2: Manually track some cells
 
-1.  Get the [Mastodon cheat sheet](https://drive.google.com/file/d/1QyFG_qQceqCBg07onLXqftxyiEYFzXux/view?usp=drive_link)
+1.  Check the **Mastodon cheat sheet** (`Time_Series/Tracking/Mastodon_cheatsheet.pdf`)
 
 2.  Figure out how to:
 ```{tip}
@@ -265,9 +259,11 @@ Many of these tools work only if you are hovering you mouse pointer on the selec
 
 #### Step 3: Semi-automatic tracking to speed things up
 
-1.  Get [some instructions](https://drive.google.com/file/d/1w2bm6aoKlaDIuSvZRPqTb-2q-6LcHYzV/view?usp=drive_link)
-    (warning, they are slightly outdated, screenshots will look a bit
-    different than the Mastodon you are using today…)
+1.  Check the **instructions** file (`Time_Series/Tracking/Mastodon_Manual_SemiAutoTracking.pdf`) for the steps to set up and try the Semi-automatic tracking. 
+
+```{warning}
+These instructions are slightly outdated, screenshots will likely look a bit different than the Mastodon you are using today… 
+```
 
 2.  Now speed up your tracking work and try to find an efficient way to
     navigate Mastodon. (Remember, tomorrow we will volunteer people to
@@ -281,14 +277,16 @@ Check out the [documentation](https://imagej.net/plugins/trackmate/) and https:/
 ```
 
 1.  Use (in Mastodon, **not** Fiji): `Plugins > Tracking > Detection…`
-    and detect cells in some part of the volume (the ROI-box to select a
-    part can also be using from within BDV).
+    and detect cells in some part of the volume (use the ROI-box to select a
+    part of the volume in the BDV).
 
-2.  Then use: `Plugins > Tracking > Linking…` and link those detections
+2.  Choose a `Detector` (there might be a familiar name in there!) and play around with the `Estimated diameter` of the objects and the `Quality threshold` to automatically detect your cells. Hit `Preview` to visualize the result.
+
+3.  Then use: `Plugins > Tracking > Linking…` and link those detections
     to each other. This will not lead to perfect results. Don’t worry
     about that!
 
-3.  Play with options, check if you can improve results somehow.
+3.  Play with options, check if you can improve results somehow. Check with your labmates what they have tried, what worked for them!
 
 ### Tracking in ilastik
 
@@ -302,7 +300,7 @@ Check out the [documentation and tutorials list](https://www.ilastik.org/documen
 
 You can download plenty of [example datasets](https://ilastik.github.io/download.html) from the ilastik website, although it can be a bit slow. 
 
-If so, you can find the same examples in the Lab Data Share under `Time_Series/Tracking/ilastik_tracking_projects` (note that each one is a folder containing several files):
+If so, you can find the same examples in the [Lab Data Share](https://tinyurl.com/QI2025AnalysisLabData) under `Time_Series/Tracking/ilastik_tracking_projects` (note that each one is a folder containing several files):
 
 1.  2D+t tracking example for ilastik
 
@@ -366,17 +364,18 @@ Check out the [documentation](https://btrack.readthedocs.io/en/latest/user_guide
 
 **Installation of btrack and napari from scratch**
 - Open a Anaconda Prompt and install all we need by executing...
-  - `conda create -n btrack`
+  - `conda create -y -n btrack`
   - `conda activate btrack`
-  - `conda install pip`
-  - `pip install btrack[napari]`
-  - `pip install -U napari[all]`
+  - `conda install -y pip`
+  - `pip install btrack`
+  - If working on Apple Silicon: `conda install -y -c conda-forge pyqt`
+  - `pip install -U napari`
 
 **Using btrack to track objects we segmented**
 - Next, we need a dataset to track. Actually, we need not only a dataset, we need
   data that is segmented. Since we learned about segmentation before, here we will
   simply use one of the btrack example datasets. 
-  You can find a file called `segmented_nuclei.tif` it in the folder `btrack_masks`.
+  You can find a file called `segmented_nuclei.tif` it in the folder `btrack_masks` in the [Lab Data share](https://tinyurl.com/QI2025AnalysisLabData).
 - Start btrack by starting napari (execute `napari` from within the *btrack* conda 
   environment we installed above).
 - Start btrack via `Plugins > Track (btrack)`.

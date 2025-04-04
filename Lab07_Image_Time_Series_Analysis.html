@@ -571,12 +571,7 @@ features.</p>
 </section>
 <section id="get-the-data-we-need">
 <h3>Get the data we need<a class="headerlink" href="#get-the-data-we-need" title="Link to this heading">#</a></h3>
-<p>Please start to download the following data:</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://tinyurl.com/trackDrosophila">Drosophila example</a></p></li>
-<li><p><a class="reference external" href="https://tinyurl.com/tracking2dt">2D+t tracking example for ilastik</a></p></li>
-<li><p><a class="reference external" href="https://tinyurl.com/tracking3dt">3D+t tracking example for ilastik</a></p></li>
-</ol>
+<p>Please start to download the <code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking</span></code> folder from the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Data Lab Share</a>. It might take some time so better start early :)</p>
 </section>
 <section id="semi-automated-tracking-in-mastodon">
 <h3>(Semi-)automated Tracking in Mastodon<a class="headerlink" href="#semi-automated-tracking-in-mastodon" title="Link to this heading">#</a></h3>
@@ -647,7 +642,7 @@ mouse location.</p></li>
 <section id="step-2-manually-track-some-cells">
 <h4>Step 2: Manually track some cells<a class="headerlink" href="#step-2-manually-track-some-cells" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p>Get the <a class="reference external" href="https://drive.google.com/file/d/1QyFG_qQceqCBg07onLXqftxyiEYFzXux/view?usp=drive_link">Mastodon cheat sheet</a></p></li>
+<li><p>Check the <strong>Mastodon cheat sheet</strong> (<code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking/Mastodon_cheatsheet.pdf</span></code>)</p></li>
 <li><p>Figure out how to:</p></li>
 </ol>
 <div class="admonition tip">
@@ -687,9 +682,13 @@ mouse location.</p></li>
 <section id="step-3-semi-automatic-tracking-to-speed-things-up">
 <h4>Step 3: Semi-automatic tracking to speed things up<a class="headerlink" href="#step-3-semi-automatic-tracking-to-speed-things-up" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p>Get <a class="reference external" href="https://drive.google.com/file/d/1w2bm6aoKlaDIuSvZRPqTb-2q-6LcHYzV/view?usp=drive_link">some instructions</a>
-(warning, they are slightly outdated, screenshots will look a bit
-different than the Mastodon you are using today…)</p></li>
+<li><p>Check the <strong>instructions</strong> file (<code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking/Mastodon_Manual_SemiAutoTracking.pdf</span></code>) for the steps to set up and try the Semi-automatic tracking.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These instructions are slightly outdated, screenshots will likely look a bit different than the Mastodon you are using today…</p>
+</div>
+<ol class="arabic simple" start="2">
 <li><p>Now speed up your tracking work and try to find an efficient way to
 navigate Mastodon. (Remember, tomorrow we will volunteer people to
 show and compare found ways to track fast and efficiently…)</p></li>
@@ -703,12 +702,13 @@ show and compare found ways to track fast and efficiently…)</p></li>
 </aside>
 <ol class="arabic simple">
 <li><p>Use (in Mastodon, <strong>not</strong> Fiji): <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Tracking</span> <span class="pre">&gt;</span> <span class="pre">Detection…</span></code>
-and detect cells in some part of the volume (the ROI-box to select a
-part can also be using from within BDV).</p></li>
+and detect cells in some part of the volume (use the ROI-box to select a
+part of the volume in the BDV).</p></li>
+<li><p>Choose a <code class="docutils literal notranslate"><span class="pre">Detector</span></code> (there might be a familiar name in there!) and play around with the <code class="docutils literal notranslate"><span class="pre">Estimated</span> <span class="pre">diameter</span></code> of the objects and the <code class="docutils literal notranslate"><span class="pre">Quality</span> <span class="pre">threshold</span></code> to automatically detect your cells. Hit <code class="docutils literal notranslate"><span class="pre">Preview</span></code> to visualize the result.</p></li>
 <li><p>Then use: <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Tracking</span> <span class="pre">&gt;</span> <span class="pre">Linking…</span></code> and link those detections
 to each other. This will not lead to perfect results. Don’t worry
 about that!</p></li>
-<li><p>Play with options, check if you can improve results somehow.</p></li>
+<li><p>Play with options, check if you can improve results somehow. Check with your labmates what they have tried, what worked for them!</p></li>
 </ol>
 </section>
 </section>
@@ -722,7 +722,7 @@ and follow the instructions.</p>
 <p>Check out the <a class="reference external" href="https://www.ilastik.org/documentation/">documentation and tutorials list</a>, or check them out on <a class="reference external" href="https://forum.image.sc/tag/ilastik">the image.sc forum!</a></p>
 </aside>
 <p>You can download plenty of <a class="reference external" href="https://ilastik.github.io/download.html">example datasets</a> from the ilastik website, although it can be a bit slow.</p>
-<p>If so, you can find the same examples in the Lab Data Share under <code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking/ilastik_tracking_projects</span></code> (note that each one is a folder containing several files):</p>
+<p>If so, you can find the same examples in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Lab Data Share</a> under <code class="docutils literal notranslate"><span class="pre">Time_Series/Tracking/ilastik_tracking_projects</span></code> (note that each one is a folder containing several files):</p>
 <ol class="arabic simple">
 <li><p>2D+t tracking example for ilastik</p></li>
 <li><p>3D+t tracking example for ilastik</p></li>
@@ -789,11 +789,12 @@ Let us install it and then use it.</p>
 <ul class="simple">
 <li><p>Open a Anaconda Prompt and install all we need by executing…</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">btrack</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-y</span> <span class="pre">-n</span> <span class="pre">btrack</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">btrack</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pip</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">btrack[napari]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">napari[all]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">pip</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">btrack</span></code></p></li>
+<li><p>If working on Apple Silicon: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">pyqt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">napari</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -802,7 +803,7 @@ Let us install it and then use it.</p>
 <li><p>Next, we need a dataset to track. Actually, we need not only a dataset, we need
 data that is segmented. Since we learned about segmentation before, here we will
 simply use one of the btrack example datasets.
-You can find a file called <code class="docutils literal notranslate"><span class="pre">segmented_nuclei.tif</span></code> it in the folder <code class="docutils literal notranslate"><span class="pre">btrack_masks</span></code>.</p></li>
+You can find a file called <code class="docutils literal notranslate"><span class="pre">segmented_nuclei.tif</span></code> it in the folder <code class="docutils literal notranslate"><span class="pre">btrack_masks</span></code> in the <a class="reference external" href="https://tinyurl.com/QI2025AnalysisLabData">Lab Data share</a>.</p></li>
 <li><p>Start btrack by starting napari (execute <code class="docutils literal notranslate"><span class="pre">napari</span></code> from within the <em>btrack</em> conda
 environment we installed above).</p></li>
 <li><p>Start btrack via <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Track</span> <span class="pre">(btrack)</span></code>.</p></li>
