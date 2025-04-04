@@ -300,25 +300,31 @@ and follow the instructions.
 Check out the [documentation and tutorials list](https://www.ilastik.org/documentation/), or check them out on [the image.sc forum!](https://forum.image.sc/tag/ilastik)
 ```
 
-Note that downloads from the ilastik website can be slow. If so, please use
-the following links to get the sample data and projects (*likely you
-have downloaded this in Exercise 0 already, no need to download it
-again*):
+You can download plenty of [example datasets](https://ilastik.github.io/download.html) from the ilastik website, although it can be a bit slow. 
 
-1.  [2D+t tracking example for ilastik](https://drive.google.com/file/d/1y-Gijufvq40guOszqL_CGNzj32NTgEnE/view?usp=drive_link)
+If so, you can find the same examples in the Lab Data Share under `Time_Series/Tracking/ilastik_tracking_projects` (note that each one is a folder containing several files):
 
-2.  [3D+t tracking example for ilastik](https://drive.google.com/file/d/14QOMHZ2z7WU47UnifXOV2LCf30jXodxe/view?usp=drive_link)
+1.  2D+t tracking example for ilastik
+
+2.  3D+t tracking example for ilastik
 
 The 2D example will be way faster to work with, but please choose any of
-the two. After the download is completed, unzip the file and open
-“***conservationTracking.ilp***” in ilastik (double click should do it).
+the two. After the download is completed, unzip the file and open the project file
+“***conservationTracking.ilp***” in ilastik (Project \> Open project).
 
+```{tip}
 Please collect some screenshots or remember what you liked most. Be
 prepared to show the coolest thing you found out tomorrow morning. Some
 of you will be volunteered to share their findings… ;)
+```
 
 Some things to try after you start feeling comfortable with ilastik.
 There is much more interesting stuff to explore. Here some inspiration:
+
+```{margin}
+Does this data look familiar? Maybe from the object classification exercise in Ilastik from the ML lab?
+If you're curious, you can check all the previous steps that have already been done in the Tracking pipeline, like thresholding, identifying divisions, categorizing double and triple nuclei.  
+```
 
 1.  For the 2D+t example…
 
@@ -334,6 +340,19 @@ There is much more interesting stuff to explore. Here some inspiration:
     1.  How long did it take to track automatically? Is there a way to
         speed this up? (Ask the online manual…)
 
+If you want to export the result of your tracking, you can do so in the `Tracking Result Export` tab. 
+- Choose 'Tracking Result' as your source.
+- Go to `Choose Image Export Settings...` and choose a suitable format. The default `.h5` format cannot be easily read in Fiji, maybe try `.tif sequence` (because this is time lapse data). Also choose the output directory and how the output images should be named.
+
+```{tip}
+Ilastik has some useful *terms* that make naming files easy:
+- `{dataset_dir}` replaces the full path to where your input data is stored
+- `{nickname}` replaces the name of the file being processed (excluding extension)
+- `{result_type}` replaces the type of result you're exporting (in this case it would be 'Tracking_result') 
+- `{slice_index}` is the index for the frame (or slice if this was 3D) being exported (only for image sequence exports)
+
+You can learn more about the export setting for Ilastik from their [documentation](https://www.ilastik.org/documentation/basics/export#settings).
+```
 
 ### Tracking with btrack in napari
 
