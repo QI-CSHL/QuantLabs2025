@@ -12,7 +12,7 @@ parts:
   - file: Lab04_ML-based_Segmentation_and_Classification.md
   - file: Lab05_3D_Image_Analysis.md
   - file: Lab06_DL4MIA_Zero_N2V_StarDist_CellPose3.md
-  #- file: Lab07_Image_Time_Series_Analysis.md
+  - file: Lab07_Image_Time_Series_Analysis.md
 - caption:  Additional Resources
   chapters:
   - file: links

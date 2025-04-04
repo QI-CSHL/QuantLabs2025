@@ -29,9 +29,9 @@ then correcting for this decay.
 
 Load the data:
 
-- Go to folder BleachCorrection
+- Go to folder `Time_Series > BleachCorrection`
 
-- Load TRITC into Fiji by dragging the folder into the Fiji window
+- Load `TRITC` into Fiji by dragging the folder into the Fiji window
   (click yes when asked to open as a stack, but leave the checkboxes
   unchecked).
 
@@ -60,7 +60,7 @@ Apply Fiji's built-in photobleach correction plugin
 - Make a note of the decay rate (parameter 'b') from the exponential
   fit.
 
-- Repeat for the FITC channel. Which image is bleaching faster?
+- Repeat for the `FITC` folder. Which image is bleaching faster?
 
 - How well does the correction work on the FITC channel? Do we need to
   select an ROI here? Why or why not?
@@ -71,9 +71,9 @@ Apply Fiji's built-in photobleach correction plugin
 
 ### FRAP
 
-In this lab we will be using a FRAP plugin for Fiji. Unfortunately it does not work on the most current version of Fji (Welcome to the world of research software, you should be used to this by now!). Inside the data folder for this lab, we have included a compatible version of Fiji with the plugin already installed in a folder called `Fiji_for_FRAP`. 
+In this lab we will be using a FRAP plugin for Fiji. Unfortunately it does not work on the most current version of Fji (*Welcome to the world of research software, you should be used to this by now!*). Inside the data folder for this lab, we have included a compatible version of Fiji with the plugin already installed in the folder `Time_Series/Fiji_for_FRAP`. 
 
-- Load the data: FRAP/33108 SU295 try1.tif (Or use your own if you
+- Load the data: `FRAP/33108 SU295 try1.tif` (Or use your own if you
   prefer)
 
 - Create an ROI over the square bleached region. Add it to the ROI
@@ -182,19 +182,19 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 1.  Put the file ‘drosophila.tif’ in some folder. Link to download this
     file can be found further up.
 
-2.  In Fiji do: `Help > Update > Manage update sites`
+2.  In Fiji go to: `Help > Update > Manage update sites`
 
     - Check boxes next to “Mastodon”.
 
     - `Close > Apply changes` and restart Fiji
 
-3.  Open ‘drosophila.tif’ in Fiji.
+3.  Open `drosophila_original.tif` in Fiji.
 
 4.  In Fiji, start Mastodon by `Plugins > Mastodon`
 
 5.  In Mastodon, start a new project by clicking “new Mastodon project”.
 
-    - Click on “use an image open in ImageJ” and select the drosophila
+    - Click on “use an image open in ImageJ” and select the Drosophila image
       you just opened in Fiji.
 
 > <img src="images/time_series/image2.png" style="width:3.91146in;height:2.20594in" />
@@ -204,12 +204,12 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 
 > <img src="images/time_series/image1.png" style="width:2.49479in;height:2.49479in" />
 
-- In this new window, you can now open BDVs and TrackSchemes by clicking
+- In this new window, you can now open BDVs (BigDataViewers ;\)) and TrackSchemes by clicking
   the respective buttons.
 
 6.  Please try to navigate the data and play with a few BDV shortcuts.
     Navigating 3D space can be confusing and a few shortcuts are really,
-    really valuable. Here a quick reminder to what we’ve seen yesterday:
+    really valuable. Here a quick reminder to what we’ve seen before:
 
     - If you left click and drag, you can reslice in arbitrary
       directions.  
@@ -232,10 +232,12 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 1.  Get the [Mastodon cheat sheet](https://drive.google.com/file/d/1QyFG_qQceqCBg07onLXqftxyiEYFzXux/view?usp=drive_link)
 
 2.  Figure out how to:
-
+```{tip}
+Many of these tools work only if you are hovering you mouse pointer on the selection of interest.
+```
     1.  Manually add cell detections (**a**)
 
-    2.  Change their size to better fit the data (**q/e**)
+    2.  Change their size to better fit the data (**q/e**).
 
     3.  Move detections around (**hold space + drag**)
 
