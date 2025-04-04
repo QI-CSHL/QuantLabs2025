@@ -457,7 +457,10 @@ Piximi's current defaults are to load two-channel images as red and green, and t
 <img src="images/dl/piximi_channels.png" height="180px" />
 ```
 
-- Use human-in-the-loop classification to train a high-performing 3 class classifier. How high can you get the evaluation metrics? How many rounds and how many corrected classifications does it take you to get there?
+- Some of the cells have already been labeled, what color represents the eGFP signal?
+
+- Use human-in-the-loop classification (same procedure as in the previous exercise) to train a high-performing 3 class classifier.
+How high can you get the evaluation metrics? How many rounds and how many corrected classifications does it take you to get there?
 
 ## **Bonus Exercise: Use Fiji’s Noise2Void Plugin**
 
