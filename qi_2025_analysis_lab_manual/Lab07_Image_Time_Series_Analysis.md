@@ -177,20 +177,17 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 
 #### Step 1: Start a Mastodon project from a single tiff File
 
-1.  Put the file ‘drosophila.tif’ in some folder. Link to download this
-    file can be found further up.
-
-2.  In Fiji go to: `Help > Update > Manage update sites`
+1.  In Fiji go to: `Help > Update > Manage update sites`
 
     - Check boxes next to “Mastodon”.
 
     - `Close > Apply changes` and restart Fiji
 
-3.  Open `drosophila_original.tif` in Fiji.
+2.  Open `drosophilus_floriansus.tif` in Fiji.
 
-4.  In Fiji, start Mastodon by `Plugins > Trtacking > Mastodon > Mastodon launcher`
+3.  In Fiji, start Mastodon by `Plugins > Trtacking > Mastodon > Mastodon launcher`
 
-5.  In Mastodon, start a new project by clicking “new Mastodon project”.
+4.  In Mastodon, start a new project by clicking “new Mastodon project”.
 
     - Click on “use an image open in ImageJ” and select the Drosophila image
       you just opened in Fiji.
@@ -205,7 +202,7 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 - In this new window, you can now open BDVs (BigDataViewers ;\)) and TrackSchemes by clicking
   the respective buttons.
 
-6.  Please try to navigate the data and play with a few BDV shortcuts.
+5.  Please try to navigate the data and play with a few BDV shortcuts.
     Navigating 3D space can be confusing and a few shortcuts are really,
     really valuable. Here a quick reminder to what we’ve seen before:
 
@@ -243,11 +240,13 @@ Many of these tools work only if you are hovering you mouse pointer on the selec
 
   4.  Look at the detections you created using the TrackSceme view
 
-  5.  Link detections across time (**hold L + drag**)
+  5.  Link detections in across time in TracksScheme (**hold L + drag**)
 
-      1.  Do this in TrackScheme
-
-      2.  Do this in one in a BDV window
+```{margin}
+See the three lock symbols on the top of some of Mastodon's screens?
+All views that have the same 'lock' activated will be linked!
+Try 'linking' the BDV and Trackscheme or adding a new BDV window to visualize your sample across the Z axis and 'locking' it too. Do you find it useful?
+```
 
   6.  Delete detections/links (**d**)
 
