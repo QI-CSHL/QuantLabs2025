@@ -188,7 +188,7 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 
 3.  Open `drosophila_original.tif` in Fiji.
 
-4.  In Fiji, start Mastodon by `Plugins > Mastodon`
+4.  In Fiji, start Mastodon by `Plugins > Trtacking > Mastodon > Mastodon launcher`
 
 5.  In Mastodon, start a new project by clicking “new Mastodon project”.
 
@@ -385,10 +385,12 @@ Check out the [documentation](https://btrack.readthedocs.io/en/latest/user_guide
   environment we installed above).
 - Start btrack via `Plugins > Track (btrack)`.
 - Drag and drop the masks file into napari.
+
   ```{warning}
-  napari does not recognize this tiff file as labels. You must manually convert 
+  Napari does not recognize this tiff file as labels. You must manually convert 
   to labels by right clicking on the layer and select `Convert to labels`.
   ```
+
 - In the btrack side-bar, select the segmentation masks in the freshly coverted labels 
   layer and click on `Track`.
 - Since this is one of the canned examples of btrack, the result is naturally quite good.
