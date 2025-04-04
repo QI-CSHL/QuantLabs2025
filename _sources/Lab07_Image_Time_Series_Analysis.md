@@ -231,15 +231,18 @@ Check out the [documentation](https://mastodon.readthedocs.io/en/latest/index.ht
 Many of these tools work only if you are hovering you mouse pointer on the selection of interest.
 ```
 
-  1.  Manually add cell detections (**a**)
+  1.  Manually add and link cell detections (**a**):
+      - Hover your mouse on a cell and press **a** to add a new detection
+      - Hover your mouse on an existing detection and press & hold **a** to go to the next frame. Move your mouse to the new location of the cell and release **a** to add a new detection. The new detection wil be linked to the previous one.
+      - Repeat the process to create a track
+      - If you relese **a** on a previously existing detection, it will link it to your track.
 
-  2.  Change their size to better fit the data (**q/e**).
+  2.  Change the detection size to better fit the data (**q/e**).
 
-  3.  Move detections around (**hold space + drag**)
+  3.  Move individual detections around (**hold space + drag**)
 
   4.  Look at the detections you created using the TrackSceme view
 
-  5.  Link detections in across time in TracksScheme (**hold L + drag**)
 
 ```{margin}
 See the three lock symbols on the top of some of Mastodon's screens?
@@ -247,17 +250,14 @@ All views that have the same 'lock' activated will be linked!
 Try 'linking' the BDV and Trackscheme or adding a new BDV window to visualize your sample across the Z axis and 'locking' it too. Do you find it useful?
 ```
 
-  6.  Delete detections/links (**d**)
+  5.  Delete detections/links (**d**)
 
-  7.  Figure out what the lock symbols in the top left of each view
-      window are for…
-
-  8.  Figure out what the ‘context’ in a TrackSceme controls (you will
+  6.  Figure out what the ‘context’ in a TrackSceme controls (you will
       need to have tracked some lineages for this).
 
-  9.  Did you spot the undo function yet? (**Ctrl + z**)
+  7.  Did you spot the undo function yet? (**Ctrl + z**)
 
-  10. Ask yourself how long it would take to manually track every
+  8. Ask yourself how long it would take to manually track every
       single nucleus in this really quite small dataset. Once this
       sunk in, pity everyone who has to do that for their project.
 

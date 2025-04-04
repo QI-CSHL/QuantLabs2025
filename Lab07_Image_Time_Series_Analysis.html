@@ -653,11 +653,17 @@ mouse location.</p></li>
 <p>Many of these tools work only if you are hovering you mouse pointer on the selection of interest.</p>
 </div>
 <ol class="arabic simple">
-<li><p>Manually add cell detections (<strong>a</strong>)</p></li>
-<li><p>Change their size to better fit the data (<strong>q/e</strong>).</p></li>
-<li><p>Move detections around (<strong>hold space + drag</strong>)</p></li>
+<li><p>Manually add and link cell detections (<strong>a</strong>):</p>
+<ul class="simple">
+<li><p>Hover your mouse on a cell and press <strong>a</strong> to add a new detection</p></li>
+<li><p>Hover your mouse on an existing detection and press &amp; hold <strong>a</strong> to go to the next frame. Move your mouse to the new location of the cell and release <strong>a</strong> to add a new detection. The new detection wil be linked to the previous one.</p></li>
+<li><p>Repeat the process to create a track</p></li>
+<li><p>If you relese <strong>a</strong> on a previously existing detection, it will link it to your track.</p></li>
+</ul>
+</li>
+<li><p>Change the detection size to better fit the data (<strong>q/e</strong>).</p></li>
+<li><p>Move individual detections around (<strong>hold space + drag</strong>)</p></li>
 <li><p>Look at the detections you created using the TrackSceme view</p></li>
-<li><p>Link detections in across time in TracksScheme (<strong>hold L + drag</strong>)</p></li>
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -665,10 +671,8 @@ mouse location.</p></li>
 All views that have the same ‘lock’ activated will be linked!
 Try ‘linking’ the BDV and Trackscheme or adding a new BDV window to visualize your sample across the Z axis and ‘locking’ it too. Do you find it useful?</p>
 </aside>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="5">
 <li><p>Delete detections/links (<strong>d</strong>)</p></li>
-<li><p>Figure out what the lock symbols in the top left of each view
-window are for…</p></li>
 <li><p>Figure out what the ‘context’ in a TrackSceme controls (you will
 need to have tracked some lineages for this).</p></li>
 <li><p>Did you spot the undo function yet? (<strong>Ctrl + z</strong>)</p></li>
